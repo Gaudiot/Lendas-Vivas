@@ -11,8 +11,18 @@ config_version=5
 [application]
 
 config/name="lendas_vivas"
+run/main_scene="res://Scenes/Menu.tscn"
 config/features=PackedStringArray("4.2", "Mobile")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/resizable=false
+window/size/borderless=true
+
+[input_devices]
+
+pointing/emulate_touch_from_mouse=true
 
 [rendering]
 
