@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://ctvivhe18irto"]
+[gd_scene load_steps=5 format=3 uid="uid://ctvivhe18irto"]
 
 [ext_resource type="Texture2D" uid="uid://ckqqhryxj335x" path="res://icon.svg" id="1_d6ssr"]
+[ext_resource type="Script" path="res://Scripts/Menu/EncyclopediaButton.gd" id="2_6fvgk"]
 [ext_resource type="Script" path="res://Scripts/Menu/ExitGameButton.gd" id="2_emepl"]
 [ext_resource type="Texture2D" uid="uid://cfucm2oj7lf3q" path="res://Assets/Menu/GameLogo.png" id="3_v37sm"]
 
@@ -58,6 +59,7 @@ offset_bottom = 224.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "Enciclopedia"
+script = ExtResource("2_6fvgk")
 
 [node name="ExitGameButton" type="Button" parent="MenuButtons"]
 anchors_preset = 8
@@ -88,4 +90,5 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("3_v37sm")
 
+[connection signal="pressed" from="MenuButtons/EncyclopediaButton" to="MenuButtons/EncyclopediaButton" method="_on_pressed"]
 [connection signal="pressed" from="MenuButtons/ExitGameButton" to="MenuButtons/ExitGameButton" method="_on_pressed"]

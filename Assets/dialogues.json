@@ -1,0 +1,70 @@
+{
+	"0": {
+		"0": {
+			"assets":[
+				{
+					"character": "Acutipupu",
+					"is_image_left": true,
+					"image_path": "res://icon.svg",
+					"sound_path": "res://Assets/Sounds/villager-sound.mp3"
+				},
+				{
+					"character": "Pisadeira",
+					"is_image_left": false,
+					"image_path": "res://icon.svg",
+					"sound_path": "res://Assets/Sounds/minecraft_hurt.mp3"
+				},
+				{
+					"character": "Maria Caninana",
+					"is_image_left": true,
+					"image_path": "res://icon.svg",
+					"sound_path": "res://Assets/Sounds/villager-sound.mp3"
+				}
+			],
+			"pt-br": [
+				{
+					"text": "oi, tudo bem??"
+				},
+				{
+					"text": "Estou bem, e você?",
+				},
+				{
+					"text": "Aqui os diálogos estão funcionando perfeitamente",
+				}
+			],
+			"en": [
+				{
+					"text": "Hi, how are you?",
+				},
+				{
+					"text": "I'm fine, what about you?",
+				},
+				{
+					"text": "Here the dialogues are working perfectly",
+				}
+			]
+		}
+	},
+	"misc": {
+		"0": {
+			"assets":[
+				{
+					"character": "Severino",
+					"is_image_left": true,
+					"image_path": "res://icon.svg",
+					"sound_path": "res://Assets/Sounds/minecraft_hurt.mp3"
+				}
+			],
+			"pt-br": [
+				{
+					"text": "algo aleatório",
+				}
+			],
+			"en": [
+				{
+					"text": "Something random",
+				}
+			]
+		}
+	}
+}
