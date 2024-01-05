@@ -1,0 +1,104 @@
+[gd_scene load_steps=3 format=3 uid="uid://h8u3vg6781qw"]
+
+[ext_resource type="Texture2D" uid="uid://ckqqhryxj335x" path="res://icon.svg" id="1_pyedm"]
+[ext_resource type="Script" path="res://Scripts/Dialogue/DialogueEvent.gd" id="1_rsbkw"]
+
+[node name="DialogueEvent" type="Node"]
+script = ExtResource("1_rsbkw")
+
+[node name="BlackBackgroundDialogue" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.329412)
+
+[node name="DialogueTimer" type="Timer" parent="."]
+wait_time = 0.05
+autostart = true
+
+[node name="DialogueVoiceSound" type="AudioStreamPlayer" parent="."]
+autoplay = true
+
+[node name="DialogueBoxBackground" type="TextureRect" parent="."]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -524.0
+offset_top = -170.0
+offset_right = 524.0
+offset_bottom = -42.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("1_pyedm")
+
+[node name="DialogueLeftCharacter" type="TextureRect" parent="DialogueBoxBackground"]
+unique_name_in_owner = true
+show_behind_parent = true
+layout_mode = 0
+offset_left = 41.0
+offset_top = -116.0
+offset_right = 169.0
+offset_bottom = 12.0
+texture = ExtResource("1_pyedm")
+
+[node name="DialogueRightCharacter" type="TextureRect" parent="DialogueBoxBackground"]
+unique_name_in_owner = true
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -181.0
+offset_top = -111.0
+offset_right = -53.0
+offset_bottom = 17.0
+grow_horizontal = 0
+texture = ExtResource("1_pyedm")
+flip_h = true
+
+[node name="DialogueText" type="RichTextLabel" parent="DialogueBoxBackground"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.033
+anchor_top = 0.289
+anchor_right = 0.967
+anchor_bottom = 0.969
+offset_left = 0.416
+offset_top = 0.00799942
+offset_right = -0.416077
+offset_bottom = -0.0320053
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="DialogueCharacterName" type="RichTextLabel" parent="DialogueBoxBackground"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.033
+anchor_top = 0.055
+anchor_right = 0.967
+anchor_bottom = 0.281
+offset_left = 0.416
+offset_top = -0.0400004
+offset_right = -0.416077
+offset_bottom = 0.0319977
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="DialogueContinueButton" type="Button" parent="DialogueBoxBackground"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+action_mode = 0
+
+[connection signal="timeout" from="DialogueTimer" to="." method="_on_dialogue_timer_timeout"]
+[connection signal="pressed" from="DialogueBoxBackground/DialogueContinueButton" to="." method="_on_dialogue_continue_button_pressed"]
