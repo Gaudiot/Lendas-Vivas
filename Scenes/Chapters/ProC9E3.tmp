@@ -1,0 +1,78 @@
+[gd_scene load_steps=11 format=3 uid="uid://xi2xuriaakkl"]
+
+[ext_resource type="Script" path="res://Scripts/Entities/UserGui.gd" id="1_3c7vq"]
+[ext_resource type="Resource" uid="uid://brk8dgriysuoq" path="res://Misc/PlayerInventory.tres" id="2_rk0ho"]
+[ext_resource type="PackedScene" uid="uid://dym0o8x4ttjvf" path="res://Scenes/Gui/Inventory/InventoryGui.tscn" id="3_m5v46"]
+[ext_resource type="Script" path="res://Scripts/Inventory/Inventory.gd" id="3_x1puw"]
+[ext_resource type="Texture2D" uid="uid://ckqqhryxj335x" path="res://icon.svg" id="4_q165w"]
+[ext_resource type="PackedScene" uid="uid://d2vghqcqvfq0e" path="res://Scenes/MainCharacter.tscn" id="5_58iv1"]
+
+[sub_resource type="GDScript" id="GDScript_2x4dq"]
+script/source = "extends CenterContainer
+
+var offset: Vector2
+var init_position: Vector2
+
+func _process(delta):
+	if Input.is_action_just_pressed(\"click\"):
+		offset = get_global_mouse_position() - global_position
+	elif Input.is_action_pressed(\"click\"):
+		global_position = get_global_mouse_position() - offset
+	elif Input.is_action_just_released(\"click\"):
+		var tween = get_tree().create_tween()
+		if true:
+			tween.tween_property(self, \"global_position\", init_position, 0.2).set_ease(Tween.EASE_OUT)
+		pass
+	
+"
+
+[sub_resource type="Resource" id="Resource_5hn1i"]
+script = SubResource("GDScript_2x4dq")
+
+[sub_resource type="Resource" id="Resource_xvbyy"]
+script = SubResource("GDScript_2x4dq")
+
+[sub_resource type="Resource" id="Resource_luil1"]
+script = ExtResource("3_x1puw")
+items = Array[SubResource("GDScript_2x4dq")]([SubResource("Resource_5hn1i"), null, null, null, null, null, null, null, null, null, null, SubResource("Resource_xvbyy"), null, null, null])
+
+[node name="Prologue" type="Node"]
+
+[node name="UserGui" type="CanvasLayer" parent="."]
+script = ExtResource("1_3c7vq")
+player_inventory = SubResource("Resource_luil1")
+
+[node name="InventoryGui" parent="UserGui" instance=ExtResource("3_m5v46")]
+offset_left = -340.5
+offset_top = -216.5
+offset_right = 340.5
+offset_bottom = 216.5
+
+[node name="InventoryButton" type="TextureButton" parent="UserGui"]
+self_modulate = Color(0.901961, 0.388235, 0, 1)
+offset_right = 111.0
+offset_bottom = 111.0
+texture_normal = ExtResource("4_q165w")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="InteractButton" type="TextureButton" parent="UserGui"]
+self_modulate = Color(0, 0.870588, 0.196078, 1)
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -79.0
+offset_top = -79.0
+grow_horizontal = 0
+grow_vertical = 0
+texture_normal = ExtResource("4_q165w")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Player" parent="." instance=ExtResource("5_58iv1")]
+inventory = ExtResource("2_rk0ho")
+
+[connection signal="pressed" from="UserGui/InventoryButton" to="UserGui" method="_on_inventory_button_pressed"]
+[connection signal="pressed" from="UserGui/InteractButton" to="UserGui" method="_on_interact_button_pressed"]
