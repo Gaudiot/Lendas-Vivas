@@ -9,13 +9,12 @@ var is_open: bool = false
 @onready var inventorySlots: Array = %InventorySlots.get_children()
 
 func _ready():
-	#inventory.updated.connect(update)
+	inventory.updated.connect(update)
 	update()
 
 func update():
-	#for i in range(min(inventory.items.size(), inventorySlots.size())):
-	#	inventorySlots[i].update(inventory.items[i])
-	pass
+	for i in range(min(inventory.items.size(), inventorySlots.size())):
+		inventorySlots[i].update(inventory.items[i])
 
 func toggle():
 	if is_open:

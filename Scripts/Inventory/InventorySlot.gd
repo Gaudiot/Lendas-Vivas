@@ -4,10 +4,10 @@ extends Panel
 @onready var inventory_item = $InventoryItem
 
 func update(item: Item):
+	inventory_item.storeItem(item)
 	if !item:
 		inventory_slot_sprite.frame = 0
-		inventory_item.visible = false
+		$InventoryItem.visible = false
 	else:
 		inventory_slot_sprite.frame = 1
-		inventory_item.visible = true
-		#inventoryItemSprite.texture = item.texture
+		$InventoryItem.visible = true

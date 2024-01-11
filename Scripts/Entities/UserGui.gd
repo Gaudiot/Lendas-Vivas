@@ -6,7 +6,6 @@ extends CanvasLayer
 
 func _ready():
 	#inventory_gui.close()
-	inventory_gui.open()
 	pass
 
 func _on_inventory_button_pressed():
