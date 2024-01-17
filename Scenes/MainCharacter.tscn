@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://d2vghqcqvfq0e"]
+
+[ext_resource type="Script" path="res://Scripts/Entities/Player.gd" id="1_pqdqm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fghye"]
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_pqdqm")
+
+[node name="PlayerSprite" type="AnimatedSprite2D" parent="."]
+
+[node name="PlayerCollision" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_fghye")
+debug_color = Color(0.14902, 0.647059, 0, 0.419608)

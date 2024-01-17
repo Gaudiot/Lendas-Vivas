@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Inventory" load_steps=5 format=3 uid="uid://brk8dgriysuoq"]
+
+[ext_resource type="Resource" uid="uid://b5kdoxobdp41p" path="res://Assets/Items/Resources/Paper.item.tres" id="1_koyi0"]
+[ext_resource type="Resource" uid="uid://c7ugnmlwqhsn4" path="res://Assets/Items/Resources/Pen.item.tres" id="2_eodw2"]
+[ext_resource type="Resource" uid="uid://bwdsbc6ffu3cp" path="res://Assets/Items/Resources/Placeholder.item.tres" id="3_meq11"]
+[ext_resource type="Script" path="res://Scripts/Inventory/Inventory.gd" id="3_syk8q"]
+
+[resource]
+script = ExtResource("3_syk8q")
+items = Array[Resource("res://Scripts/Entities/Item.gd")]([ExtResource("3_meq11"), null, null, null, null, null, null, null, ExtResource("1_koyi0"), null, null, ExtResource("3_meq11"), null, null, ExtResource("2_eodw2")])

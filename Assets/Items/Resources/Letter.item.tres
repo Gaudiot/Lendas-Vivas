@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://ccpulbvhflkhk"]
+
+[ext_resource type="Script" path="res://Scripts/Entities/Item.gd" id="1_aqqyg"]
+[ext_resource type="Texture2D" uid="uid://dmcen85wqnloj" path="res://Assets/Items/Images/letter.png" id="2_bqdg8"]
+
+[resource]
+script = ExtResource("1_aqqyg")
+id = "Letter"
+name = "Letter"
+texture = ExtResource("2_bqdg8")

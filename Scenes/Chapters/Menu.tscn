@@ -1,0 +1,97 @@
+[gd_scene load_steps=6 format=3 uid="uid://ctvivhe18irto"]
+
+[ext_resource type="Texture2D" uid="uid://ckqqhryxj335x" path="res://icon.svg" id="1_d6ssr"]
+[ext_resource type="Script" path="res://Scripts/Menu/EncyclopediaButton.gd" id="2_6fvgk"]
+[ext_resource type="Script" path="res://Scripts/Menu/ExitGameButton.gd" id="2_emepl"]
+[ext_resource type="Script" path="res://Scripts/Menu/StartGameButton.gd" id="2_ihopq"]
+[ext_resource type="Texture2D" uid="uid://cfucm2oj7lf3q" path="res://Assets/Menu/GameLogo.png" id="3_v37sm"]
+
+[node name="Menu" type="Node"]
+
+[node name="MenuBackground" type="TextureRect" parent="."]
+texture_filter = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_d6ssr")
+
+[node name="MenuButtons" type="Node" parent="."]
+
+[node name="StartGameButton" type="Button" parent="MenuButtons"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -108.0
+offset_top = -4.0
+offset_right = 108.0
+offset_bottom = 68.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Iniciar"
+script = ExtResource("2_ihopq")
+
+[node name="ContinueGameButton" type="Button" parent="MenuButtons"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -110.0
+offset_top = 85.0
+offset_right = 103.0
+offset_bottom = 161.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Continuar"
+
+[node name="EncyclopediaButton" type="Button" parent="MenuButtons"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -114.0
+offset_top = 172.0
+offset_right = 101.0
+offset_bottom = 224.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Enciclopedia"
+script = ExtResource("2_6fvgk")
+
+[node name="ExitGameButton" type="Button" parent="MenuButtons"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -112.0
+offset_top = 240.0
+offset_right = 103.0
+offset_bottom = 303.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Sair"
+script = ExtResource("2_emepl")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -460.0
+offset_top = -266.0
+offset_right = 481.0
+offset_bottom = -159.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_v37sm")
+
+[connection signal="pressed" from="MenuButtons/StartGameButton" to="MenuButtons/StartGameButton" method="_on_pressed"]
+[connection signal="pressed" from="MenuButtons/EncyclopediaButton" to="MenuButtons/EncyclopediaButton" method="_on_pressed"]
+[connection signal="pressed" from="MenuButtons/ExitGameButton" to="MenuButtons/ExitGameButton" method="_on_pressed"]

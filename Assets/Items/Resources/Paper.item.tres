@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://b5kdoxobdp41p"]
+
+[ext_resource type="Resource" uid="uid://ccpulbvhflkhk" path="res://Assets/Items/Resources/Letter.item.tres" id="1_21fs8"]
+[ext_resource type="Script" path="res://Scripts/Entities/Item.gd" id="1_emg35"]
+[ext_resource type="Texture2D" uid="uid://c8vewdiy17dbk" path="res://Assets/Items/Images/paper.png" id="2_jk0s1"]
+
+[resource]
+script = ExtResource("1_emg35")
+id = "Paper"
+name = "Paper"
+texture = ExtResource("2_jk0s1")
+combine_with_item_id = "Pen"
+result_when_combine = ExtResource("1_21fs8")
