@@ -31,8 +31,8 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -79.0
-offset_top = -79.0
+offset_left = -382.0
+offset_top = -382.0
 grow_horizontal = 0
 grow_vertical = 0
 texture_normal = ExtResource("4_q165w")
@@ -40,6 +40,11 @@ ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Player" parent="." instance=ExtResource("5_58iv1")]
+script = null
+
+[node name="Sprite2D" type="Sprite2D" parent="Player"]
+position = Vector2(578, 328)
+texture = ExtResource("4_q165w")
 
 [connection signal="pressed" from="UserGui/InventoryButton" to="UserGui" method="_on_inventory_button_pressed"]
 [connection signal="pressed" from="UserGui/InteractButton" to="UserGui" method="_on_interact_button_pressed"]

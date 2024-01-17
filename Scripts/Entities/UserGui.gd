@@ -5,7 +5,7 @@ extends CanvasLayer
 @export var player_inventory: Inventory
 
 func _ready():
-	#inventory_gui.close()
+	inventory_gui.close()
 	pass
 
 func _on_inventory_button_pressed():
