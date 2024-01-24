@@ -1,0 +1,67 @@
+[gd_scene load_steps=11 format=3 uid="uid://do36qaava0u8k"]
+
+[ext_resource type="Texture2D" uid="uid://ckqqhryxj335x" path="res://icon.svg" id="1_dacd0"]
+[ext_resource type="Script" path="res://Scripts/Entities/Collectable.gd" id="1_u40hy"]
+[ext_resource type="Texture2D" uid="uid://gr7kl4r0h7vf" path="res://Assets/Items/Images/indicator.png" id="2_ndvfr"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ortr5"]
+atlas = ExtResource("2_ndvfr")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_knmyb"]
+atlas = ExtResource("2_ndvfr")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7c87a"]
+atlas = ExtResource("2_ndvfr")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6g8df"]
+atlas = ExtResource("2_ndvfr")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mmikr"]
+atlas = ExtResource("2_ndvfr")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4m5yu"]
+atlas = ExtResource("2_ndvfr")
+region = Rect2(80, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gkbsk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ortr5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_knmyb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7c87a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6g8df")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mmikr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4m5yu")
+}],
+"loop": true,
+"name": &"Indicator",
+"speed": 6.0
+}]
+
+[node name="Collectable" type="Node2D"]
+script = ExtResource("1_u40hy")
+
+[node name="CollectableSprite" type="Sprite2D" parent="."]
+self_modulate = Color(1, 0.0509804, 0.47451, 1)
+texture = ExtResource("1_dacd0")
+
+[node name="CollectableIndicator" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_gkbsk")
+animation = &"Indicator"
+autoplay = "Indicator"

@@ -1,50 +1,67 @@
-[gd_scene load_steps=5 format=3 uid="uid://xi2xuriaakkl"]
+[gd_scene load_steps=7 format=3 uid="uid://xi2xuriaakkl"]
 
-[ext_resource type="Script" path="res://Scripts/Entities/UserGui.gd" id="1_3c7vq"]
-[ext_resource type="PackedScene" uid="uid://dym0o8x4ttjvf" path="res://Scenes/Gui/Inventory/InventoryGui.tscn" id="3_m5v46"]
 [ext_resource type="Texture2D" uid="uid://ckqqhryxj335x" path="res://icon.svg" id="4_q165w"]
 [ext_resource type="PackedScene" uid="uid://d2vghqcqvfq0e" path="res://Scenes/MainCharacter.tscn" id="5_58iv1"]
+[ext_resource type="PackedScene" uid="uid://brc301dhk383d" path="res://Components/Obstacles/RectangleObstacle.tscn" id="5_a4sl3"]
+[ext_resource type="PackedScene" uid="uid://do36qaava0u8k" path="res://Scenes/Collectables/Collectable.tscn" id="5_dj30u"]
+[ext_resource type="Texture2D" uid="uid://cc5upq8ls8tkx" path="res://Assets/Backgrounds/Prologue/House.png" id="6_csy6n"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_llqn1"]
+size = Vector2(20.915, 128)
 
 [node name="Prologue" type="Node"]
 
-[node name="UserGui" type="CanvasLayer" parent="."]
-script = ExtResource("1_3c7vq")
-
-[node name="InventoryGui" parent="UserGui" instance=ExtResource("3_m5v46")]
-offset_left = -340.5
-offset_top = -216.5
-offset_right = 340.5
-offset_bottom = 216.5
-
-[node name="InventoryButton" type="TextureButton" parent="UserGui"]
-self_modulate = Color(0.901961, 0.388235, 0, 1)
-offset_right = 111.0
-offset_bottom = 111.0
-texture_normal = ExtResource("4_q165w")
-ignore_texture_size = true
-stretch_mode = 0
-
-[node name="InteractButton" type="TextureButton" parent="UserGui"]
-self_modulate = Color(0, 0.870588, 0.196078, 1)
-anchors_preset = 3
-anchor_left = 1.0
-anchor_top = 1.0
+[node name="Background" type="TextureRect" parent="."]
+texture_filter = 1
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -382.0
-offset_top = -382.0
-grow_horizontal = 0
-grow_vertical = 0
-texture_normal = ExtResource("4_q165w")
-ignore_texture_size = true
-stretch_mode = 0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_csy6n")
+stretch_mode = 1
 
 [node name="Player" parent="." instance=ExtResource("5_58iv1")]
-script = null
+position = Vector2(760, 360)
+scale = Vector2(5.08, 5.08)
 
-[node name="Sprite2D" type="Sprite2D" parent="Player"]
-position = Vector2(578, 328)
+[node name="Collectable" parent="." instance=ExtResource("5_dj30u")]
+position = Vector2(160, 524)
+
+[node name="CollectableSprite" parent="Collectable/Area2D" index="0"]
 texture = ExtResource("4_q165w")
 
-[connection signal="pressed" from="UserGui/InventoryButton" to="UserGui" method="_on_inventory_button_pressed"]
-[connection signal="pressed" from="UserGui/InteractButton" to="UserGui" method="_on_interact_button_pressed"]
+[node name="CollisionShape2D" parent="Collectable/Area2D" index="1"]
+position = Vector2(-0.5, -0.5)
+scale = Vector2(1.4, 1.4)
+
+[node name="Obstacleeee" type="StaticBody2D" parent="."]
+position = Vector2(1382, 274)
+collision_layer = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="Obstacleeee"]
+texture = ExtResource("4_q165w")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacleeee"]
+scale = Vector2(6.12, 1)
+shape = SubResource("RectangleShape2D_llqn1")
+
+[node name="Walls" type="Node2D" parent="."]
+
+[node name="RectangleObstacle" parent="Walls" instance=ExtResource("5_a4sl3")]
+position = Vector2(-11, 360)
+scale = Vector2(1, 37)
+
+[node name="RectangleObstacle2" parent="Walls" instance=ExtResource("5_a4sl3")]
+position = Vector2(1530, 361)
+scale = Vector2(1, 37)
+
+[node name="RectangleObstacle3" parent="Walls" instance=ExtResource("5_a4sl3")]
+position = Vector2(760, -10)
+scale = Vector2(77, 1)
+
+[node name="RectangleObstacle4" parent="Walls" instance=ExtResource("5_a4sl3")]
+position = Vector2(760, 730)
+scale = Vector2(77, 1)
+
+[editable path="Collectable"]
