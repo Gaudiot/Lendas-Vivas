@@ -14,7 +14,9 @@ func _ready():
 
 func update():
 	for i in range(min(inventory.items.size(), inventorySlots.size())):
-		inventorySlots[i].update(inventory.items[i])
+		var item: Item = inventory.items[i]
+		var isItemSelected: bool = (item == inventory.selected_item)
+		inventorySlots[i].update(item, isItemSelected)
 
 func toggle():
 	if is_open:

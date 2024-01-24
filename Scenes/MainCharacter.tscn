@@ -1,14 +1,262 @@
-[gd_scene load_steps=3 format=3 uid="uid://d2vghqcqvfq0e"]
+[gd_scene load_steps=34 format=3 uid="uid://d2vghqcqvfq0e"]
 
+[ext_resource type="Texture2D" uid="uid://ckqqhryxj335x" path="res://icon.svg" id="1_6fmre"]
+[ext_resource type="Script" path="res://Scripts/Entities/PlayerUI.gd" id="1_87dt3"]
 [ext_resource type="Script" path="res://Scripts/Entities/Player.gd" id="1_pqdqm"]
+[ext_resource type="Texture2D" uid="uid://cpm23nemh72ge" path="res://Assets/Characters/Player/Idle (32x32).png" id="2_oy6rw"]
+[ext_resource type="Texture2D" uid="uid://cmh6w6y1qnept" path="res://Assets/Characters/Player/Run (32x32).png" id="3_2ml81"]
+[ext_resource type="PackedScene" uid="uid://bnoax4p4hjeit" path="res://Components/Joystick/Joystick.tscn" id="3_trvi3"]
+[ext_resource type="Resource" uid="uid://brk8dgriysuoq" path="res://Misc/PlayerInventory.tres" id="5_uqixg"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ix6t4"]
+atlas = ExtResource("2_oy6rw")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dav4v"]
+atlas = ExtResource("2_oy6rw")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_regfw"]
+atlas = ExtResource("2_oy6rw")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3ri80"]
+atlas = ExtResource("2_oy6rw")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8fb4y"]
+atlas = ExtResource("2_oy6rw")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jsfqo"]
+atlas = ExtResource("2_oy6rw")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0ckdk"]
+atlas = ExtResource("2_oy6rw")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hxoll"]
+atlas = ExtResource("2_oy6rw")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6rth5"]
+atlas = ExtResource("2_oy6rw")
+region = Rect2(256, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l4c0t"]
+atlas = ExtResource("2_oy6rw")
+region = Rect2(288, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_exwgm"]
+atlas = ExtResource("2_oy6rw")
+region = Rect2(320, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4xg2b"]
+atlas = ExtResource("3_2ml81")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lc4no"]
+atlas = ExtResource("3_2ml81")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7sffe"]
+atlas = ExtResource("3_2ml81")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5umuj"]
+atlas = ExtResource("3_2ml81")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6iuen"]
+atlas = ExtResource("3_2ml81")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ftq6v"]
+atlas = ExtResource("3_2ml81")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4x410"]
+atlas = ExtResource("3_2ml81")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5k5x3"]
+atlas = ExtResource("3_2ml81")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fl5fd"]
+atlas = ExtResource("3_2ml81")
+region = Rect2(256, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xt7qo"]
+atlas = ExtResource("3_2ml81")
+region = Rect2(288, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tww5t"]
+atlas = ExtResource("3_2ml81")
+region = Rect2(320, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1djwn"]
+atlas = ExtResource("3_2ml81")
+region = Rect2(352, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0avbc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ix6t4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dav4v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_regfw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3ri80")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8fb4y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jsfqo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0ckdk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hxoll")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6rth5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l4c0t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_exwgm")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 11.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4xg2b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lc4no")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7sffe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5umuj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6iuen")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ftq6v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4x410")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5k5x3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fl5fd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xt7qo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tww5t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1djwn")
+}],
+"loop": true,
+"name": &"Running",
+"speed": 11.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fghye"]
+size = Vector2(17.8363, 21.2719)
 
-[node name="Player" type="CharacterBody2D"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rcxhp"]
+radius = 11.3304
+
+[node name="PlayerRoot" type="Node2D"]
+texture_filter = 1
+position = Vector2(2, -2)
+scale = Vector2(13.68, 13.68)
+
+[node name="PlayerUI" type="CanvasLayer" parent="."]
+script = ExtResource("1_87dt3")
+
+[node name="InventoryButton" type="TextureButton" parent="PlayerUI"]
+self_modulate = Color(0.843137, 0.839216, 0, 1)
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -128.0
+offset_bottom = 128.0
+grow_horizontal = 0
+texture_normal = ExtResource("1_6fmre")
+
+[node name="InteractButton" type="TextureButton" parent="PlayerUI"]
+self_modulate = Color(0.792157, 0.494118, 0.933333, 1)
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -128.0
+offset_top = -128.0
+grow_horizontal = 0
+grow_vertical = 0
+texture_normal = ExtResource("1_6fmre")
+
+[node name="Joystick" parent="PlayerUI" instance=ExtResource("3_trvi3")]
+unique_name_in_owner = true
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 96.0
+offset_top = -96.0
+offset_right = 96.0
+offset_bottom = -96.0
+grow_vertical = 0
+scale = Vector2(0.5, 0.5)
+
+[node name="Player" type="CharacterBody2D" parent="."]
 script = ExtResource("1_pqdqm")
+player_inventory = ExtResource("5_uqixg")
 
-[node name="PlayerSprite" type="AnimatedSprite2D" parent="."]
+[node name="PlayerSprite" type="AnimatedSprite2D" parent="Player"]
+sprite_frames = SubResource("SpriteFrames_0avbc")
+animation = &"Running"
+autoplay = "Idle"
 
-[node name="PlayerCollision" type="CollisionShape2D" parent="."]
+[node name="PlayerCollision" type="CollisionShape2D" parent="Player"]
+visibility_layer = 12
+position = Vector2(0.438596, 0.402046)
 shape = SubResource("RectangleShape2D_fghye")
 debug_color = Color(0.14902, 0.647059, 0, 0.419608)
+
+[node name="PlayerInteractArea" type="Area2D" parent="Player"]
+collision_mask = 6
+
+[node name="PlayerInteractBox" type="CollisionShape2D" parent="Player/PlayerInteractArea"]
+light_mask = 2
+visibility_layer = 256
+position = Vector2(0.657895, 0.657895)
+shape = SubResource("CapsuleShape2D_rcxhp")
+
+[node name="PlayerCamera" type="Camera2D" parent="."]
+unique_name_in_owner = true
+
+[connection signal="button_down" from="PlayerUI/InventoryButton" to="PlayerUI" method="_on_inventory_button_button_down"]
+[connection signal="button_down" from="PlayerUI/InteractButton" to="PlayerUI" method="_on_interact_button_button_down"]

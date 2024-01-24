@@ -6,6 +6,8 @@
 size = Vector2(56, 55)
 
 [node name="InventoryItem" type="CenterContainer" groups=["item"]]
+light_mask = 512
+visibility_layer = 512
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
