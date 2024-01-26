@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="FolkloreInfo" load_steps=3 format=3 uid="uid://d0g5nqm2evx0m"]
+
+[ext_resource type="Script" path="res://Scripts/Entities/folkloreInfo/folkloreInfo.gd" id="1_k8cmc"]
+[ext_resource type="Texture2D" uid="uid://ckqqhryxj335x" path="res://icon.svg" id="1_xgl57"]
+
+[resource]
+script = ExtResource("1_k8cmc")
+folklore_image = ExtResource("1_xgl57")
+folklore_name = "Pisadeira"
+folklore_details = "Pisadeira info text"

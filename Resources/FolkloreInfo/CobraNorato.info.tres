@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="FolkloreInfo" load_steps=3 format=3 uid="uid://xyatec7dwylm"]
+
+[ext_resource type="Texture2D" uid="uid://ckqqhryxj335x" path="res://icon.svg" id="1_b5vc4"]
+[ext_resource type="Script" path="res://Scripts/Entities/folkloreInfo/folkloreInfo.gd" id="1_m0mkh"]
+
+[resource]
+script = ExtResource("1_m0mkh")
+folklore_image = ExtResource("1_b5vc4")
+folklore_name = "Cobra Norato"
+folklore_details = "Cobra Norato info text"

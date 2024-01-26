@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="FolkloreInfo" load_steps=3 format=3 uid="uid://bnrf03weumf76"]
+
+[ext_resource type="Texture2D" uid="uid://ckqqhryxj335x" path="res://icon.svg" id="1_c0lj6"]
+[ext_resource type="Script" path="res://Scripts/Entities/folkloreInfo/folkloreInfo.gd" id="1_jcx02"]
+
+[resource]
+script = ExtResource("1_jcx02")
+folklore_image = ExtResource("1_c0lj6")
+folklore_name = "Anhangá"
+folklore_details = "A figura de Anhangá é envolta em mistério e respeito. Anhangá, muitas vezes retratado como uma entidade sobrenatural, é considerado o guardião da floresta e um mensageiro entre o mundo dos vivos e dos mortos.
+
+Diz a lenda que Anhangá possui características ambivalentes, alternando entre um protetor dos animais e da natureza e um ser travesso que pode assombrar os viajantes na floresta. Seu nome também é associado a algumas criaturas noturnas, como lobos e cães selvagens.
+
+Além de sua conexão com a vida selvagem, Anhangá é frequentemente mencionado como um guia espiritual, auxiliando almas perdidas em sua jornada após a morte. Seu papel como mensageiro do além é vital nas crenças indígenas, proporcionando uma ponte entre o plano terreno e o espiritual.
+
+Assim, a lenda de Anhangá perdura como uma narrativa rica, simbolizando a dualidade da natureza e servindo como um recordatório do equilíbrio necessário entre o homem e o meio ambiente, bem como entre a vida e a morte."

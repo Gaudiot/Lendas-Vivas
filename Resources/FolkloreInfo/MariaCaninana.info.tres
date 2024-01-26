@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="FolkloreInfo" load_steps=3 format=3 uid="uid://bic0pji2pr7xc"]
+
+[ext_resource type="Script" path="res://Scripts/Entities/folkloreInfo/folkloreInfo.gd" id="1_8pfr4"]
+[ext_resource type="Texture2D" uid="uid://ckqqhryxj335x" path="res://icon.svg" id="1_uotdj"]
+
+[resource]
+script = ExtResource("1_8pfr4")
+folklore_image = ExtResource("1_uotdj")
+folklore_name = "Maria Caninana"
+folklore_details = "Maria Caninana info text"

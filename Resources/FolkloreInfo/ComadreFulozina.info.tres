@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="FolkloreInfo" load_steps=3 format=3 uid="uid://b6ef0lv1n1m2f"]
+
+[ext_resource type="Texture2D" uid="uid://ckqqhryxj335x" path="res://icon.svg" id="1_4405o"]
+[ext_resource type="Script" path="res://Scripts/Entities/folkloreInfo/folkloreInfo.gd" id="1_lryct"]
+
+[resource]
+script = ExtResource("1_lryct")
+folklore_image = ExtResource("1_4405o")
+folklore_name = "Comadre Fulozinha"
+folklore_details = "Comadre Fulozinha info text"

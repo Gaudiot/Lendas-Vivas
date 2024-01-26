@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="FolkloreInfo" load_steps=3 format=3 uid="uid://bx15pyomfn0vd"]
+
+[ext_resource type="Texture2D" uid="uid://ckqqhryxj335x" path="res://icon.svg" id="1_ikj84"]
+[ext_resource type="Script" path="res://Scripts/Entities/folkloreInfo/folkloreInfo.gd" id="1_qmug4"]
+
+[resource]
+script = ExtResource("1_qmug4")
+folklore_image = ExtResource("1_ikj84")
+folklore_name = "Curupira"
+folklore_details = "Curupira info text"

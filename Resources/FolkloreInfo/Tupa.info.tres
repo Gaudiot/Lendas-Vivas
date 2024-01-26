@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="FolkloreInfo" load_steps=3 format=3 uid="uid://cwspfnsbshrbn"]
+
+[ext_resource type="Texture2D" uid="uid://bdhk0x1wlco5p" path="res://Yellow.png" id="1_ljlax"]
+[ext_resource type="Script" path="res://Scripts/Entities/folkloreInfo/folkloreInfo.gd" id="1_obibu"]
+
+[resource]
+script = ExtResource("1_obibu")
+folklore_image = ExtResource("1_ljlax")
+folklore_name = "Tupã"
+folklore_details = "Tupa info text"
