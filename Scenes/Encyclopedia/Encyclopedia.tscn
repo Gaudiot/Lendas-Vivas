@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://b6tydcyjbwaah"]
+[gd_scene load_steps=17 format=3 uid="uid://b6tydcyjbwaah"]
 
 [ext_resource type="Texture2D" uid="uid://ckqqhryxj335x" path="res://icon.svg" id="1_1teu4"]
 [ext_resource type="Script" path="res://Scripts/Encyclopedia/Encyclopedia.gd" id="1_cariu"]
@@ -16,7 +16,6 @@
 [ext_resource type="Script" path="res://Scripts/Encyclopedia/FolkloreInfo.gd" id="13_wrsx4"]
 [ext_resource type="AudioStream" uid="uid://drc2vuj14i1fj" path="res://Assets/Sounds/Backgrounds/encyclopedia-background.ogg" id="15_unner"]
 [ext_resource type="FontFile" uid="uid://dlp1q0ohm3gb3" path="res://Assets/Fonts/Puimek/puimek.ttf" id="15_x5ki5"]
-[ext_resource type="FontFile" uid="uid://8ynndjpnj7rj" path="res://Assets/Fonts/Ladi/Ladi-Weak.otf" id="16_swc71"]
 
 [node name="Encyclopedia" type="CanvasLayer"]
 script = ExtResource("1_cariu")
@@ -106,7 +105,7 @@ offset_top = -111.0
 offset_right = 523.0
 offset_bottom = 231.0
 theme_override_fonts/normal_font = ExtResource("15_x5ki5")
-theme_override_fonts/bold_font = ExtResource("16_swc71")
+bbcode_enabled = true
 text = " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis nisl sapien, dapibus a augue quis, dictum dictum quam. Morbi quis urna id mauris laoreet aliquet. Quisque maximus magna in neque consectetur cursus a vitae augue. Nullam mattis erat eget risus fringilla, nec volutpat metus feugiat. Morbi tempus, lorem non gravida ultrices, justo augue egestas risus, sed rutrum magna sem sed purus. Suspendisse interdum justo turpis, ut varius diam vehicula accumsan. Quisque lobortis euismod ante. Sed dapibus elit et convallis aliquam. Curabitur aliquam diam et augue dignissim, quis ullamcorper purus consequat. Sed porttitor pulvinar nibh, luctus laoreet magna ornare vitae. Nulla facilisi. Vivamus sed quam euismod, efficitur nibh et, tempor augue.
 
 Etiam congue lacus vel turpis sollicitudin, id elementum mauris placerat. Phasellus vel ipsum odio. In eleifend libero sit amet felis ultricies consequat. Maecenas vehicula nisi augue, id dictum ipsum pharetra at. Nullam et condimentum odio. Fusce et imperdiet libero, ut posuere nibh. Morbi fermentum mauris at sapien viverra blandit. Vestibulum efficitur odio at dui lacinia, et hendrerit metus porttitor. Mauris neque dolor, fringilla id est id, malesuada iaculis metus. In dignissim vel mauris ut lobortis. Donec consectetur leo in tristique posuere. Donec sed lacus non dolor maximus vestibulum. "
