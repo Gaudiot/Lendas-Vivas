@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="FolkloreInfo" load_steps=3 format=3 uid="uid://xyatec7dwylm"]
+
+[ext_resource type="Texture2D" uid="uid://ckqqhryxj335x" path="res://icon.svg" id="1_b5vc4"]
+[ext_resource type="Script" path="res://Scripts/Entities/folkloreInfo/folkloreInfo.gd" id="1_m0mkh"]
+
+[resource]
+script = ExtResource("1_m0mkh")
+folklore_image = ExtResource("1_b5vc4")
+folklore_name = "Cobra Norato"
+folklore_details = "Diz a lenda, originária da região norte do Brasil, que uma mulher indígena, enquanto se banhava no rio Claro, percebeu subitamente que estava grávida, tendo sido fecundada por Boiuna, uma serpente gigante que figura no folclore brasileiro. Eventualmente, a mulher deu à luz gêmeos que, na verdade, eram cobras.
+
+A mãe, assustada com a situação, consultou o pajé da tribo sobre o que deveria fazer, cogitando até matá-los. O pajé instruiu que tal ato não poderia ser cometido, pois os filhos eram presentes de uma divindade das águas, e se fosse realizado, a mãe morreria junto com os filhos. Sem desejar a morte, mas também relutante em lidar com a situação, a mulher optou por abandonar os gêmeos no rio.
+
+À medida que cresciam, transformando-se em serpentes gigantescas, os gêmeos foram batizados de Cobra Norato e Maria Caninana.
+
+Cobra Norato, também conhecido como Honorato, nascera com um coração benevolente, evitando causar mal a qualquer pessoa. Sempre disposto a ajudar quando possível, impediu inúmeros afogamentos. À noite, transformava-se em um jovem atraente para visitar sua mãe, que não guardava rancor, e participava de festas nas cidades ribeirinhas. Ao amanhecer, retornava à forma de cobra e ao rio.
+
+Um dia, cansado das maldades de sua irmã, Cobra Norato enfrentou Maria Caninana no rio Madeira para encerrar tal comportamento. Após uma luta intensa, Cobra Norato acabou matando a irmã.
+
+Decidido a se tornar humano de uma vez por todas, Honorato estabeleceu que alguém deveria encontrá-lo adormecido, pingar três gotas de leite de mulher em sua boca e apunhalá-lo na cabeça com um cutelo de ferro virgem até que sangrasse. Ninguém teve coragem de realizar tal rito, dado o medo de cobras. Contudo, em uma festa, Honorato conheceu um soldado que aceitou realizar o pedido, e assim, Honorato deixou de ser uma cobra."
