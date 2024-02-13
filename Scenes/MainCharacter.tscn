@@ -1,12 +1,14 @@
-[gd_scene load_steps=34 format=3 uid="uid://d2vghqcqvfq0e"]
+[gd_scene load_steps=36 format=3 uid="uid://d2vghqcqvfq0e"]
 
 [ext_resource type="Texture2D" uid="uid://ckqqhryxj335x" path="res://icon.svg" id="1_6fmre"]
 [ext_resource type="Script" path="res://Scripts/Entities/PlayerUI.gd" id="1_87dt3"]
 [ext_resource type="Script" path="res://Scripts/Entities/Player.gd" id="1_pqdqm"]
 [ext_resource type="Texture2D" uid="uid://cpm23nemh72ge" path="res://Assets/Characters/Player/Idle (32x32).png" id="2_oy6rw"]
+[ext_resource type="Texture2D" uid="uid://g1uvkthojkyn" path="res://Assets/Icons/Bag.png" id="2_vl5tk"]
 [ext_resource type="Texture2D" uid="uid://cmh6w6y1qnept" path="res://Assets/Characters/Player/Run (32x32).png" id="3_2ml81"]
 [ext_resource type="PackedScene" uid="uid://bnoax4p4hjeit" path="res://Components/Joystick/Joystick.tscn" id="3_trvi3"]
-[ext_resource type="Resource" uid="uid://brk8dgriysuoq" path="res://Misc/PlayerInventory.tres" id="5_uqixg"]
+[ext_resource type="PackedScene" uid="uid://dym0o8x4ttjvf" path="res://Components/Gui/Inventory/InventoryGui.tscn" id="5_n444n"]
+[ext_resource type="Resource" uid="uid://d4b85bnj7jqr4" path="res://Misc/PlayerInventory.tres" id="5_uqixg"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ix6t4"]
 atlas = ExtResource("2_oy6rw")
@@ -201,10 +203,14 @@ self_modulate = Color(0.843137, 0.839216, 0, 1)
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -128.0
-offset_bottom = 128.0
+offset_left = -244.0
+offset_top = 90.0
+offset_right = 268.0
+offset_bottom = 602.0
 grow_horizontal = 0
-texture_normal = ExtResource("1_6fmre")
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("2_vl5tk")
+stretch_mode = 0
 
 [node name="InteractButton" type="TextureButton" parent="PlayerUI"]
 self_modulate = Color(0.792157, 0.494118, 0.933333, 1)
@@ -219,17 +225,28 @@ grow_horizontal = 0
 grow_vertical = 0
 texture_normal = ExtResource("1_6fmre")
 
+[node name="InventoryGui" parent="PlayerUI" instance=ExtResource("5_n444n")]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -60.0
+offset_right = 100.0
+offset_bottom = 60.0
+
 [node name="Joystick" parent="PlayerUI" instance=ExtResource("3_trvi3")]
 unique_name_in_owner = true
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_left = 96.0
-offset_top = -96.0
-offset_right = 96.0
-offset_bottom = -96.0
+offset_left = 165.0
+offset_top = -165.0
+offset_right = 165.0
+offset_bottom = -165.0
 grow_vertical = 0
-scale = Vector2(0.5, 0.5)
+scale = Vector2(0.299999, 0.299999)
 
 [node name="Player" type="CharacterBody2D" parent="."]
 script = ExtResource("1_pqdqm")

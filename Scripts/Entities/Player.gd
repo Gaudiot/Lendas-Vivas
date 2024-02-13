@@ -30,13 +30,6 @@ func _physics_process(delta):
 		
 	if velocity.x != 0:
 		player_sprite.flip_h = (velocity.x < 0)
-	if velocity.y != 0:
-		var y = position.y
-		var a = 0.5/7200.0
-		var b = 1/(-3600.0)
-		var c = 1.2/7200.0
-		var m = a*(y)*(y-60) + b*(y-60)*(y+60) + c*(y)*(y+60)
-		scale = Vector2.ONE*m
 		
 	move_and_slide()
 	_updateCameraPosition()

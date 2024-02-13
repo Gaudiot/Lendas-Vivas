@@ -1,26 +1,21 @@
-[gd_scene load_steps=4 format=3 uid="uid://bnoax4p4hjeit"]
+[gd_scene load_steps=5 format=3 uid="uid://bnoax4p4hjeit"]
 
-[ext_resource type="Texture2D" uid="uid://ckqqhryxj335x" path="res://icon.svg" id="1_nqpiu"]
 [ext_resource type="Script" path="res://Components/Joystick/Joystick.gd" id="1_toofw"]
+[ext_resource type="Texture2D" uid="uid://ctudyccv285ee" path="res://Components/Joystick/JoystickRing.png" id="2_x6pmt"]
+[ext_resource type="Texture2D" uid="uid://dk8imj2iduirj" path="res://Components/Joystick/JoystickKnob.png" id="3_6gh8p"]
 [ext_resource type="Script" path="res://Components/Joystick/Knob.gd" id="3_sg245"]
 
 [node name="Joystick" type="Control"]
 layout_mode = 3
 anchors_preset = 0
-offset_left = 193.0
-offset_top = 189.0
-offset_right = 193.0
-offset_bottom = 189.0
+size_flags_horizontal = 0
 script = ExtResource("1_toofw")
 
 [node name="Ring" type="Sprite2D" parent="."]
-self_modulate = Color(0, 0.533333, 0.560784, 1)
-scale = Vector2(3, 3)
-texture = ExtResource("1_nqpiu")
+texture = ExtResource("2_x6pmt")
 
 [node name="Knob" type="Sprite2D" parent="."]
-self_modulate = Color(0.588235, 0.803922, 0.188235, 1)
-texture = ExtResource("1_nqpiu")
+texture = ExtResource("3_6gh8p")
 script = ExtResource("3_sg245")
 
 [node name="Button" type="Button" parent="."]

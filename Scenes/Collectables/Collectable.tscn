@@ -1,7 +1,7 @@
 [gd_scene load_steps=12 format=3 uid="uid://do36qaava0u8k"]
 
 [ext_resource type="Script" path="res://Scripts/Entities/Collectables/Collectable.gd" id="1_qtg2r"]
-[ext_resource type="Texture2D" uid="uid://gr7kl4r0h7vf" path="res://Assets/Items/Images/indicator.png" id="2_ndvfr"]
+[ext_resource type="Texture2D" uid="uid://gr7kl4r0h7vf" path="res://Assets/Items/indicator.png" id="2_ndvfr"]
 [ext_resource type="Script" path="res://Scripts/Entities/Collectables/CollectableIndicator.gd" id="4_hgio4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mda5d"]
