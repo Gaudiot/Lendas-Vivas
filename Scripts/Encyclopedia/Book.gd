@@ -13,16 +13,12 @@ func _ready():
 	_update_page()
 	
 func _on_previous_page_button_down():
-	print("pressed prev")
 	if current_page > 0:
-		print("worked prev")
 		current_page -= 1
 		_update_page()
 
 func _on_next_page_button_down():
-	print("pressed next")
 	if current_page + 1 < folklore_list.size():
-		print("worked next")
 		current_page += 1
 		_update_page()
 		

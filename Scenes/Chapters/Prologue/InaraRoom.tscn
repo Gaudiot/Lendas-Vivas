@@ -2,49 +2,22 @@
 
 [ext_resource type="Texture2D" uid="uid://cc5upq8ls8tkx" path="res://Assets/Backgrounds/Prologue/House.png" id="1_3kivc"]
 [ext_resource type="PackedScene" uid="uid://d2vghqcqvfq0e" path="res://Scenes/MainCharacter.tscn" id="2_7gxya"]
-[ext_resource type="PackedScene" uid="uid://do36qaava0u8k" path="res://Scenes/Collectables/Collectable.tscn" id="3_xrya6"]
-[ext_resource type="Texture2D" uid="uid://ckqqhryxj335x" path="res://icon.svg" id="4_y467e"]
+[ext_resource type="PackedScene" uid="uid://liokbtu0disx" path="res://Components/Portals/Portal.tscn" id="4_ctjt0"]
+[ext_resource type="Resource" uid="uid://1w8f77hk2hl1" path="res://Resources/Portals/Menu.portal.tres" id="5_55bla"]
 [ext_resource type="PackedScene" uid="uid://brc301dhk383d" path="res://Components/Obstacles/RectangleObstacle.tscn" id="5_gwcd2"]
+[ext_resource type="Resource" uid="uid://blskyga58567u" path="res://Resources/Portals/Prologue/LivingRoom.portal.tres" id="5_vsnvb"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_llqn1"]
-size = Vector2(20.915, 128)
+[node name="Prologue" type="Node2D"]
 
-[node name="Prologue" type="Node"]
-
-[node name="Background" type="TextureRect" parent="."]
+[node name="Background" type="Sprite2D" parent="."]
 texture_filter = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+position = Vector2(771, 378)
+scale = Vector2(24.4688, 11.9375)
 texture = ExtResource("1_3kivc")
-stretch_mode = 1
 
 [node name="Player" parent="." instance=ExtResource("2_7gxya")]
 position = Vector2(760, 360)
 scale = Vector2(5.08, 5.08)
-
-[node name="Collectable" parent="." instance=ExtResource("3_xrya6")]
-position = Vector2(160, 524)
-
-[node name="CollectableSprite" parent="Collectable/Area2D" index="0"]
-texture = ExtResource("4_y467e")
-
-[node name="CollisionShape2D" parent="Collectable/Area2D" index="1"]
-position = Vector2(-0.5, -0.5)
-scale = Vector2(1.4, 1.4)
-
-[node name="Obstacleeee" type="StaticBody2D" parent="."]
-position = Vector2(1382, 274)
-collision_layer = 2
-
-[node name="Sprite2D" type="Sprite2D" parent="Obstacleeee"]
-texture = ExtResource("4_y467e")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacleeee"]
-scale = Vector2(6.12, 1)
-shape = SubResource("RectangleShape2D_llqn1")
 
 [node name="Walls" type="Node2D" parent="."]
 
@@ -64,4 +37,14 @@ scale = Vector2(77, 1)
 position = Vector2(760, 730)
 scale = Vector2(77, 1)
 
-[editable path="Collectable"]
+[node name="Portals" type="Node2D" parent="."]
+
+[node name="Menu" parent="Portals" instance=ExtResource("4_ctjt0")]
+position = Vector2(252, 150)
+rotation = -2.85113
+portal = ExtResource("5_55bla")
+
+[node name="LivingRoom" parent="Portals" instance=ExtResource("4_ctjt0")]
+position = Vector2(1338, 398)
+rotation = 2.11301
+portal = ExtResource("5_vsnvb")

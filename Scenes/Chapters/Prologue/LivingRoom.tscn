@@ -1,3 +1,10 @@
-[gd_scene format=3 uid="uid://drma8j4n22xq5"]
+[gd_scene load_steps=2 format=3 uid="uid://drma8j4n22xq5"]
+
+[ext_resource type="Texture2D" uid="uid://ckqqhryxj335x" path="res://icon.svg" id="1_h7iek"]
 
 [node name="LivingRoom" type="Node2D"]
+
+[node name="ColorRect" type="Sprite2D" parent="."]
+position = Vector2(798.5, 372)
+scale = Vector2(13.4766, 6.8125)
+texture = ExtResource("1_h7iek")

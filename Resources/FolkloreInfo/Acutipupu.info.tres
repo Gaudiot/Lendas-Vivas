@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="FolkloreInfo" load_steps=3 format=3 uid="uid://cevthe8yeavg4"]
 
-[ext_resource type="Script" path="res://Scripts/Entities/folkloreInfo/folkloreInfo.gd" id="1_0ilkq"]
+[ext_resource type="Script" path="res://Resources/FolkloreInfo/FolkloreInfo.gd" id="1_0ilkq"]
 [ext_resource type="Texture2D" uid="uid://ckqqhryxj335x" path="res://icon.svg" id="1_3shjm"]
 
 [resource]
