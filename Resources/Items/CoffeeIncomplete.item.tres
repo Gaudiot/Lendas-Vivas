@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://cwxmyau8u6uja"]
+
+[ext_resource type="Script" path="res://Resources/Items/Item.gd" id="1_k5wqt"]
+[ext_resource type="Texture2D" uid="uid://tr8xp7q4cxpj" path="res://Assets/Items/CoffeeIncomplete.png" id="2_x3jcw"]
+
+[resource]
+script = ExtResource("1_k5wqt")
+name = "CoffeeIncomplete"
+texture = ExtResource("2_x3jcw")
+combine_with_item_id = "Coffee"

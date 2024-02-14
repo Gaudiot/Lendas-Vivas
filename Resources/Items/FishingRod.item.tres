@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://cmfhuq1s0uigd"]
+
+[ext_resource type="Script" path="res://Resources/Items/Item.gd" id="1_ihbc8"]
+[ext_resource type="Texture2D" uid="uid://b8calu0uks6ms" path="res://Assets/Items/FishingRod.png" id="2_ehde3"]
+
+[resource]
+script = ExtResource("1_ihbc8")
+name = "FishingRod"
+texture = ExtResource("2_ehde3")
+combine_with_item_id = ""
