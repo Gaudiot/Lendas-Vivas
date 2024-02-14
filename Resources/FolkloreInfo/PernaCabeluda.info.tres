@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="FolkloreInfo" load_steps=3 format=3 uid="uid://j26sf8ov0cej"]
 
 [ext_resource type="Texture2D" uid="uid://bdhk0x1wlco5p" path="res://Yellow.png" id="1_3hyfy"]
-[ext_resource type="Script" path="res://Scripts/Entities/folkloreInfo/folkloreInfo.gd" id="1_72ixc"]
+[ext_resource type="Script" path="res://Resources/FolkloreInfo/FolkloreInfo.gd" id="1_72ixc"]
 
 [resource]
 script = ExtResource("1_72ixc")

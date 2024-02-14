@@ -53,7 +53,7 @@ offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("2_jhgyv")
-folklore_list = Array[Resource("res://Scripts/Entities/folkloreInfo/folkloreInfo.gd")]([ExtResource("3_a6gre"), ExtResource("4_yhqq8"), ExtResource("5_hyoel"), ExtResource("6_rufy6"), ExtResource("7_4djur"), ExtResource("8_trigp"), ExtResource("9_nrtpo"), ExtResource("10_m0pew"), ExtResource("11_36va7"), ExtResource("12_ne71i")])
+folklore_list = Array[Resource("res://Resources/FolkloreInfo/FolkloreInfo.gd")]([ExtResource("3_a6gre"), ExtResource("4_yhqq8"), ExtResource("5_hyoel"), ExtResource("6_rufy6"), ExtResource("7_4djur"), ExtResource("8_trigp"), ExtResource("9_nrtpo"), ExtResource("10_m0pew"), ExtResource("11_36va7"), ExtResource("12_ne71i")])
 
 [node name="FolkloreInfo" type="Panel" parent="Book"]
 self_modulate = Color(1, 1, 1, 0)

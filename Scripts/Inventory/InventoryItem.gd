@@ -40,7 +40,6 @@ func _isClickInsideArea(viewport, event, shapeidx) -> void:
 		offset = get_global_mouse_position() - global_position
 		
 func _selectItem():
-	var inventory: Inventory = preload("res://Misc/PlayerInventory.tres")
 	inventory.selectItem(item_stored)
 		
 func _mergeItems():

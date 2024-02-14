@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Portal" load_steps=2 format=3 uid="uid://blskyga58567u"]
+
+[ext_resource type="Script" path="res://Resources/Portals/Portal.gd" id="1_i4rqc"]
+
+[resource]
+script = ExtResource("1_i4rqc")
+go_to_scene = "res://Scenes/Chapters/Prologue/LivingRoom.tscn"
+is_portal_blocked = false
+blocked_message = "Ainda não é possível explorar essa nova área"

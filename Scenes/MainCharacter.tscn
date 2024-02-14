@@ -264,7 +264,7 @@ shape = SubResource("RectangleShape2D_fghye")
 debug_color = Color(0.14902, 0.647059, 0, 0.419608)
 
 [node name="PlayerInteractArea" type="Area2D" parent="Player"]
-collision_mask = 6
+collision_mask = 22
 
 [node name="PlayerInteractBox" type="CollisionShape2D" parent="Player/PlayerInteractArea"]
 light_mask = 2
