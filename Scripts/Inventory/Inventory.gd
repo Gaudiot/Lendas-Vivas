@@ -29,5 +29,4 @@ func combine(item1: Item, item2: Item, result: Item) -> void:
 
 func selectItem(item: Item):
 	selected_item = item
-	print("selected")
 	updated.emit()

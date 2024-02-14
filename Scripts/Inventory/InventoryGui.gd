@@ -11,11 +11,12 @@ var is_open: bool = false
 func _ready():
 	inventory.updated.connect(update)
 	update()
+	close()
 
 func update():
 	for i in range(min(inventory.items.size(), inventorySlots.size())):
 		var item: Item = inventory.items[i]
-		var isItemSelected: bool = (item == inventory.selected_item)
+		var isItemSelected: bool = (inventory.selected_item != null and item == inventory.selected_item)
 		inventorySlots[i].update(item, isItemSelected)
 
 func toggle():
@@ -25,11 +26,11 @@ func toggle():
 		open()
 
 func open():
-	visible = true
+	show()
 	is_open = true
 	opened.emit()
 	
 func close():
-	visible = false
+	hide()
 	is_open = false
 	closed.emit()

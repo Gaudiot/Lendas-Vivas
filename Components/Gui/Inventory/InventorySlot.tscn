@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://djojq6x1qgqgy"]
 
 [ext_resource type="Script" path="res://Scripts/Inventory/InventorySlot.gd" id="1_52ivc"]
-[ext_resource type="Texture2D" uid="uid://ch5m3q631vwmb" path="res://Assets/slot.png" id="2_l25gn"]
+[ext_resource type="Texture2D" uid="uid://ch5m3q631vwmb" path="res://Assets/Images/Inventory/slot.png" id="2_ptfx1"]
 [ext_resource type="PackedScene" uid="uid://fw5ak0kulcq0" path="res://Components/Gui/Inventory/InventoryItem.tscn" id="3_11jmg"]
 
 [node name="InventorySlot" type="Panel"]
@@ -17,9 +17,9 @@ unique_name_in_owner = true
 show_behind_parent = true
 texture_filter = 1
 scale = Vector2(0.875, 0.875)
-texture = ExtResource("2_l25gn")
+texture = ExtResource("2_ptfx1")
 centered = false
-hframes = 3
+hframes = 2
 
 [node name="InventoryItem" parent="." instance=ExtResource("3_11jmg")]
 layout_mode = 1
