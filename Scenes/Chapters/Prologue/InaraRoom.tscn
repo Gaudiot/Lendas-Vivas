@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://xi2xuriaakkl"]
+[gd_scene load_steps=9 format=3 uid="uid://xi2xuriaakkl"]
 
 [ext_resource type="Texture2D" uid="uid://cc5upq8ls8tkx" path="res://Assets/Backgrounds/Prologue/House.png" id="1_3kivc"]
 [ext_resource type="PackedScene" uid="uid://d2vghqcqvfq0e" path="res://Scenes/MainCharacter.tscn" id="2_7gxya"]
@@ -6,6 +6,8 @@
 [ext_resource type="Resource" uid="uid://1w8f77hk2hl1" path="res://Resources/Portals/Menu.portal.tres" id="5_55bla"]
 [ext_resource type="PackedScene" uid="uid://brc301dhk383d" path="res://Components/Obstacles/RectangleObstacle.tscn" id="5_gwcd2"]
 [ext_resource type="Resource" uid="uid://blskyga58567u" path="res://Resources/Portals/Prologue/LivingRoom.portal.tres" id="5_vsnvb"]
+[ext_resource type="PackedScene" uid="uid://che8dm2ehd180" path="res://Components/Collectables/Collectable.tscn" id="7_u2sb4"]
+[ext_resource type="Resource" uid="uid://dsj1b1jxkudrt" path="res://Resources/Collectables/Paper.collectable.tres" id="8_nlel0"]
 
 [node name="Prologue" type="Node2D"]
 
@@ -48,3 +50,9 @@ portal = ExtResource("5_55bla")
 position = Vector2(1338, 398)
 rotation = 2.11301
 portal = ExtResource("5_vsnvb")
+
+[node name="Collectables" type="Node2D" parent="."]
+
+[node name="Paper" parent="Collectables" instance=ExtResource("7_u2sb4")]
+position = Vector2(767, 593)
+collectable = ExtResource("8_nlel0")

@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://drma8j4n22xq5"]
+[gd_scene load_steps=4 format=3 uid="uid://drma8j4n22xq5"]
 
 [ext_resource type="Texture2D" uid="uid://ckqqhryxj335x" path="res://icon.svg" id="1_h7iek"]
+[ext_resource type="PackedScene" uid="uid://che8dm2ehd180" path="res://Components/Collectables/Collectable.tscn" id="2_4xhtv"]
+[ext_resource type="Resource" uid="uid://dsj1b1jxkudrt" path="res://Resources/Collectables/Paper.collectable.tres" id="3_n3tdq"]
 
 [node name="LivingRoom" type="Node2D"]
 
@@ -8,3 +10,9 @@
 position = Vector2(798.5, 372)
 scale = Vector2(13.4766, 6.8125)
 texture = ExtResource("1_h7iek")
+
+[node name="Collectables" type="Node2D" parent="."]
+
+[node name="Paper" parent="Collectables" instance=ExtResource("2_4xhtv")]
+position = Vector2(1327, 173)
+collectable = ExtResource("3_n3tdq")
