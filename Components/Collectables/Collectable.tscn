@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://che8dm2ehd180"]
+
+[ext_resource type="Script" path="res://Components/Collectables/Collectable.gd" id="1_768u5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e2fyn"]
+
+[node name="Collectable" type="Node2D"]
+script = ExtResource("1_768u5")
+
+[node name="CollectableSprite" type="Sprite2D" parent="."]
+scale = Vector2(0.2, 0.2)
+
+[node name="CollectableArea" type="Area2D" parent="."]
+scale = Vector2(5.76, 5.76)
+collision_layer = 2
+
+[node name="CollectableCollision" type="CollisionShape2D" parent="CollectableArea"]
+shape = SubResource("RectangleShape2D_e2fyn")
