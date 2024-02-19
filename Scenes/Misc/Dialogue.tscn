@@ -1,0 +1,333 @@
+[gd_scene load_steps=11 format=3 uid="uid://76pfx0pwkelc"]
+
+[ext_resource type="Script" path="res://Scripts/Misc/DialogueSystem.gd" id="1_be0p3"]
+[ext_resource type="Texture2D" uid="uid://d3ljh0pm7s40q" path="res://Assets/Icons/Frame.png" id="1_tjpsl"]
+[ext_resource type="Resource" uid="uid://fhh5um1kg2nk" path="res://Resources/Dialogues/Prologue/01_PoliceCall.dialogue.tres" id="2_4gc7v"]
+[ext_resource type="Resource" uid="uid://bddwhfrssynpk" path="res://Resources/Dialogues/Prologue/02_PoliceCall.dialogue.tres.tres" id="3_bddgu"]
+[ext_resource type="Texture2D" uid="uid://ckqqhryxj335x" path="res://icon.svg" id="5_xpipx"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5grox"]
+
+[sub_resource type="Animation" id="Animation_4d6gg"]
+resource_name = "EndDialogue"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:mouse_filter")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 2]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0.317647), Color(0, 0, 0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("DialogueBox:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("DialogueBox/DialogueButton:disabled")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("DialogueBox/DialogueButton:mouse_filter")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [2]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("ColorRect:mouse_filter")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [2]
+}
+
+[sub_resource type="Animation" id="Animation_0813o"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("DialogueBox/DialogueButton:disabled")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("DialogueBox/DialogueButton:mouse_filter")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [2]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ColorRect:mouse_filter")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [2]
+}
+
+[sub_resource type="Animation" id="Animation_pb7l4"]
+resource_name = "StartDialogue"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 0.317647)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:mouse_filter")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("DialogueBox:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.5, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("DialogueBox/DialogueButton:disabled")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("DialogueBox/DialogueButton:mouse_filter")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("ColorRect:mouse_filter")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ffu10"]
+_data = {
+"EndDialogue": SubResource("Animation_4d6gg"),
+"RESET": SubResource("Animation_0813o"),
+"StartDialogue": SubResource("Animation_pb7l4")
+}
+
+[node name="Dialogue" type="CanvasLayer"]
+layer = 5
+script = ExtResource("1_be0p3")
+dialogue_lines = Array[Resource("res://Resources/Dialogues/Dialogue.gd")]([ExtResource("2_4gc7v"), ExtResource("3_bddgu")])
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 0)
+metadata/_edit_use_anchors_ = true
+
+[node name="DialogueBox" type="NinePatchRect" parent="."]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -639.0
+offset_top = -285.0
+offset_right = 640.0
+offset_bottom = -32.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("1_tjpsl")
+patch_margin_left = 88
+patch_margin_top = 88
+patch_margin_right = 86
+patch_margin_bottom = 82
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Characters" type="Control" parent="DialogueBox"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -589.5
+offset_top = -90.0
+offset_right = 578.5
+offset_bottom = 38.0
+grow_horizontal = 2
+mouse_filter = 2
+
+[node name="CharLeft" type="TextureRect" parent="DialogueBox/Characters"]
+self_modulate = Color(0, 0.823529, 0.4, 1)
+layout_mode = 2
+offset_left = 3.0
+offset_right = 131.0
+offset_bottom = 128.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("5_xpipx")
+
+[node name="CharRight" type="TextureRect" parent="DialogueBox/Characters"]
+self_modulate = Color(0.984314, 0.498039, 0, 1)
+layout_mode = 2
+offset_left = 1036.0
+offset_right = 1164.0
+offset_bottom = 128.0
+mouse_filter = 2
+texture = ExtResource("5_xpipx")
+
+[node name="Texts" type="Control" parent="DialogueBox"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="CharName" type="Label" parent="DialogueBox/Texts"]
+layout_mode = 1
+offset_left = 48.0
+offset_top = 49.0
+offset_right = 150.0
+offset_bottom = 72.0
+text = "Dialogo teste - Nome do personagem"
+
+[node name="DialogueText" type="RichTextLabel" parent="DialogueBox/Texts"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -593.5
+offset_top = -38.5
+offset_right = 584.5
+offset_bottom = 80.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+text = "Texto placeholder
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+
+[node name="DialogueButton" type="Button" parent="DialogueBox"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_5grox")
+disabled = true
+flat = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+reset_on_save = false
+libraries = {
+"": SubResource("AnimationLibrary_ffu10")
+}
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.1
+
+[connection signal="pressed" from="DialogueBox/DialogueButton" to="." method="_dialoguePressed"]
+[connection signal="timeout" from="Timer" to="." method="_showNextLetter"]

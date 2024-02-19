@@ -3,7 +3,7 @@ extends CharacterBody2D
 @onready var player_sprite = $PlayerSprite
 @onready var player_camera = %PlayerCamera
 @onready var player_interact_area = $PlayerInteractArea
-@onready var joystick = %Joystick
+@onready var joystick = $"../PlayerUI/Joystick"
 
 @export var player_inventory: Inventory
 
