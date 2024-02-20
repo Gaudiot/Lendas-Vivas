@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="DialogueLine" load_steps=2 format=3 uid="uid://d2kxjiwxycwcf"]
+
+[ext_resource type="Script" path="res://Resources/Dialogues/Dialogue.gd" id="1_5bwl1"]
+
+[resource]
+script = ExtResource("1_5bwl1")
+is_char_left = false
+char_name = "Curupira"
+line = "Sou, e você deveria sair daqui, aqui não é seguro, e eu também não gosto de você."

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="DialogueLine" load_steps=2 format=3 uid="uid://ckoy5h4wtngi1"]
+
+[ext_resource type="Script" path="res://Resources/Dialogues/Dialogue.gd" id="1_1x2m5"]
+
+[resource]
+script = ExtResource("1_1x2m5")
+is_char_left = false
+char_name = "Roberto"
+line = "Estamos recebendo ligações a manhã inteira de famílias preocupadas com crianças sumindo no meio da noite. Até agora já temos 37 casos relatados, mas várias ligações estão chegando."

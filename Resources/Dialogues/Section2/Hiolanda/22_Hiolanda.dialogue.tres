@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="DialogueLine" load_steps=2 format=3 uid="uid://cp2p2i12nc5y0"]
+
+[ext_resource type="Script" path="res://Resources/Dialogues/Dialogue.gd" id="1_jnddo"]
+
+[resource]
+script = ExtResource("1_jnddo")
+is_char_left = true
+char_name = "Inara"
+line = "obrigada por tudo! Vou voltar a buscar minha irmã."

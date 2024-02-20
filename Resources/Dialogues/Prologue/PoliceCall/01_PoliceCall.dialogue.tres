@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="DialogueLine" load_steps=4 format=3 uid="uid://fhh5um1kg2nk"]
+
+[ext_resource type="Texture2D" uid="uid://ckqqhryxj335x" path="res://icon.svg" id="1_j6qd7"]
+[ext_resource type="AudioStream" uid="uid://bk7hiapom2b6o" path="res://Assets/Sounds/minecraft_hurt.mp3" id="2_e1kv5"]
+[ext_resource type="Script" path="res://Resources/Dialogues/Dialogue.gd" id="3_h38yc"]
+
+[resource]
+script = ExtResource("3_h38yc")
+is_char_left = false
+char_name = "Roberto"
+line = "Aqui é da polícia, me chamo Roberto, como posso te ajudar?"
+char_image = ExtResource("1_j6qd7")
+char_sound = ExtResource("2_e1kv5")

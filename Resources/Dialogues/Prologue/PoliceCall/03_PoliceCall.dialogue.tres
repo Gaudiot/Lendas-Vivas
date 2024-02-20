@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="DialogueLine" load_steps=2 format=3 uid="uid://d30xad0ckwisg"]
+
+[ext_resource type="Script" path="res://Resources/Dialogues/Dialogue.gd" id="1_qo8du"]
+
+[resource]
+script = ExtResource("1_qo8du")
+is_char_left = false
+char_name = "Roberto"
+line = "Calma senhora, vamos fazer o melhor possível. Por acaso a sua irmã teria entre 7 a 12 anos?"

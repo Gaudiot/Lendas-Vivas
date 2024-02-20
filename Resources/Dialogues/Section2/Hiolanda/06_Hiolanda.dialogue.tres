@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="DialogueLine" load_steps=2 format=3 uid="uid://idndpn7c2jfv"]
+
+[ext_resource type="Script" path="res://Resources/Dialogues/Dialogue.gd" id="1_068ae"]
+
+[resource]
+script = ExtResource("1_068ae")
+is_char_left = true
+char_name = "Inara"
+line = "Dona Hiolanda! Agradeço pensar na minha mãe, mas vim falar sobre minha irmã e as crianças sumidas. Sabe de alguma coisa ou não?!?!"

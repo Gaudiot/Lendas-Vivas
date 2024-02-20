@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="DialogueLine" load_steps=2 format=3 uid="uid://dafr7e8f3ejy6"]
+
+[ext_resource type="Script" path="res://Resources/Dialogues/Dialogue.gd" id="1_wah0h"]
+
+[resource]
+script = ExtResource("1_wah0h")
+is_char_left = false
+char_name = "Roberto"
+line = "Sentimos muito pela situação e estamos trabalhando o mais rápido possível para localizarmos sua irmã. Tem mais algo que possamos lhe ajudar?"

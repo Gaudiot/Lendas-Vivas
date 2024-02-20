@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="DialogueLine" load_steps=2 format=3 uid="uid://b5oo8l4kbwnph"]
+
+[ext_resource type="Script" path="res://Resources/Dialogues/Dialogue.gd" id="1_7idlt"]
+
+[resource]
+script = ExtResource("1_7idlt")
+is_char_left = false
+char_name = "Guilherme"
+line = "Já tentasse falar com a Dona Hiolanda?"

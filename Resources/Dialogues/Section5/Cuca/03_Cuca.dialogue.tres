@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="DialogueLine" load_steps=2 format=3 uid="uid://6m3etvyd8v3e"]
+
+[ext_resource type="Script" path="res://Resources/Dialogues/Dialogue.gd" id="1_ftvu5"]
+
+[resource]
+script = ExtResource("1_ftvu5")
+is_char_left = true
+char_name = "Curupira"
+line = "Ainda não sei o que planejam, mas tem que parar! Esse não é o ciclo natural das coisas, como viemos fazendo há centenas de anos!"

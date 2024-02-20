@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="DialogueLine" load_steps=2 format=3 uid="uid://tswjlcxrbjww"]
+
+[ext_resource type="Script" path="res://Resources/Dialogues/Dialogue.gd" id="1_qbp3g"]
+
+[resource]
+script = ExtResource("1_qbp3g")
+is_char_left = true
+char_name = "Inara"
+line = "Vou chamar a polícia se continuar a me importunar (se bem que eles não vão fazer nada no momento, os inúteis). 
+Agora me esquece que tenho meus próprios BOs para resolver."

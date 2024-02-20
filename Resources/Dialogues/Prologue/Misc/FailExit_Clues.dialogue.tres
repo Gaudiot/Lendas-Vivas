@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="DialogueLine" load_steps=2 format=3 uid="uid://ck5rj1n2js05m"]
+
+[ext_resource type="Script" path="res://Resources/Dialogues/Dialogue.gd" id="1_1b5l8"]
+
+[resource]
+script = ExtResource("1_1b5l8")
+is_char_left = true
+char_name = "Inara"
+line = "Acho que deveria procurar por mais pistas, talvez eu tenha deixado algo para trás."

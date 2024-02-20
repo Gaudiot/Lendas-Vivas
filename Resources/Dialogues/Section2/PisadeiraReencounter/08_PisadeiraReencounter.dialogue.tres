@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="DialogueLine" load_steps=2 format=3 uid="uid://cspwi2nomuwlt"]
+
+[ext_resource type="Script" path="res://Resources/Dialogues/Dialogue.gd" id="1_v8px3"]
+
+[resource]
+script = ExtResource("1_v8px3")
+is_char_left = true
+char_name = "Inara"
+line = "E como vamos fazer para resolver isso?
+Como iremos recuperar a minha irmã?
+E porque EU sou tão importante para isso tudo?"

@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://che8dm2ehd180"]
+[gd_scene load_steps=4 format=3 uid="uid://che8dm2ehd180"]
 
 [ext_resource type="Script" path="res://Components/Collectables/Collectable.gd" id="1_768u5"]
+[ext_resource type="Texture2D" uid="uid://bkxx40pjsa8ey" path="res://Assets/Icons/Question.png" id="2_15ev5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e2fyn"]
 
@@ -9,6 +10,7 @@ script = ExtResource("1_768u5")
 
 [node name="CollectableSprite" type="Sprite2D" parent="."]
 scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_15ev5")
 
 [node name="CollectableArea" type="Area2D" parent="."]
 scale = Vector2(5.76, 5.76)

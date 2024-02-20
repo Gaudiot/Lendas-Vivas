@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="DialogueLine" load_steps=2 format=3 uid="uid://bjjb7bn5mh1b2"]
+
+[ext_resource type="Script" path="res://Resources/Dialogues/Dialogue.gd" id="1_xf65g"]
+
+[resource]
+script = ExtResource("1_xf65g")
+is_char_left = true
+char_name = "Inara"
+line = "A Cuca também é real?! Quer dizer que todas as lendas são reais?
+E por que ela sequestrou a minha irmã? Moema sempre se comportou bem."

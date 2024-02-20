@@ -237,16 +237,12 @@ offset_right = 100.0
 offset_bottom = 60.0
 
 [node name="Joystick" parent="PlayerUI" instance=ExtResource("3_trvi3")]
-unique_name_in_owner = true
 anchors_preset = 2
 anchor_top = 1.0
-anchor_bottom = 1.0
-offset_left = 165.0
-offset_top = -165.0
-offset_right = 165.0
-offset_bottom = -165.0
+anchor_right = 0.0
+grow_horizontal = 1
 grow_vertical = 0
-scale = Vector2(0.299999, 0.299999)
+scale = Vector2(0.359999, 0.359999)
 
 [node name="Player" type="CharacterBody2D" parent="."]
 script = ExtResource("1_pqdqm")

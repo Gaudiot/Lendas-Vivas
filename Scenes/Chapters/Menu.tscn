@@ -9,6 +9,7 @@
 [ext_resource type="AudioStream" uid="uid://bhixnh5dh8kb8" path="res://Assets/Sounds/Backgrounds/menu-background.ogg" id="6_byq7g"]
 
 [node name="Menu" type="CanvasLayer"]
+layer = 6
 
 [node name="MenuBackground" type="TextureRect" parent="."]
 texture_filter = 1

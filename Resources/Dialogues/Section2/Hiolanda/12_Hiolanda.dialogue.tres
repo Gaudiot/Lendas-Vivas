@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="DialogueLine" load_steps=2 format=3 uid="uid://d3rhhgflqglho"]
+
+[ext_resource type="Script" path="res://Resources/Dialogues/Dialogue.gd" id="1_tllss"]
+
+[resource]
+script = ExtResource("1_tllss")
+is_char_left = false
+char_name = "Hiolanda"
+line = "Não sei, meu anjo. Como disse, eles viram só um vulto, não conseguiram ver o rosto. 
+Parece que eles estavam no centro quando tudo isso aconteceu, mas não tenho certeza."

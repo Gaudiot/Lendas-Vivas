@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="DialogueLine" load_steps=2 format=3 uid="uid://4ep1lijjnquq"]
+
+[ext_resource type="Script" path="res://Resources/Dialogues/Dialogue.gd" id="1_bh7oq"]
+
+[resource]
+script = ExtResource("1_bh7oq")
+is_char_left = false
+char_name = "Roberto"
+line = "Posso lhe dizer que estamos fazendo nosso melhor para encontrar os culpados. "
