@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="DialogueLine" load_steps=2 format=3 uid="uid://bhrlpr7lnxpye"]
+
+[ext_resource type="Script" path="res://Resources/Dialogues/Dialogue.gd" id="1_4y4if"]
+
+[resource]
+script = ExtResource("1_4y4if")
+is_char_left = true
+char_name = "Inara"
+line = "Você diz ser a Pisadeira, uma lenda. Lendas não são supostas existirem de verdade.
+Como posso saber que você não é uma doida qualquer? Nunca nem ouvi falar da lenda da Pisadeira antes."

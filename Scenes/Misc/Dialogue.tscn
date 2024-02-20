@@ -1,10 +1,9 @@
-[gd_scene load_steps=11 format=3 uid="uid://76pfx0pwkelc"]
+[gd_scene load_steps=10 format=3 uid="uid://76pfx0pwkelc"]
 
 [ext_resource type="Script" path="res://Scripts/Misc/DialogueSystem.gd" id="1_be0p3"]
 [ext_resource type="Texture2D" uid="uid://d3ljh0pm7s40q" path="res://Assets/Icons/Frame.png" id="1_tjpsl"]
-[ext_resource type="Resource" uid="uid://fhh5um1kg2nk" path="res://Resources/Dialogues/Prologue/01_PoliceCall.dialogue.tres" id="2_4gc7v"]
-[ext_resource type="Resource" uid="uid://bddwhfrssynpk" path="res://Resources/Dialogues/Prologue/02_PoliceCall.dialogue.tres.tres" id="3_bddgu"]
-[ext_resource type="Texture2D" uid="uid://ckqqhryxj335x" path="res://icon.svg" id="5_xpipx"]
+[ext_resource type="Resource" uid="uid://fhh5um1kg2nk" path="res://Resources/Dialogues/Prologue/PoliceCall/01_PoliceCall.dialogue.tres" id="2_4gc7v"]
+[ext_resource type="Resource" uid="uid://bddwhfrssynpk" path="res://Resources/Dialogues/Prologue/PoliceCall/02_PoliceCall.dialogue.tres.tres" id="3_bddgu"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5grox"]
 
@@ -263,7 +262,6 @@ offset_bottom = 128.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-texture = ExtResource("5_xpipx")
 
 [node name="CharRight" type="TextureRect" parent="DialogueBox/Characters"]
 self_modulate = Color(0.984314, 0.498039, 0, 1)
@@ -272,7 +270,6 @@ offset_left = 1036.0
 offset_right = 1164.0
 offset_bottom = 128.0
 mouse_filter = 2
-texture = ExtResource("5_xpipx")
 
 [node name="Texts" type="Control" parent="DialogueBox"]
 layout_mode = 1
@@ -328,6 +325,8 @@ libraries = {
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.1
+
+[node name="DialogueAudioPlayer" type="AudioStreamPlayer2D" parent="."]
 
 [connection signal="pressed" from="DialogueBox/DialogueButton" to="." method="_dialoguePressed"]
 [connection signal="timeout" from="Timer" to="." method="_showNextLetter"]

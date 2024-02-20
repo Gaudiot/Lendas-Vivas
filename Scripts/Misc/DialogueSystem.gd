@@ -1,8 +1,8 @@
 extends CanvasLayer
 
 # CHARACTER NODES
-@onready var char_left = $DialogueBox/Characters/CharLeft
-@onready var char_right = $DialogueBox/Characters/CharRight
+@onready var char_left: TextureRect = $DialogueBox/Characters/CharLeft
+@onready var char_right: TextureRect = $DialogueBox/Characters/CharRight
 
 # TEXT NODES
 @onready var dialogue_button = $DialogueBox/DialogueButton
@@ -12,6 +12,7 @@ extends CanvasLayer
 # AUXILIAR NODES
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var timer: Timer = $Timer
+@onready var dialogue_audio_player = $DialogueAudioPlayer
 
 @export var dialogue_lines: Array[DialogueLine] = []
 var current_line: String = ""
@@ -38,11 +39,16 @@ func _getNextLine():
 	text_displayed = ""
 	
 	if next_dialogue_line.is_char_left:
+		char_left.texture = next_dialogue_line.char_image
 		char_left.show()
 		char_right.hide()
 	else:
+		char_right.texture = next_dialogue_line.char_image
 		char_left.hide()
 		char_right.show()
+	
+	dialogue_audio_player.stream = next_dialogue_line.char_sound
+	dialogue_audio_player.play()
 
 func _startDialogue():
 	_getNextLine()

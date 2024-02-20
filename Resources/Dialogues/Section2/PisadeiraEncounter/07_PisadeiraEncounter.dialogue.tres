@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="DialogueLine" load_steps=2 format=3 uid="uid://g5p7vrylt8be"]
+
+[ext_resource type="Script" path="res://Resources/Dialogues/Dialogue.gd" id="1_hbpb1"]
+
+[resource]
+script = ExtResource("1_hbpb1")
+is_char_left = true
+char_name = "Inara"
+line = "Minha paciência está se esgotando já! Me deixa em paz que eu sei lutar karatê! (Eu não sei karatê, espero que ela caia no blefe)."

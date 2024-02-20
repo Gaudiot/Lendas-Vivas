@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="DialogueLine" load_steps=2 format=3 uid="uid://bqwcjri7p5grc"]
+
+[ext_resource type="Script" path="res://Resources/Dialogues/Dialogue.gd" id="1_e540u"]
+
+[resource]
+script = ExtResource("1_e540u")
+is_char_left = true
+char_name = "Inara"
+line = "Eu tenho que deixar uma carta para quando minha mãe chegar ela saber o que está acontecendo. Deve ter caneta e papel pela casa."

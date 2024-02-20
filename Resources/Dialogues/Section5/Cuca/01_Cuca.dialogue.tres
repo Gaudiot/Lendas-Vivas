@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="DialogueLine" load_steps=2 format=3 uid="uid://dq4hamxm544r7"]
+
+[ext_resource type="Script" path="res://Resources/Dialogues/Dialogue.gd" id="1_wign6"]
+
+[resource]
+script = ExtResource("1_wign6")
+is_char_left = true
+char_name = "Cuca"
+line = "Vocês realmente são bestas. Acharam que eu não fosse descobrir que estavam atrás de mim e que iriam arruinar os nossos planos."

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="DialogueLine" load_steps=2 format=3 uid="uid://bt76gal4s4jxj"]
+
+[ext_resource type="Script" path="res://Resources/Dialogues/Dialogue.gd" id="1_kxswc"]
+
+[resource]
+script = ExtResource("1_kxswc")
+is_char_left = true
+char_name = "Inara"
+line = "Se for sobre a Cuca, eu estou do seu lado. A Pisadeira disse que eu era importante para ajudar a resolver tudo que está acontecendo. Na verdade queria nem entrar nisso, só quero recuperar a minha irmã que --"

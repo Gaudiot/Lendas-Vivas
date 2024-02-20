@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="DialogueLine" load_steps=4 format=3 uid="uid://bddwhfrssynpk"]
+
+[ext_resource type="Texture2D" uid="uid://ckqqhryxj335x" path="res://icon.svg" id="1_ctn1b"]
+[ext_resource type="AudioStream" uid="uid://eexbeyk6xy1v" path="res://Assets/Sounds/villager-sound.mp3" id="2_sdpte"]
+[ext_resource type="Script" path="res://Resources/Dialogues/Dialogue.gd" id="3_ilnje"]
+
+[resource]
+script = ExtResource("3_ilnje")
+is_char_left = true
+char_name = "Inara"
+line = "Por favor, me ajudem! minha irmã não está no quarto dela, acho que ela foi sequestrada!!"
+char_image = ExtResource("1_ctn1b")
+char_sound = ExtResource("2_sdpte")

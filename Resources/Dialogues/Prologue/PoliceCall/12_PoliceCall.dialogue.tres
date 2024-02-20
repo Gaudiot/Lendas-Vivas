@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="DialogueLine" load_steps=2 format=3 uid="uid://cfl8dfcwvd7n2"]
+
+[ext_resource type="Script" path="res://Resources/Dialogues/Dialogue.gd" id="1_s5gdt"]
+
+[resource]
+script = ExtResource("1_s5gdt")
+is_char_left = true
+char_name = "Inara"
+line = "SE VOCÊS NÃO VÃO ME AJUDAR, EU MESMO IREI RESOLVER. TCHAU."

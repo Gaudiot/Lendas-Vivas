@@ -17,8 +17,7 @@ func _ready():
 func _process(delta):
 	if pressing:
 		var is_inside_ring: bool = (get_global_mouse_position() - CENTER_VECTOR).distance_to(get_parent().global_position) <= max_length
-		print(is_inside_ring)
-		print(get_global_mouse_position())
+		
 		if is_inside_ring:
 			global_position = get_global_mouse_position() - CENTER_VECTOR
 		else:

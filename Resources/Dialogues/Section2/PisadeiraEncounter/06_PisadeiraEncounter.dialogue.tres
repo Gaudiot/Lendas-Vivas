@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="DialogueLine" load_steps=2 format=3 uid="uid://c3sm71fxxfmgc"]
+
+[ext_resource type="Script" path="res://Resources/Dialogues/Dialogue.gd" id="1_hgr2r"]
+
+[resource]
+script = ExtResource("1_hgr2r")
+is_char_left = false
+char_name = "???"
+line = "Mas você não está entendendo, nós precisamos de você para consertar essa confusão!"

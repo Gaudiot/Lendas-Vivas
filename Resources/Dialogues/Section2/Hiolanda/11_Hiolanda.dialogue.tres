@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="DialogueLine" load_steps=2 format=3 uid="uid://cyxwclm56f0j8"]
+
+[ext_resource type="Script" path="res://Resources/Dialogues/Dialogue.gd" id="1_383ln"]
+
+[resource]
+script = ExtResource("1_383ln")
+is_char_left = true
+char_name = "Inara"
+line = "Será que o culpado dos sequestros é esse vulto? Eles viram mais algo? Viram para onde estava indo?"

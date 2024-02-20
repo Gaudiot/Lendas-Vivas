@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="DialogueLine" load_steps=2 format=3 uid="uid://fsql1ubcmji1"]
+
+[ext_resource type="Script" path="res://Resources/Dialogues/Dialogue.gd" id="1_egmkw"]
+
+[resource]
+script = ExtResource("1_egmkw")
+is_char_left = false
+char_name = "Curupira"
+line = "Sua história não me interessa.
+ A Pisadeira deve ter enlouquecido de vez se achou que uma humana pode nos ajudar. Vocês destroem florestas, poluem as águas e matam animais por prazer, até mesmo levando alguns à extinção. Eu. Não. Confio. Em vocês!"

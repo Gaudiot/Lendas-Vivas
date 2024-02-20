@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="DialogueLine" load_steps=2 format=3 uid="uid://bi6ssifiot12p"]
+
+[ext_resource type="Script" path="res://Resources/Dialogues/Dialogue.gd" id="1_rilpw"]
+
+[resource]
+script = ExtResource("1_rilpw")
+is_char_left = false
+char_name = "Hiolanda"
+line = "Está bem, minha santa. Fique com Deus, que Ele é bom. Espero que consiga encontrar sua irmã são e salva."

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="DialogueLine" load_steps=2 format=3 uid="uid://tbhexg3nmxce"]
+
+[ext_resource type="Script" path="res://Resources/Dialogues/Dialogue.gd" id="1_fr4x5"]
+
+[resource]
+script = ExtResource("1_fr4x5")
+is_char_left = true
+char_name = "Inara"
+line = "SABE SEI LÁ O QUE OS SEQUESTRADORES ESTÃO FAZENDO COM MINHA IRMÃ NESTE MOMENTO"

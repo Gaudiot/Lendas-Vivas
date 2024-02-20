@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="DialogueLine" load_steps=2 format=3 uid="uid://3ahejpewqixl"]
+
+[ext_resource type="Script" path="res://Resources/Dialogues/Dialogue.gd" id="1_wvkvu"]
+
+[resource]
+script = ExtResource("1_wvkvu")
+is_char_left = true
+char_name = "Inara"
+line = "Eu vou a lugar nenhum com uma stalker! como assim tu me conhece e eu não te conheço."

@@ -5,9 +5,14 @@ extends CanvasLayer
 @onready var player_interact_area: Area2D = $"../Player/PlayerInteractArea"
 
 func _on_inventory_button_button_down():
-	var arr: Array[DialogueLine] = [preload("res://Resources/Dialogues/Prologue/01_PoliceCall.dialogue.tres"), preload("res://Resources/Dialogues/Prologue/01_PoliceCall.dialogue.tres"), preload("res://Resources/Dialogues/Prologue/02_PoliceCall.dialogue.tres.tres")]
-	DialogueSystem.startupDialogue(arr)
-	#inventory_gui.toggle()
+	#DialogueSystem.startupDialogue([
+		#preload("res://Resources/Dialogues/Prologue/MotherCall/01_MotherCall.dialogue.tres"),
+		#preload("res://Resources/Dialogues/Prologue/MotherCall/02_MotherCall.dialogue.tres"),
+		#preload("res://Resources/Dialogues/Prologue/MotherCall/03_MotherCall.dialogue.tres"),
+		#preload("res://Resources/Dialogues/Prologue/MotherCall/04_MotherCall.dialogue.tres"),
+		#preload("res://Resources/Dialogues/Prologue/MotherCall/05_MotherCall.dialogue.tres")
+	#])
+	inventory_gui.toggle()
 
 func _on_interact_button_button_down():
 	var collisions: Array[Area2D] = player_interact_area.get_overlapping_areas()

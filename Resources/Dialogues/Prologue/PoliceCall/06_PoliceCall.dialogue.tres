@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="DialogueLine" load_steps=2 format=3 uid="uid://dtlqfmso45f4t"]
+
+[ext_resource type="Script" path="res://Resources/Dialogues/Dialogue.gd" id="1_gvass"]
+
+[resource]
+script = ExtResource("1_gvass")
+is_char_left = true
+char_name = "Inara"
+line = "E MINHA IRMÃ?! Ela vai ficar bem?! Vão conseguir trazê-la de volta hoje??"

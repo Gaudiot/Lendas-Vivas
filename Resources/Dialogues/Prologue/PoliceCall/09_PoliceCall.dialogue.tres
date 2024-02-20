@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="DialogueLine" load_steps=2 format=3 uid="uid://dcc5bdx3ruf1o"]
+
+[ext_resource type="Script" path="res://Resources/Dialogues/Dialogue.gd" id="1_euaap"]
+
+[resource]
+script = ExtResource("1_euaap")
+is_char_left = true
+char_name = "Inara"
+line = "Mas e minha irmã?! ela só tem 9 anos, ela deve estar assustada, tem que encontrá-la logo."

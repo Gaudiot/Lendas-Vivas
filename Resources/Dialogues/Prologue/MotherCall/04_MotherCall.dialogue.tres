@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="DialogueLine" load_steps=2 format=3 uid="uid://8x7cfjayusld"]
+
+[ext_resource type="Script" path="res://Resources/Dialogues/Dialogue.gd" id="1_ji7ag"]
+
+[resource]
+script = ExtResource("1_ji7ag")
+is_char_left = false
+char_name = "Telefone"
+line = "Deixe seu recado após o sinal."
