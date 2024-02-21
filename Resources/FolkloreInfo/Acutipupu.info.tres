@@ -1,11 +1,9 @@
-[gd_resource type="Resource" script_class="FolkloreInfo" load_steps=3 format=3 uid="uid://cevthe8yeavg4"]
+[gd_resource type="Resource" script_class="FolkloreInfo" load_steps=2 format=3 uid="uid://cevthe8yeavg4"]
 
 [ext_resource type="Script" path="res://Resources/FolkloreInfo/FolkloreInfo.gd" id="1_0ilkq"]
-[ext_resource type="Texture2D" uid="uid://ckqqhryxj335x" path="res://icon.svg" id="1_3shjm"]
 
 [resource]
 script = ExtResource("1_0ilkq")
-folklore_image = ExtResource("1_3shjm")
 folklore_name = "Acutipupu"
 folklore_details = "Acutipupu é uma figura lendária, podendo ser ora homem e ora mulher. É associada à misteriosa Serra do Japó. Embora essa serra não tenha uma localização precisa, há suposições de que possa referir-se à Serra de Japi, no estado de São Paulo.
 

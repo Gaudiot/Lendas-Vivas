@@ -1,18 +1,14 @@
-[gd_resource type="Resource" script_class="FolkloreInfo" load_steps=3 format=3 uid="uid://cwspfnsbshrbn"]
+[gd_resource type="Resource" script_class="FolkloreInfo" load_steps=2 format=3 uid="uid://cwspfnsbshrbn"]
 
-[ext_resource type="Texture2D" uid="uid://bdhk0x1wlco5p" path="res://Yellow.png" id="1_ljlax"]
 [ext_resource type="Script" path="res://Resources/FolkloreInfo/FolkloreInfo.gd" id="1_obibu"]
 
 [resource]
 script = ExtResource("1_obibu")
-folklore_image = ExtResource("1_ljlax")
 folklore_name = "Tupã"
-folklore_details = "Certamente! Aqui está uma versão resumida sobre a lenda de Tupã:
-
-\"Tupã, uma divindade do folclore brasileiro, é conhecido como o deus do trovão e da chuva. Sua origem remonta às raízes indígenas. Tupã governa os céus, trazendo tempestades e fertilidade à terra.
+folklore_details = "Tupã, uma divindade do folclore brasileiro, é conhecido como o deus do trovão e da chuva. Sua origem remonta às raízes indígenas. Tupã governa os céus, trazendo tempestades e fertilidade à terra.
 
 De acordo com a lenda, Tupã é um deus benevolente, associado à vitalidade da natureza. Ele é frequentemente retratado como uma figura imponente no céu, lançando raios e trovões para fertilizar a terra e proporcionar colheitas abundantes.
 
 Os povos indígenas veneram Tupã como uma divindade que mantém o equilíbrio entre o céu e a terra. Sua influência está presente na reverência pela natureza e na busca pela harmonia com o meio ambiente.
 
-Tupã, com sua aura divina, simboliza a interconexão entre os elementos e a importância de respeitar a natureza. Sua lenda perdura como uma expressão viva da espiritualidade ligada à terra no folclore brasileiro.\""
+Tupã, com sua aura divina, simboliza a interconexão entre os elementos e a importância de respeitar a natureza. Sua lenda perdura como uma expressão viva da espiritualidade ligada à terra no folclore brasileiro."

@@ -5,8 +5,8 @@ signal page_turned(folklore: FolkloreInfo)
 @export var folklore_list: Array[FolkloreInfo] = []
 var current_page: int = 0
 
-@onready var previous_page = $PreviousPage
-@onready var next_page = $NextPage
+@onready var previous_page = %PreviousPage
+@onready var next_page = %NextPage
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

@@ -1,11 +1,11 @@
 [gd_resource type="Resource" script_class="FolkloreInfo" load_steps=3 format=3 uid="uid://bx15pyomfn0vd"]
 
-[ext_resource type="Texture2D" uid="uid://ckqqhryxj335x" path="res://icon.svg" id="1_ikj84"]
+[ext_resource type="Texture2D" uid="uid://dkneqxoomtsvo" path="res://Assets/Characters/Curupira/Curupira.png" id="1_ispdr"]
 [ext_resource type="Script" path="res://Resources/FolkloreInfo/FolkloreInfo.gd" id="1_qmug4"]
 
 [resource]
 script = ExtResource("1_qmug4")
-folklore_image = ExtResource("1_ikj84")
+folklore_image = ExtResource("1_ispdr")
 folklore_name = "Curupira"
 folklore_details = "O Curupira, figura mística venerada como guardião das florestas, é representado como um ser de estatura baixa, com cabelos vermelhos e pés voltados para trás, exibindo uma força física impressionante. Apesar de sua origem indígena, o Curupira inspirava temor entre os próprios indígenas, uma vez que se opunha veementemente àqueles que tentavam explorar a floresta, caçar animais ou derrubar árvores, podendo aterrorizar ou até mesmo punir os infratores. No entanto, diz-se que ele não se manifesta contra aqueles que realizavam essas atividades para suprir necessidades básicas.
 
