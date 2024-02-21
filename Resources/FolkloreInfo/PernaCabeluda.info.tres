@@ -1,11 +1,9 @@
-[gd_resource type="Resource" script_class="FolkloreInfo" load_steps=3 format=3 uid="uid://j26sf8ov0cej"]
+[gd_resource type="Resource" script_class="FolkloreInfo" load_steps=2 format=3 uid="uid://j26sf8ov0cej"]
 
-[ext_resource type="Texture2D" uid="uid://bdhk0x1wlco5p" path="res://Yellow.png" id="1_3hyfy"]
 [ext_resource type="Script" path="res://Resources/FolkloreInfo/FolkloreInfo.gd" id="1_72ixc"]
 
 [resource]
 script = ExtResource("1_72ixc")
-folklore_image = ExtResource("1_3hyfy")
 folklore_name = "Perna Cabeluda"
 folklore_details = "Nos meados da década de 70, moradores de Recife começaram a relatar experiências incomuns durante as madrugadas, alegando terem sido derrubados por algo que se assemelhava a uma perna cabeluda, sem corpo aparente. Mesmo quando a vítima já estava no chão, a perna continuava a chutar de maneira ameaçadora.
 
