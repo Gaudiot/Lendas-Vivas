@@ -20,6 +20,10 @@ func remove(item: Item) -> void:
 			items[i] = null
 			break;
 			
+func removeSelectedItem() -> void:
+	remove(selected_item)
+	updated.emit()
+			
 func combine(item1: Item, item2: Item, result: Item) -> void:
 	if selected_item in [item1, item2]:
 		selected_item = null

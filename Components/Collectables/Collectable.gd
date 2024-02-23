@@ -6,12 +6,13 @@ extends Node2D
 const PLAYER_INVENTORY = preload("res://Misc/PlayerInventory.tres")
 
 func _ready():
-	if collectable.has_been_collected:
-		queue_free()
-	else:
+	var is_item_on_ground: bool = GlobalVariables.isItemOnGround(collectable.item.name)
+	if is_item_on_ground:
 		collectable_sprite.texture = collectable.get_item_texture()
+	else:
+		queue_free()
 		
-func interact():
-	collectable.collect()
-	PLAYER_INVENTORY.insert(collectable.item)
+func interact(player_inventory: Inventory):
+	GlobalVariables.pickItem(collectable.item.name)
+	player_inventory.insert(collectable.item)
 	queue_free()

@@ -1,9 +1,11 @@
-[gd_resource type="Resource" script_class="DialogueLine" load_steps=2 format=3 uid="uid://ck5rj1n2js05m"]
+[gd_resource type="Resource" script_class="DialogueLine" load_steps=3 format=3 uid="uid://ck5rj1n2js05m"]
 
 [ext_resource type="Script" path="res://Resources/Dialogues/Dialogue.gd" id="1_1b5l8"]
+[ext_resource type="Texture2D" uid="uid://d2fl67tffv6xg" path="res://Assets/Characters/Player/Inarita.png" id="1_6inx8"]
 
 [resource]
 script = ExtResource("1_1b5l8")
 is_char_left = true
 char_name = "Inara"
 line = "Acho que deveria procurar por mais pistas, talvez eu tenha deixado algo para trás."
+char_image = ExtResource("1_6inx8")

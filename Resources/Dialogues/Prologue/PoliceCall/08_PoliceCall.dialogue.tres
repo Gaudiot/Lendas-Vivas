@@ -1,5 +1,6 @@
-[gd_resource type="Resource" script_class="DialogueLine" load_steps=2 format=3 uid="uid://cgy13jqfetps2"]
+[gd_resource type="Resource" script_class="DialogueLine" load_steps=3 format=3 uid="uid://cgy13jqfetps2"]
 
+[ext_resource type="Texture2D" uid="uid://0n4hs228dgnj" path="res://Assets/Characters/NPCs/policial.png" id="1_aw8f1"]
 [ext_resource type="Script" path="res://Resources/Dialogues/Dialogue.gd" id="1_n471h"]
 
 [resource]
@@ -7,3 +8,4 @@ script = ExtResource("1_n471h")
 is_char_left = false
 char_name = "Roberto"
 line = "Recomendados que se possível fique em casa com as portas e janelas trancadas até que tudo se resolva."
+char_image = ExtResource("1_aw8f1")

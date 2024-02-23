@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="DialogueLine" load_steps=3 format=3 uid="uid://bde1fxj4mqvxb"]
+
+[ext_resource type="Texture2D" uid="uid://d2fl67tffv6xg" path="res://Assets/Characters/Player/Inarita.png" id="1_trwrt"]
+[ext_resource type="Script" path="res://Resources/Dialogues/Dialogue.gd" id="2_hi1tf"]
+
+[resource]
+script = ExtResource("2_hi1tf")
+is_char_left = true
+char_name = "Inara"
+line = "Mas o que diabos aconteceu aqui? Por que a janela está assim? será que ela foi sequestrada durante à noite?!
+ISSO NÃO PODE SER REAL, AINDA DEVO ESTAR SONHANDO."
+char_image = ExtResource("1_trwrt")

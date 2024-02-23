@@ -1,0 +1,60 @@
+[gd_scene load_steps=5 format=3 uid="uid://d4ff8s6mjwor2"]
+
+[ext_resource type="Texture2D" uid="uid://cy4svuv2egtal" path="res://Assets/Backgrounds/Chapters/Rua.png" id="1_eknd3"]
+[ext_resource type="PackedScene" uid="uid://d2vghqcqvfq0e" path="res://Scenes/MainCharacter.tscn" id="2_8doae"]
+[ext_resource type="PackedScene" uid="uid://liokbtu0disx" path="res://Components/Portals/Portal.tscn" id="3_p4vo2"]
+[ext_resource type="PackedScene" uid="uid://p8ndd1qu3ttx" path="res://Components/Obstacles/walls.tscn" id="4_l6aov"]
+
+[node name="Street" type="Node2D"]
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(3699, 360)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_eknd3")
+
+[node name="PlayerRoot" parent="." instance=ExtResource("2_8doae")]
+
+[node name="PlayerCamera" parent="PlayerRoot" index="2"]
+limit_right = 7398
+
+[node name="Portals" type="Node2D" parent="."]
+
+[node name="InaraHouse" parent="Portals" instance=ExtResource("3_p4vo2")]
+position = Vector2(116, 618)
+rotation = 4.71239
+scale = Vector2(0.8, 0.8)
+
+[node name="Butcher" parent="Portals" instance=ExtResource("3_p4vo2")]
+position = Vector2(3272, 606)
+rotation = 4.71239
+scale = Vector2(0.8, 0.8)
+
+[node name="Library" parent="Portals" instance=ExtResource("3_p4vo2")]
+position = Vector2(4586, 602)
+rotation = 4.71239
+scale = Vector2(0.8, 0.8)
+
+[node name="Restaurant" parent="Portals" instance=ExtResource("3_p4vo2")]
+position = Vector2(6058, 602)
+rotation = 4.71239
+scale = Vector2(0.8, 0.8)
+
+[node name="Park" parent="Portals" instance=ExtResource("3_p4vo2")]
+position = Vector2(7284, 624)
+scale = Vector2(0.8, 0.8)
+
+[node name="Walls" parent="." instance=ExtResource("4_l6aov")]
+
+[node name="Top" parent="Walls" index="1"]
+position = Vector2(3699, 589)
+scale = Vector2(380, 1)
+
+[node name="Right" parent="Walls" index="2"]
+position = Vector2(7398, 360)
+
+[node name="Bottom" parent="Walls" index="3"]
+position = Vector2(3699, 720)
+scale = Vector2(380, 1)
+
+[editable path="PlayerRoot"]
+[editable path="Walls"]

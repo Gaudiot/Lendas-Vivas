@@ -243,33 +243,41 @@ metadata/_edit_use_anchors_ = true
 [node name="Characters" type="Control" parent="DialogueBox"]
 show_behind_parent = true
 layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -589.5
-offset_top = -90.0
-offset_right = 578.5
-offset_bottom = 38.0
-grow_horizontal = 2
-mouse_filter = 2
-
-[node name="CharLeft" type="TextureRect" parent="DialogueBox/Characters"]
-self_modulate = Color(0, 0.823529, 0.4, 1)
-layout_mode = 2
-offset_left = 3.0
-offset_right = 131.0
-offset_bottom = 128.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 
-[node name="CharRight" type="TextureRect" parent="DialogueBox/Characters"]
-self_modulate = Color(0.984314, 0.498039, 0, 1)
-layout_mode = 2
-offset_left = 1036.0
-offset_right = 1164.0
-offset_bottom = 128.0
+[node name="CharLeft" type="TextureRect" parent="DialogueBox/Characters"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = -150.0
+offset_top = -595.0
+offset_right = 445.0
+grow_vertical = 0
 mouse_filter = 2
+expand_mode = 1
+
+[node name="CharRight" type="TextureRect" parent="DialogueBox/Characters"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -443.0
+offset_top = -595.0
+offset_right = 152.0
+grow_horizontal = 0
+grow_vertical = 0
+pivot_offset = Vector2(595, 595)
+mouse_filter = 2
+expand_mode = 1
+flip_h = true
 
 [node name="Texts" type="Control" parent="DialogueBox"]
 layout_mode = 1
@@ -281,27 +289,23 @@ grow_vertical = 2
 mouse_filter = 2
 
 [node name="CharName" type="Label" parent="DialogueBox/Texts"]
+unique_name_in_owner = true
 layout_mode = 1
 offset_left = 48.0
-offset_top = 49.0
-offset_right = 150.0
-offset_bottom = 72.0
+offset_top = 43.0
+offset_right = 585.0
+offset_bottom = 85.0
+theme_override_font_sizes/font_size = 30
 text = "Dialogo teste - Nome do personagem"
 
-[node name="DialogueText" type="RichTextLabel" parent="DialogueBox/Texts"]
+[node name="DialogueText" type="RichTextLabel" parent="DialogueBox/Texts/CharName"]
+unique_name_in_owner = true
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -593.5
-offset_top = -38.5
-offset_right = 584.5
-offset_bottom = 80.5
-grow_horizontal = 2
-grow_vertical = 2
+offset_top = 46.0
+offset_right = 1178.0
+offset_bottom = 165.0
 mouse_filter = 2
+theme_override_font_sizes/normal_font_size = 25
 text = "Texto placeholder
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
 
@@ -324,7 +328,7 @@ libraries = {
 }
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 0.1
+wait_time = 0.05
 
 [node name="DialogueAudioPlayer" type="AudioStreamPlayer2D" parent="."]
 

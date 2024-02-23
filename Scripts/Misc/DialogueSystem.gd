@@ -6,8 +6,8 @@ extends CanvasLayer
 
 # TEXT NODES
 @onready var dialogue_button = $DialogueBox/DialogueButton
-@onready var char_name_label = $DialogueBox/Texts/CharName
-@onready var dialogue_text = $DialogueBox/Texts/DialogueText
+@onready var char_name_label = %CharName
+@onready var dialogue_text = %DialogueText
 
 # AUXILIAR NODES
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
@@ -48,7 +48,6 @@ func _getNextLine():
 		char_right.show()
 	
 	dialogue_audio_player.stream = next_dialogue_line.char_sound
-	dialogue_audio_player.play()
 
 func _startDialogue():
 	_getNextLine()
@@ -77,6 +76,8 @@ func _showNextLetter():
 		return
 		
 	visible_letters += 1
+	if visible_letters < current_line.length() && current_line[visible_letters] != " ":
+		dialogue_audio_player.play()
 	text_displayed = current_line.left(visible_letters)
 	_updateText()
 
