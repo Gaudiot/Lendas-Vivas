@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="DialogueLine" load_steps=2 format=3 uid="uid://dnkn5p1dyeoe1"]
+
+[ext_resource type="Script" path="res://Resources/Dialogues/Dialogue.gd" id="1_x50lu"]
+
+[resource]
+script = ExtResource("1_x50lu")
+is_char_left = false
+char_name = "Pisadeira"
+line = "Não precisa ser ignorante também. Algumas das lendas popularizaram mais que outras, por isso você não me conhece. 
+Mas sim, sou a pisadeira, se quiser eu posso lhe falar sobre como foram os pesadelos que você vem tendo."

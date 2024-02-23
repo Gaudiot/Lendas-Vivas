@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="FolkloreInfo" load_steps=3 format=3 uid="uid://d0g5nqm2evx0m"]
+
+[ext_resource type="Texture2D" uid="uid://deoxlmnbw4gx6" path="res://Assets/Characters/Pisadeira/Pisadeira.png" id="1_2wi1y"]
+[ext_resource type="Script" path="res://Resources/FolkloreInfo/FolkloreInfo.gd" id="1_k8cmc"]
+
+[resource]
+script = ExtResource("1_k8cmc")
+folklore_image = ExtResource("1_2wi1y")
+folklore_name = "Pisadeira"
+folklore_details = "Reconhecida como a personificação do pesadelo, a Pisadeira é uma figura mais proeminente em Minas Gerais e São Paulo. Descrita como uma mulher alta e magra, com unhas longas e sujas, queixo pronunciado, dentes esverdeados e cabelos brancos e desgrenhados.
+
+Durante o dia, ela fica no telhado das casa observando a movimentação dentro das casas, aguardando o momento certo. Após o jantar, quando alguém vai dormir com o estômago cheio, a Pisadeira surge. Saindo de seu esconderijo, ela pisa com força e crueldade no peito da pessoa, deixando-a em um estado de paralisia. A vítima, consciente do que ocorre, experimenta uma sensação de desespero, mas incapaz de reagir.
+
+Segundo a sabedoria popular, para evitar a visita da Pisadeira, basta esfregar os pés um no outro três vezes e batê-los antes de dormir, o que supostamente garante uma noite tranquila e sem interferências."

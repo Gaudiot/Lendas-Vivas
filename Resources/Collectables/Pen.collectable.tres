@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Collectable" load_steps=3 format=3 uid="uid://38o2imcnmyn7"]
+
+[ext_resource type="Script" path="res://Resources/Collectables/Collectable.gd" id="1_i2r8c"]
+[ext_resource type="Resource" uid="uid://c7ugnmlwqhsn4" path="res://Resources/Items/Pen.item.tres" id="1_p1qcy"]
+
+[resource]
+script = ExtResource("1_i2r8c")
+item = ExtResource("1_p1qcy")

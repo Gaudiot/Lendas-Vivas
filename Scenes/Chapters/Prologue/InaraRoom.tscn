@@ -1,0 +1,55 @@
+[gd_scene load_steps=10 format=3 uid="uid://xi2xuriaakkl"]
+
+[ext_resource type="Texture2D" uid="uid://c178tv3l2u5ui" path="res://Assets/Backgrounds/Chapters/Prologue/InaraRoom.png" id="1_mpne6"]
+[ext_resource type="Script" path="res://Scripts/Chapters/Prologue/InaraRoom.gd" id="1_tmsmd"]
+[ext_resource type="PackedScene" uid="uid://d2vghqcqvfq0e" path="res://Scenes/MainCharacter.tscn" id="2_7gxya"]
+[ext_resource type="Resource" uid="uid://d1vqa6c0mk73o" path="res://Resources/Dialogues/Prologue/Awake/01_Awake.dialogue.tres" id="2_xvk5a"]
+[ext_resource type="PackedScene" uid="uid://p8ndd1qu3ttx" path="res://Components/Obstacles/walls.tscn" id="3_pnjor"]
+[ext_resource type="Resource" uid="uid://bb2f80lyfeoot" path="res://Resources/Dialogues/Prologue/Awake/02_Awake.dialogue.tres" id="3_u4hd7"]
+[ext_resource type="PackedScene" uid="uid://liokbtu0disx" path="res://Components/Portals/Portal.tscn" id="4_ctjt0"]
+[ext_resource type="Resource" uid="uid://blskyga58567u" path="res://Resources/Portals/Prologue/LivingRoom.portal.tres" id="5_vsnvb"]
+[ext_resource type="PackedScene" uid="uid://brc301dhk383d" path="res://Components/Obstacles/RectangleObstacle.tscn" id="8_aac21"]
+
+[node name="InaraRoom" type="Node2D"]
+script = ExtResource("1_tmsmd")
+cutscene_lines = Array[Resource("res://Resources/Dialogues/Dialogue.gd")]([ExtResource("2_xvk5a"), ExtResource("3_u4hd7")])
+
+[node name="Background" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(760, 360)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_mpne6")
+
+[node name="Portals" type="Node2D" parent="."]
+
+[node name="LivingRoom" parent="Portals" instance=ExtResource("4_ctjt0")]
+position = Vector2(105, 619)
+rotation = 3.14159
+portal = ExtResource("5_vsnvb")
+
+[node name="Spawns" type="Node2D" parent="."]
+
+[node name="SpawnDoor" type="Node2D" parent="Spawns"]
+position = Vector2(206, 617)
+
+[node name="Walls" parent="." instance=ExtResource("3_pnjor")]
+
+[node name="Top" parent="Walls" index="1"]
+position = Vector2(760, 536)
+
+[node name="RectangleObstacle" parent="Walls" instance=ExtResource("8_aac21")]
+position = Vector2(1253, 623)
+rotation = 0.563629
+scale = Vector2(20, 1)
+
+[node name="Player" parent="." instance=ExtResource("2_7gxya")]
+position = Vector2(596, 601)
+scale = Vector2(5.08, 5.08)
+
+[node name="PlayerCamera" parent="Player" index="2"]
+scale = Vector2(1, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+[editable path="Walls"]
+[editable path="Player"]

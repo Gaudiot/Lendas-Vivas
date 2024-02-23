@@ -1,0 +1,34 @@
+[gd_scene load_steps=4 format=3 uid="uid://3our0enw254n"]
+
+[ext_resource type="Texture2D" uid="uid://b24kjh5f41qdd" path="res://Assets/Backgrounds/Chapters/Section4/Library.png" id="1_v8wjk"]
+[ext_resource type="PackedScene" uid="uid://liokbtu0disx" path="res://Components/Portals/Portal.tscn" id="2_i12mp"]
+[ext_resource type="PackedScene" uid="uid://p8ndd1qu3ttx" path="res://Components/Obstacles/walls.tscn" id="3_hn5rv"]
+
+[node name="Library" type="Node2D"]
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(1238, 360)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_v8wjk")
+
+[node name="Portals" type="Node2D" parent="."]
+
+[node name="Street" parent="Portals" instance=ExtResource("2_i12mp")]
+position = Vector2(166, 590)
+rotation = 3.14159
+scale = Vector2(1.5, 1.5)
+
+[node name="Walls" parent="." instance=ExtResource("3_hn5rv")]
+
+[node name="Top" parent="Walls" index="1"]
+position = Vector2(1238, 489)
+scale = Vector2(130, 1)
+
+[node name="Right" parent="Walls" index="2"]
+position = Vector2(2476, 360)
+
+[node name="Bottom" parent="Walls" index="3"]
+position = Vector2(1238, 720)
+scale = Vector2(130, 1)
+
+[editable path="Walls"]

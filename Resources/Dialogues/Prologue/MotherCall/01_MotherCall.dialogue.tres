@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="DialogueLine" load_steps=3 format=3 uid="uid://b5ab4uq0p4npd"]
+
+[ext_resource type="Script" path="res://Resources/Dialogues/Dialogue.gd" id="1_lnfbn"]
+[ext_resource type="Texture2D" uid="uid://d2fl67tffv6xg" path="res://Assets/Characters/Player/Inarita.png" id="1_qx8mc"]
+
+[resource]
+script = ExtResource("1_lnfbn")
+is_char_left = true
+char_name = "Inara"
+line = "Tenho que ligar pra minha mãe também, avisá-la do que está acontecendo"
+char_image = ExtResource("1_qx8mc")

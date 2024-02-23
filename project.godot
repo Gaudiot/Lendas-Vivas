@@ -10,10 +10,54 @@ config_version=5
 
 [application]
 
-config/name="lendas_vivas"
+config/name="LendasVivas"
+run/main_scene="res://Scenes/Menu.tscn"
 config/features=PackedStringArray("4.2", "Mobile")
 config/icon="res://icon.svg"
+
+[autoload]
+
+SceneTransition="*res://Scenes/Misc/SceneTransition.tscn"
+DialogueSystem="*res://Scenes/Misc/Dialogue.tscn"
+GlobalVariables="*res://Scripts/Global/GlobalVariables.gd"
+PrologueState="*res://Scripts/Global/PrologueState.gd"
+
+[display]
+
+window/size/viewport_width=1520
+window/size/viewport_height=720
+window/size/initial_position_type=3
+window/stretch/mode="viewport"
+window/stretch/aspect="expand"
+
+[input]
+
+click={
+"deadzone": 0.5,
+"events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":0,"position":Vector2(0, 0),"global_position":Vector2(0, 0),"factor":1.0,"button_index":1,"canceled":false,"pressed":false,"double_click":false,"script":null)
+]
+}
+
+[input_devices]
+
+pointing/emulate_touch_from_mouse=true
+
+[layer_names]
+
+2d_render/layer_1="Player"
+2d_render/layer_2="PlayerInteract"
+2d_render/layer_3="Border"
+2d_render/layer_4="Obstacles"
+2d_render/layer_9="ItemGround"
+2d_render/layer_10="ItemSlot"
+2d_physics/layer_1="Player"
+2d_physics/layer_2="Collectable"
+2d_physics/layer_3="NPC"
+2d_physics/layer_4="InventoryItem"
+2d_physics/layer_5="Portal"
+2d_physics/layer_6="Interactable"
 
 [rendering]
 
 renderer/rendering_method="mobile"
+textures/vram_compression/import_etc2_astc=true

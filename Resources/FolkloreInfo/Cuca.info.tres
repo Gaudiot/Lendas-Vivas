@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="FolkloreInfo" load_steps=3 format=3 uid="uid://dth28kmig13ku"]
+
+[ext_resource type="Texture2D" uid="uid://ds5mwrr7wi2wd" path="res://Assets/Characters/Cuca/Cuca.png" id="1_h30p4"]
+[ext_resource type="Script" path="res://Resources/FolkloreInfo/FolkloreInfo.gd" id="1_hoox5"]
+
+[resource]
+script = ExtResource("1_hoox5")
+folklore_image = ExtResource("1_h30p4")
+folklore_name = "Cuca"
+folklore_details = "A Cuca é uma das figuras mais reconhecidas do folclore brasileiro, sendo retratada como uma bruxa com uma cabeça de jacaré e um corpo escamoso, semelhante a um jacaré, além de possuir uma voz assustadora. Segundo a lenda, ela tem o hábito de sequestrar crianças, especialmente aquelas que desobedecem ou desrespeitam seus pais.
+
+De acordo com a tradição, a Cuca só dorme uma vez a cada sete anos, e para evitar que ela sequestre uma criança, é fundamental que esta durma no horário apropriado.
+
+Curiosamente, a Cuca é a única lenda do folclore brasileiro associada a uma cantiga de ninar, que diz:
+\"Nana neném,
+Que a Cuca vem pegar.
+Papai foi à roça,
+Mamãe foi trabalhar.\""

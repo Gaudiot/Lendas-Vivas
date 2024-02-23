@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="DialogueLine" load_steps=3 format=3 uid="uid://fhh5um1kg2nk"]
+
+[ext_resource type="Texture2D" uid="uid://0n4hs228dgnj" path="res://Assets/Characters/NPCs/policial.png" id="1_k6sgu"]
+[ext_resource type="Script" path="res://Resources/Dialogues/Dialogue.gd" id="3_h38yc"]
+
+[resource]
+script = ExtResource("3_h38yc")
+is_char_left = false
+char_name = "Roberto"
+line = "Aqui é da polícia, me chamo Roberto, como posso te ajudar?"
+char_image = ExtResource("1_k6sgu")

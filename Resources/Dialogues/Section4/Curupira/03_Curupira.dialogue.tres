@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="DialogueLine" load_steps=2 format=3 uid="uid://cweomn7qqgpiq"]
+
+[ext_resource type="Script" path="res://Resources/Dialogues/Dialogue.gd" id="1_hyqfn"]
+
+[resource]
+script = ExtResource("1_hyqfn")
+is_char_left = true
+char_name = "Inara"
+line = "Bem… Você estava assoviando, meio difícil botar a culpa em mim de lhe encontrar. Por acaso você é o Curupira? Com os pés ao contrário é meu único chute na verdade."

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="DialogueLine" load_steps=3 format=3 uid="uid://bddwhfrssynpk"]
+
+[ext_resource type="Texture2D" uid="uid://d2fl67tffv6xg" path="res://Assets/Characters/Player/Inarita.png" id="1_r0htj"]
+[ext_resource type="Script" path="res://Resources/Dialogues/Dialogue.gd" id="3_ilnje"]
+
+[resource]
+script = ExtResource("3_ilnje")
+is_char_left = true
+char_name = "Inara"
+line = "Por favor, me ajudem! minha irmã não está no quarto dela, acho que ela foi sequestrada!!"
+char_image = ExtResource("1_r0htj")

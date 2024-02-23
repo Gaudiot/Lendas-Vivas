@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="FolkloreInfo" load_steps=2 format=3 uid="uid://bnrf03weumf76"]
+
+[ext_resource type="Script" path="res://Resources/FolkloreInfo/FolkloreInfo.gd" id="1_jcx02"]
+
+[resource]
+script = ExtResource("1_jcx02")
+folklore_name = "Anhangá"
+folklore_details = "Representado como um imponente veado branco, de olhos vermelhos, chifres pontiagudos e uma cruz na testa entre os olhos, Anhangá emerge como um espírito guardião das matas, rios e animais selvagens, com origens na região amazônica. Sua antiguidade é comparada à das árvores mais anciãs da floresta. Também se diz que ele é inimigo de Tupã.
+
+Anhangá pode assumir a forma de diversos animais, inclusive a de seres humanos, uma transformação frequentemente empregada para amedrontar madeireiros e caçadores, especialmente aqueles que ameaçam filhotes.
+
+Anhangá, zeloso pela preservação da natureza, desempenha o papel de punidor daqueles que maltratam os animais ou exploram desmedidamente o meio ambiente. Contos sobre suas ações incluem relatos de pancadas invisíveis, investidas com os chifres e coices. Há também registros de sua capacidade de iludir caçadores, levando-os mais fundo na mata, onde se perdem para sempre.
+
+Ao ser alvejado por um caçador, Anhangá desvia as balas, redirecionando a mira para pessoas queridas ao atirador. Para buscar sua proteção, é comum oferecer-lhe aguardente ou fumo de rolo. Alternativamente, é possível afastá-lo queimando castanhas de caju ou criando cruzes com madeira retirada da própria floresta.
+
+Anhangá deixa uma aura de assombração pelos lugares onde ele costuma frequentar."

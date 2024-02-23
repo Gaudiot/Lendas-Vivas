@@ -1,0 +1,96 @@
+[gd_scene load_steps=16 format=3 uid="uid://drma8j4n22xq5"]
+
+[ext_resource type="Texture2D" uid="uid://bwbb3opvh0x3j" path="res://Assets/Backgrounds/Chapters/Prologue/LivingRoom.png" id="1_t7j4q"]
+[ext_resource type="PackedScene" uid="uid://che8dm2ehd180" path="res://Components/Collectables/Collectable.tscn" id="2_4xhtv"]
+[ext_resource type="Texture2D" uid="uid://ve57qy78rhpd" path="res://Assets/Items/Letter.png" id="2_thwpm"]
+[ext_resource type="Texture2D" uid="uid://clsbihn2nx8wd" path="res://Assets/Items/Pen.png" id="3_4mufj"]
+[ext_resource type="Script" path="res://Scripts/Chapters/Prologue/Letter.gd" id="3_fyeoa"]
+[ext_resource type="Resource" uid="uid://38o2imcnmyn7" path="res://Resources/Collectables/Pen.collectable.tres" id="3_r4c61"]
+[ext_resource type="PackedScene" uid="uid://d2vghqcqvfq0e" path="res://Scenes/MainCharacter.tscn" id="5_402x4"]
+[ext_resource type="PackedScene" uid="uid://liokbtu0disx" path="res://Components/Portals/Portal.tscn" id="5_aqh1b"]
+[ext_resource type="Resource" uid="uid://mdwbsy5gtuqs" path="res://Resources/Portals/Prologue/InaraRoom.portal.tres" id="6_voaxx"]
+[ext_resource type="Script" path="res://Scripts/Chapters/Prologue/PortalToMoema.gd" id="7_144ib"]
+[ext_resource type="Resource" uid="uid://cgkdon6tjuoah" path="res://Resources/Portals/Prologue/MoemaRoom.portal.tres" id="7_x1dr3"]
+[ext_resource type="PackedScene" uid="uid://p8ndd1qu3ttx" path="res://Components/Obstacles/walls.tscn" id="8_q5t0e"]
+[ext_resource type="Resource" uid="uid://css1ty0qkig4r" path="res://Resources/Portals/Street.portal.tres" id="8_wx487"]
+[ext_resource type="Script" path="res://Scripts/Chapters/Prologue/PortalToStreet.gd" id="11_mvj03"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d7pp6"]
+size = Vector2(514.624, 897.966)
+
+[node name="LivingRoom" type="Node2D"]
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(1168.54, 360.625)
+scale = Vector2(0.500521, 0.500521)
+texture = ExtResource("1_t7j4q")
+
+[node name="Letter" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(2004, 431)
+scale = Vector2(0.19043, 0.19043)
+texture = ExtResource("2_thwpm")
+script = ExtResource("3_fyeoa")
+
+[node name="LetterArea" type="Area2D" parent="Letter"]
+collision_layer = 32
+
+[node name="LetterCollision" type="CollisionShape2D" parent="Letter/LetterArea"]
+position = Vector2(-0.000976563, 275.692)
+shape = SubResource("RectangleShape2D_d7pp6")
+
+[node name="Collectables" type="Node2D" parent="."]
+
+[node name="Pen" parent="Collectables" instance=ExtResource("2_4xhtv")]
+position = Vector2(565, 465)
+rotation = 0.651235
+collectable = ExtResource("3_r4c61")
+
+[node name="CollectableSprite" parent="Collectables/Pen" index="0"]
+texture = ExtResource("3_4mufj")
+
+[node name="Portals" type="Node2D" parent="."]
+
+[node name="InaraRoom" parent="Portals" instance=ExtResource("5_aqh1b")]
+position = Vector2(826, 536)
+rotation = 4.71239
+portal = ExtResource("6_voaxx")
+
+[node name="MoemaRoom" parent="Portals" instance=ExtResource("5_aqh1b")]
+position = Vector2(1710, 536)
+rotation = 4.71239
+script = ExtResource("7_144ib")
+portal = ExtResource("7_x1dr3")
+
+[node name="Street" parent="Portals" instance=ExtResource("5_aqh1b")]
+position = Vector2(2235, 608)
+script = ExtResource("11_mvj03")
+portal = ExtResource("8_wx487")
+
+[node name="Walls" parent="." instance=ExtResource("8_q5t0e")]
+
+[node name="Top" parent="Walls" index="1"]
+position = Vector2(1168, 487)
+scale = Vector2(120, 1.5)
+
+[node name="Right" parent="Walls" index="2"]
+position = Vector2(2336, 360)
+
+[node name="Bottom" parent="Walls" index="3"]
+position = Vector2(1168, 720)
+scale = Vector2(120, 1.5)
+
+[node name="PlayerRoot" parent="." instance=ExtResource("5_402x4")]
+position = Vector2(358, 590)
+scale = Vector2(5.04, 5.04)
+
+[node name="PlayerCamera" parent="PlayerRoot" index="2"]
+scale = Vector2(1, 1)
+limit_right = 2336
+
+[node name="AudioPlayer" type="AudioStreamPlayer2D" parent="."]
+unique_name_in_owner = true
+
+[editable path="Collectables/Pen"]
+[editable path="Walls"]
+[editable path="PlayerRoot"]

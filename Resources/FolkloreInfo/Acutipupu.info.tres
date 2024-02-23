@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="FolkloreInfo" load_steps=2 format=3 uid="uid://cevthe8yeavg4"]
+
+[ext_resource type="Script" path="res://Resources/FolkloreInfo/FolkloreInfo.gd" id="1_0ilkq"]
+
+[resource]
+script = ExtResource("1_0ilkq")
+folklore_name = "Acutipupu"
+folklore_details = "Acutipupu é uma figura lendária, podendo ser ora homem e ora mulher. É associada à misteriosa Serra do Japó. Embora essa serra não tenha uma localização precisa, há suposições de que possa referir-se à Serra de Japi, no estado de São Paulo.
+
+Na forma feminina, Acutipupu era conhecida por dar à luz exclusivamente a meninas, que, segundo a lenda, se tornavam mulheres de uma beleza incomparável, rivalizando com as próprias estrelas. Já na forma masculina, a criatura engravidava mulheres que, por sua vez, davam à luz apenas meninos, destinados a se tornarem homens fortes e valentes, irradiando uma bravura comparável ao sol e transformando-se em guerreiros destemidos de suas tribos.
+
+Uma narrativa específica envolve Acutipupu no papel de mulher, sendo supostamente engravidad por Uaiú. Eventualmente, ela deu à luz uma filha chamada Erem, que se destacou por sua deslumbrante beleza. No entanto, uma reviravolta sombria se desenrola quando Uaiú, atormentado por desejos impróprios, tenta avançar sobre a própria filha. Erem, recusando-se a ceder a tais avanços, foge para uma tribo vizinha em busca de refúgio, onde acaba se casando com o chefe local.
+
+Enfurecido com essa reviravolta, Uaiú declara guerra à tribo onde sua filha se refugiou, resultando na trágica morte de todos os membros, incluindo Erem. Assim, Acutipupu enfrenta a amarga perda de sua própria filha, marcando um episódio sombrio em sua lenda."

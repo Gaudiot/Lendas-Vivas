@@ -1,0 +1,169 @@
+[gd_scene load_steps=22 format=3 uid="uid://b6tydcyjbwaah"]
+
+[ext_resource type="Script" path="res://Scripts/Encyclopedia/Encyclopedia.gd" id="1_cariu"]
+[ext_resource type="Texture2D" uid="uid://do8cb6227cf6g" path="res://Assets/Backgrounds/Misc/Leafs.png" id="2_iigwv"]
+[ext_resource type="Script" path="res://Scripts/Encyclopedia/Book.gd" id="2_jhgyv"]
+[ext_resource type="Resource" uid="uid://cevthe8yeavg4" path="res://Resources/FolkloreInfo/Acutipupu.info.tres" id="3_a6gre"]
+[ext_resource type="Texture2D" uid="uid://cbre5h51y8n43" path="res://Assets/Icons/ArrowRight.png" id="3_egd7k"]
+[ext_resource type="Texture2D" uid="uid://b12qqholninv4" path="res://Assets/Images/Book/BookCover.png" id="4_lrq32"]
+[ext_resource type="Resource" uid="uid://bnrf03weumf76" path="res://Resources/FolkloreInfo/Anhanga.info.tres" id="4_yhqq8"]
+[ext_resource type="Resource" uid="uid://xyatec7dwylm" path="res://Resources/FolkloreInfo/CobraNorato.info.tres" id="5_hyoel"]
+[ext_resource type="Resource" uid="uid://b6ef0lv1n1m2f" path="res://Resources/FolkloreInfo/ComadreFulozina.info.tres" id="6_rufy6"]
+[ext_resource type="Resource" uid="uid://dth28kmig13ku" path="res://Resources/FolkloreInfo/Cuca.info.tres" id="7_4djur"]
+[ext_resource type="Resource" uid="uid://bx15pyomfn0vd" path="res://Resources/FolkloreInfo/Curupira.info.tres" id="8_trigp"]
+[ext_resource type="Resource" uid="uid://bic0pji2pr7xc" path="res://Resources/FolkloreInfo/MariaCaninana.info.tres" id="9_nrtpo"]
+[ext_resource type="Resource" uid="uid://j26sf8ov0cej" path="res://Resources/FolkloreInfo/PernaCabeluda.info.tres" id="10_m0pew"]
+[ext_resource type="Resource" uid="uid://d0g5nqm2evx0m" path="res://Resources/FolkloreInfo/Pisadeira.info.tres" id="11_36va7"]
+[ext_resource type="Resource" uid="uid://cwspfnsbshrbn" path="res://Resources/FolkloreInfo/Tupa.info.tres" id="12_ne71i"]
+[ext_resource type="Script" path="res://Scripts/Encyclopedia/FolkloreInfo.gd" id="13_wrsx4"]
+[ext_resource type="AudioStream" uid="uid://drc2vuj14i1fj" path="res://Assets/Sounds/Backgrounds/encyclopedia-background.ogg" id="15_unner"]
+[ext_resource type="FontFile" uid="uid://dlp1q0ohm3gb3" path="res://Assets/Fonts/Puimek/puimek.ttf" id="15_x5ki5"]
+[ext_resource type="Texture2D" uid="uid://bns4cpss8qvl6" path="res://Assets/Images/Book/BookPages.png" id="16_6vumi"]
+[ext_resource type="Texture2D" uid="uid://cv3t6b040qe0b" path="res://Assets/Icons/ArrowPage.png" id="16_88l3f"]
+[ext_resource type="Texture2D" uid="uid://bkxx40pjsa8ey" path="res://Assets/Icons/Question.png" id="18_fxvyy"]
+
+[node name="Encyclopedia" type="CanvasLayer"]
+script = ExtResource("1_cariu")
+
+[node name="Background" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_iigwv")
+expand_mode = 1
+
+[node name="Book" type="TextureRect" parent="."]
+self_modulate = Color(0.866667, 0.25098, 0, 1)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_lrq32")
+expand_mode = 1
+script = ExtResource("2_jhgyv")
+folklore_list = Array[Resource("res://Resources/FolkloreInfo/FolkloreInfo.gd")]([ExtResource("3_a6gre"), ExtResource("4_yhqq8"), ExtResource("5_hyoel"), ExtResource("6_rufy6"), ExtResource("7_4djur"), ExtResource("8_trigp"), ExtResource("9_nrtpo"), ExtResource("10_m0pew"), ExtResource("11_36va7"), ExtResource("12_ne71i")])
+
+[node name="BookPages" type="TextureRect" parent="Book"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("16_6vumi")
+expand_mode = 1
+
+[node name="FolkloreInfo" type="Panel" parent="Book/BookPages"]
+self_modulate = Color(1, 1, 1, 0)
+clip_contents = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -545.0
+offset_top = -292.0
+offset_right = 551.0
+offset_bottom = 231.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("13_wrsx4")
+
+[node name="FolkloreImage" type="TextureRect" parent="Book/BookPages/FolkloreInfo"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 25.0
+offset_top = -537.5
+offset_right = 1065.0
+offset_bottom = 502.5
+grow_vertical = 2
+scale = Vector2(0.45, 0.45)
+pivot_offset = Vector2(0, 520)
+texture = ExtResource("18_fxvyy")
+
+[node name="FolkloreName" type="Label" parent="Book/BookPages/FolkloreInfo"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -507.0
+offset_top = 2.0
+offset_right = -34.0
+offset_bottom = 89.0
+grow_horizontal = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("15_x5ki5")
+theme_override_font_sizes/font_size = 80
+text = "Name"
+autowrap_mode = 2
+justification_flags = 162
+
+[node name="FolkloreInfoText" type="RichTextLabel" parent="Book/BookPages/FolkloreInfo/FolkloreName"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -10.0
+offset_right = 500.0
+offset_bottom = 400.0
+grow_vertical = 0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("15_x5ki5")
+theme_override_font_sizes/normal_font_size = 40
+bbcode_enabled = true
+text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis nisl sapien, dapibus a augue quis, dictum dictum quam. Morbi quis urna id mauris laoreet aliquet. Quisque maximus magna in neque consectetur cursus a vitae augue. Nullam mattis erat eget risus fringilla, nec volutpat metus feugiat. Morbi tempus, lorem non gravida ultrices, justo augue egestas risus, sed rutrum magna sem sed purus. Suspendisse interdum justo turpis, ut varius diam vehicula accumsan. Quisque lobortis euismod ante. Sed dapibus elit et convallis aliquam. Curabitur aliquam diam et augue dignissim, quis ullamcorper purus consequat. Sed porttitor pulvinar nibh, luctus laoreet magna ornare vitae. Nulla facilisi. Vivamus sed quam euismod, efficitur nibh et, tempor augue.
+
+Etiam congue lacus vel turpis sollicitudin, id elementum mauris placerat. Phasellus vel ipsum odio. In eleifend libero sit amet felis ultricies consequat. Maecenas vehicula nisi augue, id dictum ipsum pharetra at. Nullam et condimentum odio. Fusce et imperdiet libero, ut posuere nibh. Morbi fermentum mauris at sapien viverra blandit. Vestibulum efficitur odio at dui lacinia, et hendrerit metus porttitor. Mauris neque dolor, fringilla id est id, malesuada iaculis metus. In dignissim vel mauris ut lobortis. Donec consectetur leo in tristique posuere. Donec sed lacus non dolor maximus vestibulum. "
+autowrap_mode = 2
+
+[node name="PreviousPage" type="TextureButton" parent="Book/BookPages"]
+unique_name_in_owner = true
+layout_mode = 2
+offset_left = 192.0
+offset_top = 574.0
+offset_right = 625.0
+offset_bottom = 721.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.55, 0.55)
+texture_normal = ExtResource("16_88l3f")
+flip_h = true
+
+[node name="NextPage" type="TextureButton" parent="Book/BookPages"]
+unique_name_in_owner = true
+layout_mode = 2
+offset_left = 1092.0
+offset_top = 574.0
+offset_right = 1525.0
+offset_bottom = 721.0
+grow_horizontal = 0
+grow_vertical = 2
+scale = Vector2(0.55, 0.55)
+texture_normal = ExtResource("16_88l3f")
+
+[node name="Back" type="TextureButton" parent="."]
+offset_right = 144.0
+offset_bottom = 144.0
+texture_normal = ExtResource("3_egd7k")
+ignore_texture_size = true
+stretch_mode = 0
+flip_h = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("15_unner")
+volume_db = -11.243
+autoplay = true
+
+[connection signal="page_turned" from="Book" to="Book/BookPages/FolkloreInfo" method="_on_book_page_turned"]
+[connection signal="button_down" from="Book/BookPages/PreviousPage" to="Book" method="_on_previous_page_button_down"]
+[connection signal="button_down" from="Book/BookPages/NextPage" to="Book" method="_on_next_page_button_down"]
+[connection signal="button_down" from="Back" to="." method="_on_back_button_down"]

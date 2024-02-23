@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="DialogueLine" load_steps=2 format=3 uid="uid://v63griy4k57h"]
+
+[ext_resource type="Script" path="res://Resources/Dialogues/Dialogue.gd" id="1_q3hv5"]
+
+[resource]
+script = ExtResource("1_q3hv5")
+is_char_left = false
+char_name = "Cuca"
+line = "Ah, já cansei do natural, sempre a mesmice chata. Mas não se preocupem, irei deixar vocês saírem daí assim que completarmos nosso plano ou quando vocês virarem picolés. O que vier por último HAHAHA"

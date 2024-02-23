@@ -1,0 +1,112 @@
+[gd_scene load_steps=8 format=3 uid="uid://ctvivhe18irto"]
+
+[ext_resource type="Texture2D" uid="uid://b37rm2j34jtia" path="res://Assets/Backgrounds/Menu/Menu.png" id="1_kuxkc"]
+[ext_resource type="Script" path="res://Scripts/Chapters/Menu/EncyclopediaButton.gd" id="2_6fvgk"]
+[ext_resource type="Script" path="res://Scripts/Chapters/Menu/ExitGameButton.gd" id="2_emepl"]
+[ext_resource type="FontFile" uid="uid://dlp1q0ohm3gb3" path="res://Assets/Fonts/Puimek/puimek.ttf" id="2_emyjh"]
+[ext_resource type="Script" path="res://Scripts/Chapters/Menu/StartGameButton.gd" id="2_ihopq"]
+[ext_resource type="FontFile" uid="uid://dkr8cg02b1yrt" path="res://Assets/Fonts/Ladi/Ladi-Dense.otf" id="6_86nec"]
+[ext_resource type="AudioStream" uid="uid://bhixnh5dh8kb8" path="res://Assets/Sounds/Backgrounds/menu-background.ogg" id="6_byq7g"]
+
+[node name="Menu" type="CanvasLayer"]
+layer = 6
+
+[node name="MenuBackground" type="TextureRect" parent="."]
+texture_filter = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_kuxkc")
+expand_mode = 1
+
+[node name="MenuButtons" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ButtonsBox" type="VBoxContainer" parent="MenuButtons"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -155.0
+offset_top = -7.0
+offset_right = 156.0
+offset_bottom = 313.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+
+[node name="StartGameButton" type="Button" parent="MenuButtons/ButtonsBox"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_emyjh")
+theme_override_font_sizes/font_size = 50
+text = "Iniciar"
+script = ExtResource("2_ihopq")
+
+[node name="ContinueGameButton" type="Button" parent="MenuButtons/ButtonsBox"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_emyjh")
+theme_override_font_sizes/font_size = 50
+text = "Continuar"
+
+[node name="EncyclopediaButton" type="Button" parent="MenuButtons/ButtonsBox"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_emyjh")
+theme_override_font_sizes/font_size = 50
+text = "Enciclopédia"
+script = ExtResource("2_6fvgk")
+
+[node name="ExitGameButton" type="Button" parent="MenuButtons/ButtonsBox"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_emyjh")
+theme_override_font_sizes/font_size = 50
+text = "Sair"
+script = ExtResource("2_emepl")
+
+[node name="TitleBox" type="HBoxContainer" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -618.0
+offset_top = -223.0
+offset_right = 619.0
+offset_bottom = -71.9999
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.00431, 0.976315)
+theme_override_constants/separation = 200
+
+[node name="Title1" type="Label" parent="TitleBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.929412, 0.780392, 0.180392, 1)
+theme_override_fonts/font = ExtResource("6_86nec")
+theme_override_font_sizes/font_size = 150
+text = "LENDAS"
+
+[node name="Title2" type="Label" parent="TitleBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.976471, 0.882353, 0.682353, 1)
+theme_override_fonts/font = ExtResource("6_86nec")
+theme_override_font_sizes/font_size = 150
+text = "VIVAS"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_byq7g")
+volume_db = -10.0
+autoplay = true
+
+[connection signal="pressed" from="MenuButtons/ButtonsBox/StartGameButton" to="MenuButtons/ButtonsBox/StartGameButton" method="_on_pressed"]
+[connection signal="pressed" from="MenuButtons/ButtonsBox/EncyclopediaButton" to="MenuButtons/ButtonsBox/EncyclopediaButton" method="_on_pressed"]
+[connection signal="pressed" from="MenuButtons/ButtonsBox/ExitGameButton" to="MenuButtons/ButtonsBox/ExitGameButton" method="_on_pressed"]

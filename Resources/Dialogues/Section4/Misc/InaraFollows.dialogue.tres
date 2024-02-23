@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="DialogueLine" load_steps=2 format=3 uid="uid://bjim5fiv3flrc"]
+
+[ext_resource type="Script" path="res://Resources/Dialogues/Dialogue.gd" id="1_awhw8"]
+
+[resource]
+script = ExtResource("1_awhw8")
+is_char_left = true
+char_name = "Inara"
+line = "Calma! Eu também vou! A Cuca tem que me falar onde minha irmã está!"

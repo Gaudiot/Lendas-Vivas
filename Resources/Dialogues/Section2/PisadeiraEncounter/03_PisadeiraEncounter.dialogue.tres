@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="DialogueLine" load_steps=2 format=3 uid="uid://c42ku07ukpq2u"]
+
+[ext_resource type="Script" path="res://Resources/Dialogues/Dialogue.gd" id="1_d8ftc"]
+
+[resource]
+script = ExtResource("1_d8ftc")
+is_char_left = false
+char_name = "???"
+line = "Não, mas eu lhe conheço, Inara. Bora andando que temos muito a fazer, a gente pode falar no caminho."

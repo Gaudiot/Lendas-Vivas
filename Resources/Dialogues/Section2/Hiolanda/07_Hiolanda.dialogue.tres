@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="DialogueLine" load_steps=2 format=3 uid="uid://b3db8fx1k2arb"]
+
+[ext_resource type="Script" path="res://Resources/Dialogues/Dialogue.gd" id="1_4kje3"]
+
+[resource]
+script = ExtResource("1_4kje3")
+is_char_left = false
+char_name = "Hiolanda"
+line = "Meu Deus! Verdade, você queria saber disso. Desculpa, é que com a idade a gente já não lembra mais direito das coisas. A cabeça não é mais a mesma. Inclusive o outro dia --"

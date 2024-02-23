@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://fw5ak0kulcq0"]
+
+[ext_resource type="Script" path="res://Scripts/Inventory/InventoryItem.gd" id="1_ibmy6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0gmia"]
+size = Vector2(56, 55)
+
+[node name="InventoryItem" type="CenterContainer" groups=["item"]]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 8
+script = ExtResource("1_ibmy6")
+
+[node name="InventoryItemArea" type="Area2D" parent="."]
+
+[node name="InventoryItemCollision" type="CollisionShape2D" parent="InventoryItemArea"]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_0gmia")
+
+[node name="InventoryItemPanel" type="Panel" parent="InventoryItemArea"]
+
+[node name="InventoryItemSprite" type="Sprite2D" parent="InventoryItemArea/InventoryItemPanel"]
+scale = Vector2(0.429688, 0.429688)

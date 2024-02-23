@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="DialogueLine" load_steps=2 format=3 uid="uid://767rbgrsfsqp"]
+
+[ext_resource type="Script" path="res://Resources/Dialogues/Dialogue.gd" id="1_e644w"]
+
+[resource]
+script = ExtResource("1_e644w")
+is_char_left = false
+char_name = "Pisadeira"
+line = "Vou falar com meus contatos para descobrir mais detalhes sobre o que vem acontecendo. E tenha cuidado, não sei o que a Cuca pode fazer se descobrir que estamos indo atrás dela. "

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="DialogueLine" load_steps=3 format=3 uid="uid://jjr10vc3j5gd"]
+
+[ext_resource type="Texture2D" uid="uid://co0anu6n6vyj" path="res://Assets/Characters/NPCs/Victor.png" id="1_3eawg"]
+[ext_resource type="Script" path="res://Resources/Dialogues/Dialogue.gd" id="1_rd8qw"]
+
+[resource]
+script = ExtResource("1_rd8qw")
+is_char_left = false
+char_name = "Victor"
+line = "Poxa Inara, não soubemos de nada, desculpa. Mas se descobrirmos iremos falar contigo. Estamos torcendo por ti!"
+char_image = ExtResource("1_3eawg")

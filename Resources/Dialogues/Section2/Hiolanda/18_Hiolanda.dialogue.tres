@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="DialogueLine" load_steps=2 format=3 uid="uid://jh4aa1h8lxlh"]
+
+[ext_resource type="Script" path="res://Resources/Dialogues/Dialogue.gd" id="1_qspgb"]
+
+[resource]
+script = ExtResource("1_qspgb")
+is_char_left = false
+char_name = "Hiolanda"
+line = "Talvez você venha recebendo umas visitas. Existe uma lenda que uma mulher fica à espreita da noite, só observando as pessoas a partir do telhado das casas, e quem dorme com barriga cheia ela vem e fica pisando na boca da barriga. Dessa forma a pessoa acaba tendo vários pesadelos.
+O nome dessa lenda é Pisadeira"

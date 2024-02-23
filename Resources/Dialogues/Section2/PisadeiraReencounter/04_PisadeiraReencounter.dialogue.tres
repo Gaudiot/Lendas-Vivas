@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="DialogueLine" load_steps=2 format=3 uid="uid://cd2yab7aksrhn"]
+
+[ext_resource type="Script" path="res://Resources/Dialogues/Dialogue.gd" id="1_ebhht"]
+
+[resource]
+script = ExtResource("1_ebhht")
+is_char_left = true
+char_name = "Inara"
+line = "Se você é minha aliada, por que me deu pesadelos ao invés de bons sonhos?"

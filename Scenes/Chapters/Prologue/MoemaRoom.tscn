@@ -1,0 +1,83 @@
+[gd_scene load_steps=26 format=3 uid="uid://b2776m78pj2t4"]
+
+[ext_resource type="Texture2D" uid="uid://dbpwvx6si67u1" path="res://Assets/Backgrounds/Chapters/Prologue/MoemaRoom.png" id="1_31cqe"]
+[ext_resource type="Script" path="res://Scripts/Chapters/Prologue/MoemaRoom.gd" id="1_ix7fi"]
+[ext_resource type="PackedScene" uid="uid://d2vghqcqvfq0e" path="res://Scenes/MainCharacter.tscn" id="2_ieo8d"]
+[ext_resource type="Resource" uid="uid://bde1fxj4mqvxb" path="res://Resources/Dialogues/Prologue/PoliceCall/00_PoliceCall.dialogue.tres.tres" id="2_u1oio"]
+[ext_resource type="PackedScene" uid="uid://che8dm2ehd180" path="res://Components/Collectables/Collectable.tscn" id="2_xpa8f"]
+[ext_resource type="Resource" uid="uid://dsj1b1jxkudrt" path="res://Resources/Collectables/Paper.collectable.tres" id="3_4j7o5"]
+[ext_resource type="Resource" uid="uid://dj3t0lpwqittc" path="res://Resources/Dialogues/Prologue/PoliceCall/00.5_PoliceCall.dialogue.tres.tres" id="3_dkj4p"]
+[ext_resource type="Resource" uid="uid://fhh5um1kg2nk" path="res://Resources/Dialogues/Prologue/PoliceCall/01_PoliceCall.dialogue.tres" id="4_8yxmy"]
+[ext_resource type="Texture2D" uid="uid://bjy6b50487d6w" path="res://Assets/Items/Paper.png" id="4_qghtg"]
+[ext_resource type="PackedScene" uid="uid://liokbtu0disx" path="res://Components/Portals/Portal.tscn" id="5_2cs3n"]
+[ext_resource type="Resource" uid="uid://bddwhfrssynpk" path="res://Resources/Dialogues/Prologue/PoliceCall/02_PoliceCall.dialogue.tres.tres" id="5_yumxf"]
+[ext_resource type="PackedScene" uid="uid://p8ndd1qu3ttx" path="res://Components/Obstacles/walls.tscn" id="6_l0udx"]
+[ext_resource type="Resource" uid="uid://d30xad0ckwisg" path="res://Resources/Dialogues/Prologue/PoliceCall/03_PoliceCall.dialogue.tres" id="6_tsxws"]
+[ext_resource type="Resource" uid="uid://blskyga58567u" path="res://Resources/Portals/Prologue/LivingRoom.portal.tres" id="7_a5vmq"]
+[ext_resource type="Resource" uid="uid://b14kd23j21gn" path="res://Resources/Dialogues/Prologue/PoliceCall/04_PoliceCall.dialogue.tres" id="7_ejk3i"]
+[ext_resource type="PackedScene" uid="uid://brc301dhk383d" path="res://Components/Obstacles/RectangleObstacle.tscn" id="7_gkqgt"]
+[ext_resource type="Resource" uid="uid://ckoy5h4wtngi1" path="res://Resources/Dialogues/Prologue/PoliceCall/05_PoliceCall.dialogue.tres" id="8_aw6or"]
+[ext_resource type="Resource" uid="uid://dtlqfmso45f4t" path="res://Resources/Dialogues/Prologue/PoliceCall/06_PoliceCall.dialogue.tres" id="9_a42v8"]
+[ext_resource type="Resource" uid="uid://4ep1lijjnquq" path="res://Resources/Dialogues/Prologue/PoliceCall/07_PoliceCall.dialogue.tres" id="10_erdl4"]
+[ext_resource type="Resource" uid="uid://cgy13jqfetps2" path="res://Resources/Dialogues/Prologue/PoliceCall/08_PoliceCall.dialogue.tres" id="11_37tpx"]
+[ext_resource type="Resource" uid="uid://dcc5bdx3ruf1o" path="res://Resources/Dialogues/Prologue/PoliceCall/09_PoliceCall.dialogue.tres" id="12_xjhpy"]
+[ext_resource type="Resource" uid="uid://dafr7e8f3ejy6" path="res://Resources/Dialogues/Prologue/PoliceCall/10_PoliceCall.dialogue.tres" id="13_fobbt"]
+[ext_resource type="Resource" uid="uid://tbhexg3nmxce" path="res://Resources/Dialogues/Prologue/PoliceCall/11_PoliceCall.dialogue.tres" id="14_ofkww"]
+[ext_resource type="Resource" uid="uid://cfl8dfcwvd7n2" path="res://Resources/Dialogues/Prologue/PoliceCall/12_PoliceCall.dialogue.tres" id="15_2pxnp"]
+[ext_resource type="Resource" uid="uid://b3736hkmxbpy" path="res://Resources/Dialogues/Prologue/PoliceCall/13_PoliceCall.dialogue.tres" id="16_0q3it"]
+
+[node name="MoemaRoom" type="Node2D"]
+script = ExtResource("1_ix7fi")
+cutscene_lines = Array[Resource("res://Resources/Dialogues/Dialogue.gd")]([ExtResource("2_u1oio"), ExtResource("3_dkj4p"), ExtResource("4_8yxmy"), ExtResource("5_yumxf"), ExtResource("6_tsxws"), ExtResource("7_ejk3i"), ExtResource("8_aw6or"), ExtResource("9_a42v8"), ExtResource("10_erdl4"), ExtResource("11_37tpx"), ExtResource("12_xjhpy"), ExtResource("13_fobbt"), ExtResource("14_ofkww"), ExtResource("15_2pxnp"), ExtResource("16_0q3it")])
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(760, 360)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_31cqe")
+
+[node name="Collectables" type="Node2D" parent="."]
+
+[node name="Paper" parent="Collectables" instance=ExtResource("2_xpa8f")]
+position = Vector2(669, 408)
+rotation = 0.626432
+scale = Vector2(0.74417, 0.74417)
+collectable = ExtResource("3_4j7o5")
+
+[node name="CollectableSprite" parent="Collectables/Paper" index="0"]
+texture = ExtResource("4_qghtg")
+
+[node name="Portals" type="Node2D" parent="."]
+
+[node name="LivingRoom" parent="Portals" instance=ExtResource("5_2cs3n")]
+position = Vector2(389, 445)
+rotation = -2.0355
+portal = ExtResource("7_a5vmq")
+
+[node name="Walls" parent="." instance=ExtResource("6_l0udx")]
+
+[node name="RectangleObstacle" parent="Walls" instance=ExtResource("7_gkqgt")]
+position = Vector2(779, 428)
+rotation = 1.01659
+scale = Vector2(1, 20)
+
+[node name="RectangleObstacle2" parent="Walls" instance=ExtResource("7_gkqgt")]
+position = Vector2(824, 348)
+rotation = 1.72297
+scale = Vector2(1, 15)
+
+[node name="RectangleObstacle3" parent="Walls" instance=ExtResource("7_gkqgt")]
+position = Vector2(732, 623)
+rotation = 2.17014
+scale = Vector2(1, 15)
+
+[node name="RectangleObstacle4" parent="Walls" instance=ExtResource("7_gkqgt")]
+position = Vector2(339, 457)
+rotation = 1.24291
+scale = Vector2(1, 40)
+
+[node name="PlayerRoot" parent="." instance=ExtResource("2_ieo8d")]
+position = Vector2(388, 568)
+scale = Vector2(2.56, 2.56)
+is_movement_only_horizontal = false
+
+[editable path="Collectables/Paper"]

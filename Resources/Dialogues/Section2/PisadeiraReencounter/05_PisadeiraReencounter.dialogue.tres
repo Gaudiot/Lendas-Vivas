@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="DialogueLine" load_steps=2 format=3 uid="uid://b4mvkr266wrln"]
+
+[ext_resource type="Script" path="res://Resources/Dialogues/Dialogue.gd" id="1_orho1"]
+
+[resource]
+script = ExtResource("1_orho1")
+is_char_left = false
+char_name = "Pisadeira"
+line = "Eu só sou capaz de gerar pesadelos, infelizmente. Olha, eu sei quem raptou a sua irmã, a Moema. Foi a cuca!"
