@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=3 uid="uid://p8ndd1qu3ttx"]
+
+[ext_resource type="PackedScene" uid="uid://brc301dhk383d" path="res://Components/Obstacles/RectangleObstacle.tscn" id="1_oyy1f"]
+
+[node name="Walls" type="Node2D"]
+
+[node name="Left" parent="." instance=ExtResource("1_oyy1f")]
+position = Vector2(0, 360)
+scale = Vector2(1, 40)
+
+[node name="Top" parent="." instance=ExtResource("1_oyy1f")]
+position = Vector2(760, 0)
+scale = Vector2(80, 1)
+
+[node name="Right" parent="." instance=ExtResource("1_oyy1f")]
+position = Vector2(1520, 360)
+scale = Vector2(1, 40)
+
+[node name="Bottom" parent="." instance=ExtResource("1_oyy1f")]
+position = Vector2(760, 720)
+scale = Vector2(80, 1)

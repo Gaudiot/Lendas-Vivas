@@ -1,14 +1,15 @@
-[gd_scene load_steps=36 format=3 uid="uid://d2vghqcqvfq0e"]
+[gd_scene load_steps=28 format=3 uid="uid://d2vghqcqvfq0e"]
 
-[ext_resource type="Texture2D" uid="uid://ckqqhryxj335x" path="res://icon.svg" id="1_6fmre"]
-[ext_resource type="Script" path="res://Scripts/Entities/PlayerUI.gd" id="1_87dt3"]
-[ext_resource type="Script" path="res://Scripts/Entities/Player.gd" id="1_pqdqm"]
+[ext_resource type="Script" path="res://Scripts/Entities/Player/PlayerUI.gd" id="1_87dt3"]
+[ext_resource type="Script" path="res://Scripts/Entities/Player/PlayerRoot.gd" id="1_j737d"]
+[ext_resource type="Script" path="res://Scripts/Entities/Player/Player.gd" id="1_pqdqm"]
 [ext_resource type="Texture2D" uid="uid://cpm23nemh72ge" path="res://Assets/Characters/Player/Idle (32x32).png" id="2_oy6rw"]
 [ext_resource type="Texture2D" uid="uid://g1uvkthojkyn" path="res://Assets/Icons/Bag.png" id="2_vl5tk"]
-[ext_resource type="Texture2D" uid="uid://cmh6w6y1qnept" path="res://Assets/Characters/Player/Run (32x32).png" id="3_2ml81"]
+[ext_resource type="Texture2D" uid="uid://cyacf5xxuhepc" path="res://Assets/Icons/Interact.png" id="3_632un"]
 [ext_resource type="PackedScene" uid="uid://bnoax4p4hjeit" path="res://Components/Joystick/Joystick.tscn" id="3_trvi3"]
 [ext_resource type="PackedScene" uid="uid://dym0o8x4ttjvf" path="res://Components/Gui/Inventory/InventoryGui.tscn" id="5_n444n"]
 [ext_resource type="Resource" uid="uid://d4b85bnj7jqr4" path="res://Misc/PlayerInventory.tres" id="5_uqixg"]
+[ext_resource type="Texture2D" uid="uid://28d4b3s28m6l" path="res://Assets/Characters/Player/Walk.png" id="10_e23dl"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ix6t4"]
 atlas = ExtResource("2_oy6rw")
@@ -54,53 +55,17 @@ region = Rect2(288, 0, 32, 32)
 atlas = ExtResource("2_oy6rw")
 region = Rect2(320, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_4xg2b"]
-atlas = ExtResource("3_2ml81")
-region = Rect2(0, 0, 32, 32)
+[sub_resource type="AtlasTexture" id="AtlasTexture_5hnkm"]
+atlas = ExtResource("10_e23dl")
+region = Rect2(2080, 0, 1040, 1040)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_lc4no"]
-atlas = ExtResource("3_2ml81")
-region = Rect2(32, 0, 32, 32)
+[sub_resource type="AtlasTexture" id="AtlasTexture_xpfqk"]
+atlas = ExtResource("10_e23dl")
+region = Rect2(1040, 0, 1040, 1040)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_7sffe"]
-atlas = ExtResource("3_2ml81")
-region = Rect2(64, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_5umuj"]
-atlas = ExtResource("3_2ml81")
-region = Rect2(96, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_6iuen"]
-atlas = ExtResource("3_2ml81")
-region = Rect2(128, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ftq6v"]
-atlas = ExtResource("3_2ml81")
-region = Rect2(160, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_4x410"]
-atlas = ExtResource("3_2ml81")
-region = Rect2(192, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_5k5x3"]
-atlas = ExtResource("3_2ml81")
-region = Rect2(224, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_fl5fd"]
-atlas = ExtResource("3_2ml81")
-region = Rect2(256, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_xt7qo"]
-atlas = ExtResource("3_2ml81")
-region = Rect2(288, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_tww5t"]
-atlas = ExtResource("3_2ml81")
-region = Rect2(320, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_1djwn"]
-atlas = ExtResource("3_2ml81")
-region = Rect2(352, 0, 32, 32)
+[sub_resource type="AtlasTexture" id="AtlasTexture_y8rfr"]
+atlas = ExtResource("10_e23dl")
+region = Rect2(0, 0, 1040, 1040)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_0avbc"]
 animations = [{
@@ -144,44 +109,17 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_4xg2b")
+"texture": SubResource("AtlasTexture_5hnkm")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_lc4no")
+"texture": SubResource("AtlasTexture_xpfqk")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_7sffe")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_5umuj")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_6iuen")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ftq6v")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_4x410")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_5k5x3")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_fl5fd")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_xt7qo")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_tww5t")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_1djwn")
+"texture": SubResource("AtlasTexture_y8rfr")
 }],
 "loop": true,
 "name": &"Running",
-"speed": 11.0
+"speed": 6.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fghye"]
@@ -194,8 +132,11 @@ radius = 11.3304
 texture_filter = 1
 position = Vector2(2, -2)
 scale = Vector2(13.68, 13.68)
+script = ExtResource("1_j737d")
+is_movement_only_horizontal = false
 
 [node name="PlayerUI" type="CanvasLayer" parent="."]
+visible = false
 script = ExtResource("1_87dt3")
 
 [node name="InventoryButton" type="TextureButton" parent="PlayerUI"]
@@ -203,27 +144,30 @@ self_modulate = Color(0.843137, 0.839216, 0, 1)
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -244.0
-offset_top = 90.0
-offset_right = 268.0
-offset_bottom = 602.0
+offset_left = -250.0
+offset_top = 100.0
+offset_right = -100.0
+offset_bottom = 250.0
 grow_horizontal = 0
-scale = Vector2(0.3, 0.3)
 texture_normal = ExtResource("2_vl5tk")
+ignore_texture_size = true
 stretch_mode = 0
 
 [node name="InteractButton" type="TextureButton" parent="PlayerUI"]
-self_modulate = Color(0.792157, 0.494118, 0.933333, 1)
 anchors_preset = 3
 anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -128.0
-offset_top = -128.0
+offset_left = -254.0
+offset_top = -254.0
+offset_right = -100.0
+offset_bottom = -100.0
 grow_horizontal = 0
 grow_vertical = 0
-texture_normal = ExtResource("1_6fmre")
+texture_normal = ExtResource("3_632un")
+ignore_texture_size = true
+stretch_mode = 0
 
 [node name="InventoryGui" parent="PlayerUI" instance=ExtResource("5_n444n")]
 anchors_preset = 8
@@ -240,6 +184,10 @@ offset_bottom = 60.0
 anchors_preset = 2
 anchor_top = 1.0
 anchor_right = 0.0
+offset_left = 100.0
+offset_top = -100.0
+offset_right = 100.0
+offset_bottom = -100.0
 grow_horizontal = 1
 grow_vertical = 0
 scale = Vector2(0.359999, 0.359999)
@@ -249,9 +197,10 @@ script = ExtResource("1_pqdqm")
 player_inventory = ExtResource("5_uqixg")
 
 [node name="PlayerSprite" type="AnimatedSprite2D" parent="Player"]
+scale = Vector2(0.0243196, 0.0243196)
 sprite_frames = SubResource("SpriteFrames_0avbc")
 animation = &"Running"
-autoplay = "Idle"
+autoplay = "Running"
 
 [node name="PlayerCollision" type="CollisionShape2D" parent="Player"]
 visibility_layer = 12
@@ -260,7 +209,7 @@ shape = SubResource("RectangleShape2D_fghye")
 debug_color = Color(0.14902, 0.647059, 0, 0.419608)
 
 [node name="PlayerInteractArea" type="Area2D" parent="Player"]
-collision_mask = 22
+collision_mask = 54
 
 [node name="PlayerInteractBox" type="CollisionShape2D" parent="Player/PlayerInteractArea"]
 light_mask = 2
@@ -268,8 +217,18 @@ visibility_layer = 256
 position = Vector2(0.657895, 0.657895)
 shape = SubResource("CapsuleShape2D_rcxhp")
 
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Player"]
+remote_path = NodePath("../../PlayerCamera")
+
 [node name="PlayerCamera" type="Camera2D" parent="."]
 unique_name_in_owner = true
+limit_left = 0
+limit_top = 0
+limit_right = 1520
+limit_bottom = 720
+limit_smoothed = true
+position_smoothing_enabled = true
+editor_draw_limits = true
 
 [connection signal="button_down" from="PlayerUI/InventoryButton" to="PlayerUI" method="_on_inventory_button_button_down"]
-[connection signal="button_down" from="PlayerUI/InteractButton" to="PlayerUI" method="_on_interact_button_button_down"]
+[connection signal="button_down" from="PlayerUI/InteractButton" to="Player" method="interactWithEnvironment"]

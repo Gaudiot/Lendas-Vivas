@@ -1,9 +1,11 @@
-[gd_resource type="Resource" script_class="DialogueLine" load_steps=2 format=3 uid="uid://dak2c2eigu5bn"]
+[gd_resource type="Resource" script_class="DialogueLine" load_steps=3 format=3 uid="uid://dak2c2eigu5bn"]
 
 [ext_resource type="Script" path="res://Resources/Dialogues/Dialogue.gd" id="1_ji7ag"]
+[ext_resource type="Texture2D" uid="uid://23suqsdubeix" path="res://Assets/Characters/Misc/celular.png" id="1_uh120"]
 
 [resource]
 script = ExtResource("1_ji7ag")
 is_char_left = false
 char_name = "Telefone"
 line = "Trim Trim Trim."
+char_image = ExtResource("1_uh120")

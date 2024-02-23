@@ -1,9 +1,11 @@
-[gd_resource type="Resource" script_class="DialogueLine" load_steps=2 format=3 uid="uid://tbhexg3nmxce"]
+[gd_resource type="Resource" script_class="DialogueLine" load_steps=3 format=3 uid="uid://tbhexg3nmxce"]
 
 [ext_resource type="Script" path="res://Resources/Dialogues/Dialogue.gd" id="1_fr4x5"]
+[ext_resource type="Texture2D" uid="uid://d2fl67tffv6xg" path="res://Assets/Characters/Player/Inarita.png" id="1_pfcwi"]
 
 [resource]
 script = ExtResource("1_fr4x5")
 is_char_left = true
 char_name = "Inara"
 line = "SABE SEI LÁ O QUE OS SEQUESTRADORES ESTÃO FAZENDO COM MINHA IRMÃ NESTE MOMENTO"
+char_image = ExtResource("1_pfcwi")

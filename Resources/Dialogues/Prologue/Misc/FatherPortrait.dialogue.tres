@@ -1,5 +1,6 @@
-[gd_resource type="Resource" script_class="DialogueLine" load_steps=2 format=3 uid="uid://4a1urugn0cex"]
+[gd_resource type="Resource" script_class="DialogueLine" load_steps=3 format=3 uid="uid://4a1urugn0cex"]
 
+[ext_resource type="Texture2D" uid="uid://d2fl67tffv6xg" path="res://Assets/Characters/Player/Inarita.png" id="1_1bx0g"]
 [ext_resource type="Script" path="res://Resources/Dialogues/Dialogue.gd" id="1_yjr4k"]
 
 [resource]
@@ -7,3 +8,4 @@ script = ExtResource("1_yjr4k")
 is_char_left = true
 char_name = "Inara"
 line = "Ai pai, se ao menos ainda estivesse conosco. Você saberia perfeitamente o que fazer."
+char_image = ExtResource("1_1bx0g")

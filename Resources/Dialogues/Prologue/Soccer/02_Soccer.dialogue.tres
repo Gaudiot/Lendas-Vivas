@@ -1,5 +1,6 @@
-[gd_resource type="Resource" script_class="DialogueLine" load_steps=2 format=3 uid="uid://cnryhc0ne5sfe"]
+[gd_resource type="Resource" script_class="DialogueLine" load_steps=3 format=3 uid="uid://cnryhc0ne5sfe"]
 
+[ext_resource type="Texture2D" uid="uid://co0anu6n6vyj" path="res://Assets/Characters/NPCs/Victor.png" id="1_t06ge"]
 [ext_resource type="Script" path="res://Resources/Dialogues/Dialogue.gd" id="1_wiypc"]
 
 [resource]
@@ -7,3 +8,4 @@ script = ExtResource("1_wiypc")
 is_char_left = false
 char_name = "Victor"
 line = "A Moema foi sequestrada! Quem que fez isso?"
+char_image = ExtResource("1_t06ge")
