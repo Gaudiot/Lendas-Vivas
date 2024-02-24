@@ -1,9 +1,14 @@
-[gd_scene load_steps=5 format=3 uid="uid://d4ff8s6mjwor2"]
+[gd_scene load_steps=10 format=3 uid="uid://d4ff8s6mjwor2"]
 
 [ext_resource type="Texture2D" uid="uid://cy4svuv2egtal" path="res://Assets/Backgrounds/Chapters/Rua.png" id="1_eknd3"]
 [ext_resource type="PackedScene" uid="uid://d2vghqcqvfq0e" path="res://Scenes/MainCharacter.tscn" id="2_8doae"]
 [ext_resource type="PackedScene" uid="uid://liokbtu0disx" path="res://Components/Portals/Portal.tscn" id="3_p4vo2"]
 [ext_resource type="PackedScene" uid="uid://p8ndd1qu3ttx" path="res://Components/Obstacles/walls.tscn" id="4_l6aov"]
+[ext_resource type="Resource" uid="uid://blskyga58567u" path="res://Resources/Portals/Prologue/LivingRoom.portal.tres" id="4_miulg"]
+[ext_resource type="Resource" uid="uid://c4yn6lsfsxhb6" path="res://Resources/Portals/Section3/Butcher.portal.tres" id="5_i1ihr"]
+[ext_resource type="Resource" uid="uid://du67fucpkt36o" path="res://Resources/Portals/Section4/Library.portal.tres" id="5_jhwsy"]
+[ext_resource type="Resource" uid="uid://dbtni7caipqbo" path="res://Resources/Portals/Section5/Park.portal.tres" id="6_7od58"]
+[ext_resource type="Resource" uid="uid://j6r6ybod15fr" path="res://Resources/Portals/Section5/Restaurant.portal.tres" id="6_tep5w"]
 
 [node name="Street" type="Node2D"]
 
@@ -12,36 +17,36 @@ position = Vector2(3699, 360)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("1_eknd3")
 
-[node name="PlayerRoot" parent="." instance=ExtResource("2_8doae")]
-
-[node name="PlayerCamera" parent="PlayerRoot" index="2"]
-limit_right = 7398
-
 [node name="Portals" type="Node2D" parent="."]
 
 [node name="InaraHouse" parent="Portals" instance=ExtResource("3_p4vo2")]
 position = Vector2(116, 618)
 rotation = 4.71239
 scale = Vector2(0.8, 0.8)
+portal = ExtResource("4_miulg")
 
 [node name="Butcher" parent="Portals" instance=ExtResource("3_p4vo2")]
 position = Vector2(3272, 606)
 rotation = 4.71239
 scale = Vector2(0.8, 0.8)
+portal = ExtResource("5_i1ihr")
 
 [node name="Library" parent="Portals" instance=ExtResource("3_p4vo2")]
 position = Vector2(4586, 602)
 rotation = 4.71239
 scale = Vector2(0.8, 0.8)
+portal = ExtResource("5_jhwsy")
 
 [node name="Restaurant" parent="Portals" instance=ExtResource("3_p4vo2")]
 position = Vector2(6058, 602)
 rotation = 4.71239
 scale = Vector2(0.8, 0.8)
+portal = ExtResource("6_tep5w")
 
 [node name="Park" parent="Portals" instance=ExtResource("3_p4vo2")]
 position = Vector2(7284, 624)
 scale = Vector2(0.8, 0.8)
+portal = ExtResource("6_7od58")
 
 [node name="Walls" parent="." instance=ExtResource("4_l6aov")]
 
@@ -56,5 +61,13 @@ position = Vector2(7398, 360)
 position = Vector2(3699, 720)
 scale = Vector2(380, 1)
 
-[editable path="PlayerRoot"]
+[node name="PlayerRoot" parent="." instance=ExtResource("2_8doae")]
+position = Vector2(203, 584)
+scale = Vector2(0.35, 0.35)
+
+[node name="PlayerCamera" parent="PlayerRoot" index="2"]
+scale = Vector2(1, 1)
+limit_right = 7398
+
 [editable path="Walls"]
+[editable path="PlayerRoot"]
