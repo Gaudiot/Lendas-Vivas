@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cmh6w6y1qnept"
-path="res://.godot/imported/Run (32x32).png-a80045ba0636a06276fa23cfee8438e8.ctex"
+uid="uid://b3r8gsuimp8mr"
+path="res://.godot/imported/Moema.png-d3bb99a6fe2dd93074b3b396003e3bc2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Characters/Player/Run (32x32).png"
-dest_files=["res://.godot/imported/Run (32x32).png-a80045ba0636a06276fa23cfee8438e8.ctex"]
+source_file="res://Assets/Characters/Moema/Moema.png"
+dest_files=["res://.godot/imported/Moema.png-d3bb99a6fe2dd93074b3b396003e3bc2.ctex"]
 
 [params]
 

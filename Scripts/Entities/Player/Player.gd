@@ -8,7 +8,7 @@ extends CharacterBody2D
 @export var player_inventory: Inventory
 @export var is_movement_only_horizontal: bool = true
 
-const SPEED = 200.0
+var SPEED = 200.0
 
 func _physics_process(delta):
 	var directon = joystick.pos_vector
@@ -25,7 +25,7 @@ func _physics_process(delta):
 		else:
 			velocity.y = move_toward(velocity.y, 0, SPEED)
 		
-	if false and abs(velocity.x) + abs(velocity.y) == 0:
+	if abs(velocity.x) + abs(velocity.y) == 0:
 		player_sprite.animation = "Idle"
 	else:
 		player_sprite.animation = "Running"

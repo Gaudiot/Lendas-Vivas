@@ -6,10 +6,11 @@ extends Node2D
 var knocked: bool = false
 
 func _ready():
-	blockPortal()
+	unblockPortal()
 
 func interact(player_inventory: Inventory):
-	if not knocked:
+	var played_moema_cutscene: bool = PrologueState.cutscenes_played["MoemaRoom"]
+	if not played_moema_cutscene and not knocked:
 		audio_player.stream = preload("res://Assets/Sounds/Misc/Knock.ogg")
 		audio_player.play()
 		var dialogue_lines: Array[DialogueLine] = [
@@ -17,10 +18,8 @@ func interact(player_inventory: Inventory):
 		]
 		DialogueSystem.startupDialogue(dialogue_lines)
 		knocked = true
-	if (not portal.is_portal_blocked) and portal.go_to_scene:
+	elif (not portal.is_portal_blocked) and portal.go_to_scene:
 		SceneTransition.swapScene(portal.go_to_scene)
-		
-	unblockPortal()
 	
 func unblockPortal():
 	portal.unblockPortal()

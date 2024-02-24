@@ -43,11 +43,7 @@ rotation = 0.563629
 scale = Vector2(20, 1)
 
 [node name="Player" parent="." instance=ExtResource("2_7gxya")]
-position = Vector2(596, 601)
-scale = Vector2(5.08, 5.08)
-
-[node name="PlayerCamera" parent="Player" index="2"]
-scale = Vector2(1, 1)
+position = Vector2(818, 423)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bdhk0x1wlco5p"
-path="res://.godot/imported/Yellow.png-8c5e275313f765d02799362409b1b5fe.ctex"
+uid="uid://bjlwjifxtr50t"
+path="res://.godot/imported/Anhanga.png-403917568e10df7dd1931a5867712755.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Yellow.png"
-dest_files=["res://.godot/imported/Yellow.png-8c5e275313f765d02799362409b1b5fe.ctex"]
+source_file="res://Assets/Characters/Anhanga/Anhanga.png"
+dest_files=["res://.godot/imported/Anhanga.png-403917568e10df7dd1931a5867712755.ctex"]
 
 [params]
 
