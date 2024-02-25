@@ -1,9 +1,0 @@
-[gd_resource type="Resource" script_class="Portal" load_steps=2 format=3 uid="uid://dbtni7caipqbo"]
-
-[ext_resource type="Script" path="res://Resources/Portals/Portal.gd" id="1_qg532"]
-
-[resource]
-script = ExtResource("1_qg532")
-go_to_scene = "res://Scenes/Chapters/Section5/Park.tscn"
-is_portal_blocked = false
-blocked_message = "Ainda não é possível explorar essa nova área"

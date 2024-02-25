@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://c12kv5leijcjy"]
+
+[ext_resource type="Script" path="res://Resources/Items/Item.gd" id="1_n8xdb"]
+[ext_resource type="Texture2D" uid="uid://cvdy108felmvs" path="res://Assets/Images/Misc/Shovel.png" id="2_8orfc"]
+
+[resource]
+script = ExtResource("1_n8xdb")
+name = "Shovel"
+texture = ExtResource("2_8orfc")
+combine_with_item_id = ""

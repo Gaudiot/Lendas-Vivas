@@ -3,7 +3,8 @@ extends Node
 var items_on_ground: Dictionary = {
 	"paper": true,
 	"pen": true,
-	"stick": true
+	"stick": true,
+	"shovel": true
 }
 
 func isItemOnGround(item_name: String) -> bool:

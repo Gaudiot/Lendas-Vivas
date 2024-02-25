@@ -9,6 +9,11 @@ var cutscenes_played: Dictionary = {
 	"InaraRoom": false,
 	"MoemaRoom": false
 }
+
+var npcs_talked: Dictionary = {
+	"Hiolanda": false,
+	"Soccer": false
+}
 	
 var itemsUsed: Dictionary = {
 	"Letter": false

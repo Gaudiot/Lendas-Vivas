@@ -1,5 +1,6 @@
-[gd_scene load_steps=10 format=3 uid="uid://d4ff8s6mjwor2"]
+[gd_scene load_steps=40 format=3 uid="uid://d4ff8s6mjwor2"]
 
+[ext_resource type="Script" path="res://Scripts/Chapters/Street.gd" id="1_dxq2a"]
 [ext_resource type="Texture2D" uid="uid://cy4svuv2egtal" path="res://Assets/Backgrounds/Chapters/Rua.png" id="1_eknd3"]
 [ext_resource type="PackedScene" uid="uid://d2vghqcqvfq0e" path="res://Scenes/MainCharacter.tscn" id="2_8doae"]
 [ext_resource type="PackedScene" uid="uid://liokbtu0disx" path="res://Components/Portals/Portal.tscn" id="3_p4vo2"]
@@ -7,17 +8,249 @@
 [ext_resource type="Resource" uid="uid://blskyga58567u" path="res://Resources/Portals/Prologue/LivingRoom.portal.tres" id="4_miulg"]
 [ext_resource type="Resource" uid="uid://c4yn6lsfsxhb6" path="res://Resources/Portals/Section3/Butcher.portal.tres" id="5_i1ihr"]
 [ext_resource type="Resource" uid="uid://du67fucpkt36o" path="res://Resources/Portals/Section4/Library.portal.tres" id="5_jhwsy"]
-[ext_resource type="Resource" uid="uid://dbtni7caipqbo" path="res://Resources/Portals/Section5/Park.portal.tres" id="6_7od58"]
+[ext_resource type="Resource" uid="uid://dbtni7caipqbo" path="res://Resources/Portals/Section5/Forest.portal.tres" id="6_7od58"]
 [ext_resource type="Resource" uid="uid://j6r6ybod15fr" path="res://Resources/Portals/Section5/Restaurant.portal.tres" id="6_tep5w"]
+[ext_resource type="Texture2D" uid="uid://bleyvspljcdgn" path="res://Assets/Characters/NPCs/Caramelo.png" id="9_21n5h"]
+[ext_resource type="Resource" uid="uid://bwsjgr577evlv" path="res://Resources/Portals/Section3/Park.portal.tres" id="9_fvpbn"]
+[ext_resource type="Script" path="res://Scripts/Chapters/Section2/Dog.gd" id="10_2ae70"]
+[ext_resource type="Texture2D" uid="uid://muvaisq8ekkr" path="res://Assets/Characters/NPCs/Hiolanda.png" id="11_kcwjs"]
+[ext_resource type="Script" path="res://Scripts/Chapters/Section2/Hiolanda.gd" id="12_rbrxt"]
+[ext_resource type="Script" path="res://Scripts/Chapters/Prologue/Futebol.gd" id="13_cgufd"]
+[ext_resource type="Texture2D" uid="uid://co0anu6n6vyj" path="res://Assets/Characters/NPCs/Victor.png" id="13_xlpy7"]
+[ext_resource type="Texture2D" uid="uid://diear63852c52" path="res://Assets/Characters/NPCs/Guilherme.png" id="14_fn48p"]
+[ext_resource type="Texture2D" uid="uid://du1x4yvm5ubfc" path="res://Assets/Characters/Pisadeira/PisadeiraUp.png" id="16_wcoub"]
+[ext_resource type="Texture2D" uid="uid://dlyxgwrwpjf2d" path="res://Assets/Characters/NPCs/WomanWallet.png" id="18_cfrx7"]
+[ext_resource type="Script" path="res://Scripts/Chapters/Section2/Manhole.gd" id="19_7ogl6"]
+[ext_resource type="Script" path="res://Scripts/Triggers/Triggers.gd" id="19_40ldn"]
+[ext_resource type="PackedScene" uid="uid://che8dm2ehd180" path="res://Components/Collectables/Collectable.tscn" id="20_qd8k3"]
+[ext_resource type="Resource" uid="uid://cv7g0dmqpynyj" path="res://Resources/Collectables/Shovel.collectable.tres" id="21_sngr1"]
+[ext_resource type="Texture2D" uid="uid://cvdy108felmvs" path="res://Assets/Images/Misc/Shovel.png" id="21_xgj7a"]
+[ext_resource type="Texture2D" uid="uid://deop0bkkom364" path="res://Assets/Images/Misc/Sand.png" id="23_4frid"]
+[ext_resource type="Script" path="res://Scripts/Chapters/Prologue/Sand.gd" id="24_2w6ic"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_syjse"]
+size = Vector2(97, 140)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_le1er"]
+size = Vector2(750, 1240)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lakfe"]
+size = Vector2(192, 147)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g7x7h"]
+size = Vector2(330, 1050)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_d12jx"]
+radius = 23.0
+height = 82.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c78k2"]
+size = Vector2(579.147, 961.548)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x35oo"]
+size = Vector2(930.414, 731.283)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m3clr"]
+size = Vector2(20, 122)
+
+[sub_resource type="Animation" id="Animation_p5uak"]
+resource_name = "DogLeave"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PlayerRoot:play_can_move")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("NPCs/Dog:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(4268, 639), Vector2(4268, 639), Vector2(5136, 639)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("NPCs/Dog/DogSprite:flip_h")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="Animation" id="Animation_bo6d8"]
+resource_name = "PisadeiraFirstEncounter"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("NPCs/Pisadeira:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("NPCs/Pisadeira:flip_h")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("NPCs/Pisadeira:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(3165, 578), Vector2(1882, 587)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("PlayerRoot:play_can_move")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/4/type = "method"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath(".")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(1.8),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"pisadeiraFirstEncounterDialogue"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_ioij4"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("NPCs/Pisadeira:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("NPCs/Pisadeira:flip_h")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("NPCs/Pisadeira:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(3505, 587)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("PlayerRoot:play_can_move")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("NPCs/Dog:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(4268, 639)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("NPCs/Dog/DogSprite:flip_h")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_u1fav"]
+_data = {
+"DogLeave": SubResource("Animation_p5uak"),
+"PisadeiraFirstEncounter": SubResource("Animation_bo6d8"),
+"RESET": SubResource("Animation_ioij4")
+}
 
 [node name="Street" type="Node2D"]
+script = ExtResource("1_dxq2a")
 
 [node name="Background" type="Sprite2D" parent="."]
-position = Vector2(3699, 360)
+position = Vector2(3896.7, 360)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("1_eknd3")
 
 [node name="Portals" type="Node2D" parent="."]
+position = Vector2(388, 0)
 
 [node name="InaraHouse" parent="Portals" instance=ExtResource("3_p4vo2")]
 position = Vector2(116, 618)
@@ -43,31 +276,191 @@ rotation = 4.71239
 scale = Vector2(0.8, 0.8)
 portal = ExtResource("6_tep5w")
 
-[node name="Park" parent="Portals" instance=ExtResource("3_p4vo2")]
+[node name="Forest" parent="Portals" instance=ExtResource("3_p4vo2")]
 position = Vector2(7284, 624)
 scale = Vector2(0.8, 0.8)
 portal = ExtResource("6_7od58")
 
+[node name="Park" parent="Portals" instance=ExtResource("3_p4vo2")]
+position = Vector2(-316, 656)
+rotation = 3.14159
+scale = Vector2(0.8, 0.8)
+portal = ExtResource("9_fvpbn")
+
 [node name="Walls" parent="." instance=ExtResource("4_l6aov")]
 
 [node name="Top" parent="Walls" index="1"]
-position = Vector2(3699, 589)
-scale = Vector2(380, 1)
+position = Vector2(3893, 589)
+scale = Vector2(390, 1.026)
 
 [node name="Right" parent="Walls" index="2"]
-position = Vector2(7398, 360)
+position = Vector2(7786, 360)
 
 [node name="Bottom" parent="Walls" index="3"]
-position = Vector2(3699, 720)
-scale = Vector2(380, 1)
+position = Vector2(3893, 720)
+scale = Vector2(390, 1.026)
+
+[node name="NPCs" type="Node2D" parent="."]
+position = Vector2(388, 0)
+
+[node name="Dog" type="StaticBody2D" parent="NPCs"]
+position = Vector2(4268, 639)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPCs/Dog"]
+position = Vector2(2.5, 8)
+shape = SubResource("RectangleShape2D_syjse")
+debug_color = Color(0.596078, 0.537255, 0.254902, 0.419608)
+
+[node name="DogSprite" type="Sprite2D" parent="NPCs/Dog"]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("9_21n5h")
+flip_h = true
+script = ExtResource("10_2ae70")
+
+[node name="DogInteractArea" type="Area2D" parent="NPCs/Dog/DogSprite"]
+collision_layer = 4
+
+[node name="DogCollision" type="CollisionShape2D" parent="NPCs/Dog/DogSprite/DogInteractArea"]
+position = Vector2(-285, 0)
+scale = Vector2(0.999999, 0.999999)
+shape = SubResource("RectangleShape2D_le1er")
+
+[node name="Hiolanda" type="Sprite2D" parent="NPCs"]
+position = Vector2(2389, 550)
+scale = Vector2(0.17, 0.17)
+texture = ExtResource("11_kcwjs")
+flip_h = true
+script = ExtResource("12_rbrxt")
+
+[node name="HiolandaInteractArea" type="Area2D" parent="NPCs/Hiolanda"]
+collision_layer = 4
+
+[node name="HiolandaCollision" type="CollisionShape2D" parent="NPCs/Hiolanda/HiolandaInteractArea"]
+position = Vector2(15, 0)
+scale = Vector2(0.999999, 0.999999)
+shape = SubResource("RectangleShape2D_le1er")
+
+[node name="Soccer" type="Node2D" parent="NPCs"]
+z_index = 1
+position = Vector2(6, 24)
+script = ExtResource("13_cgufd")
+
+[node name="Victor" type="Sprite2D" parent="NPCs/Soccer"]
+position = Vector2(733, 627)
+scale = Vector2(0.17, 0.17)
+texture = ExtResource("13_xlpy7")
+
+[node name="Guilherme" type="Sprite2D" parent="NPCs/Soccer"]
+position = Vector2(840, 629)
+scale = Vector2(0.17, 0.17)
+texture = ExtResource("14_fn48p")
+flip_h = true
+
+[node name="FutebolArea" type="Area2D" parent="NPCs/Soccer"]
+position = Vector2(788, 609)
+collision_layer = 4
+
+[node name="FutebolCollision" type="CollisionShape2D" parent="NPCs/Soccer/FutebolArea"]
+z_index = 1
+position = Vector2(-9, 0.5)
+shape = SubResource("RectangleShape2D_lakfe")
+
+[node name="Pisadeira" type="Sprite2D" parent="NPCs"]
+position = Vector2(3505, 587)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("16_wcoub")
+flip_h = true
+
+[node name="WomanWallet" type="Sprite2D" parent="NPCs"]
+position = Vector2(3882, 530)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("18_cfrx7")
+
+[node name="WalletArea" type="Area2D" parent="NPCs/WomanWallet"]
+
+[node name="WalletCollision" type="CollisionShape2D" parent="NPCs/WomanWallet/WalletArea"]
+position = Vector2(-10, 0)
+shape = SubResource("RectangleShape2D_g7x7h")
+
+[node name="Collectables" type="Node2D" parent="."]
+
+[node name="Shovel" parent="Collectables" instance=ExtResource("20_qd8k3")]
+position = Vector2(1745, 581)
+skew = -0.261799
+collectable = ExtResource("21_sngr1")
+
+[node name="CollectableSprite" parent="Collectables/Shovel" index="0"]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("21_xgj7a")
+
+[node name="Objects" type="Node2D" parent="."]
+position = Vector2(388, 0)
+
+[node name="Manhole" type="Node2D" parent="Objects"]
+position = Vector2(3973, 682)
+script = ExtResource("19_7ogl6")
+
+[node name="ManholeArea" type="Area2D" parent="Objects/Manhole"]
+collision_layer = 32
+
+[node name="ManholeCollision" type="CollisionShape2D" parent="Objects/Manhole/ManholeArea"]
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_d12jx")
+
+[node name="Sand" type="StaticBody2D" parent="Objects"]
+position = Vector2(1640, 594)
+rotation = 0.278001
+scale = Vector2(0.315393, 0.2)
+
+[node name="SandSprite" type="Sprite2D" parent="Objects/Sand"]
+skew = -0.349066
+texture = ExtResource("23_4frid")
+hframes = 2
+frame = 1
+script = ExtResource("24_2w6ic")
+
+[node name="Area2D" type="Area2D" parent="Objects/Sand/SandSprite"]
+collision_layer = 32
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Objects/Sand/SandSprite/Area2D"]
+position = Vector2(-279.573, 470.776)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_c78k2")
+
+[node name="Area2D" type="CollisionShape2D" parent="Objects/Sand"]
+position = Vector2(98.3472, 69.8469)
+shape = SubResource("RectangleShape2D_x35oo")
+debug_color = Color(0.65098, 0.509804, 0.254902, 0.419608)
 
 [node name="PlayerRoot" parent="." instance=ExtResource("2_8doae")]
-position = Vector2(203, 584)
+position = Vector2(987, 560)
 scale = Vector2(0.35, 0.35)
 
 [node name="PlayerCamera" parent="PlayerRoot" index="2"]
 scale = Vector2(1, 1)
-limit_right = 7398
+limit_right = 7786
+
+[node name="Triggers" type="Node2D" parent="."]
+position = Vector2(388, 0)
+script = ExtResource("19_40ldn")
+
+[node name="Pisadeira1Area" type="Area2D" parent="Triggers"]
+unique_name_in_owner = true
+position = Vector2(1839, 655)
+collision_layer = 64
+
+[node name="Pisadeira1Collision" type="CollisionShape2D" parent="Triggers/Pisadeira1Area"]
+shape = SubResource("RectangleShape2D_m3clr")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+unique_name_in_owner = true
+libraries = {
+"": SubResource("AnimationLibrary_u1fav")
+}
+
+[connection signal="area_entered" from="Triggers/Pisadeira1Area" to="Triggers" method="pisadeiraEncounter"]
+[connection signal="animation_finished" from="AnimationPlayer" to="NPCs/Dog/DogSprite" method="deleteDog"]
 
 [editable path="Walls"]
+[editable path="Collectables/Shovel"]
 [editable path="PlayerRoot"]

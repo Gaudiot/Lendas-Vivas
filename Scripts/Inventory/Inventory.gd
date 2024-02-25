@@ -22,6 +22,7 @@ func remove(item: Item) -> void:
 			
 func removeSelectedItem() -> void:
 	remove(selected_item)
+	selected_item = null
 	updated.emit()
 			
 func combine(item1: Item, item2: Item, result: Item) -> void:

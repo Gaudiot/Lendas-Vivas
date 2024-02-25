@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="DialogueLine" load_steps=2 format=3 uid="uid://j5c2t6o2qxtx"]
+
+[ext_resource type="Script" path="res://Resources/Dialogues/Dialogue.gd" id="1_h1xcg"]
+
+[resource]
+script = ExtResource("1_h1xcg")
+is_char_left = false
+char_name = "Açougueiro"
+line = "Obrigado pela preferência! volte sempre e aproveite sua carne."
