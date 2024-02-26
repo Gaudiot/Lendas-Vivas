@@ -1,11 +1,13 @@
-[gd_scene load_steps=7 format=3 uid="uid://c2pdi5ecngttt"]
+[gd_scene load_steps=9 format=3 uid="uid://c2pdi5ecngttt"]
 
 [ext_resource type="Texture2D" uid="uid://bq8m2chvxhlja" path="res://Assets/Backgrounds/Chapters/Section3/Park.png" id="1_rylxh"]
 [ext_resource type="PackedScene" uid="uid://p8ndd1qu3ttx" path="res://Components/Obstacles/walls.tscn" id="2_te2wc"]
 [ext_resource type="PackedScene" uid="uid://che8dm2ehd180" path="res://Components/Collectables/Collectable.tscn" id="3_mhhi8"]
 [ext_resource type="Resource" uid="uid://djfrbijbcpc0h" path="res://Resources/Collectables/Stick.collectable.tres" id="4_kuvn0"]
 [ext_resource type="Texture2D" uid="uid://btt16hliibg6p" path="res://Assets/Items/Stick.png" id="4_uarlt"]
+[ext_resource type="PackedScene" uid="uid://liokbtu0disx" path="res://Components/Portals/Portal.tscn" id="6_fiv8y"]
 [ext_resource type="PackedScene" uid="uid://d2vghqcqvfq0e" path="res://Scenes/MainCharacter.tscn" id="6_j7e55"]
+[ext_resource type="Resource" uid="uid://css1ty0qkig4r" path="res://Resources/Portals/Street.portal.tres" id="7_vq87c"]
 
 [node name="Park" type="Node2D"]
 
@@ -37,6 +39,13 @@ collectable = ExtResource("4_kuvn0")
 
 [node name="CollectableSprite" parent="Collectables/Stick" index="0"]
 texture = ExtResource("4_uarlt")
+
+[node name="Portals" type="Node2D" parent="."]
+
+[node name="Street" parent="Portals" instance=ExtResource("6_fiv8y")]
+position = Vector2(2227, 642)
+scale = Vector2(0.8, 0.8)
+portal = ExtResource("7_vq87c")
 
 [node name="PlayerRoot" parent="." instance=ExtResource("6_j7e55")]
 position = Vector2(2003, 590)

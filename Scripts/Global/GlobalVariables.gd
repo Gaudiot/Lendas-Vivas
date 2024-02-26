@@ -16,7 +16,7 @@ func pickItem(item_name: String) -> void:
 	items_on_ground[item_name.to_lower()] = false
 
 var blocked_path: Dictionary = {
-	"gridwall": true,
+	"sand": true,
 	"dog": true
 }
 

@@ -465,7 +465,7 @@ collectable = ExtResource("30_dsrav")
 texture = ExtResource("30_sch2h")
 
 [node name="PlayerRoot" parent="." instance=ExtResource("2_8doae")]
-position = Vector2(2903, 586)
+position = Vector2(1559, 576)
 scale = Vector2(0.35, 0.35)
 
 [node name="PlayerCamera" parent="PlayerRoot" index="2"]
