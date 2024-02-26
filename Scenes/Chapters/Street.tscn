@@ -390,7 +390,6 @@ skew = -0.261799
 collectable = ExtResource("21_sngr1")
 
 [node name="CollectableSprite" parent="Collectables/Shovel" index="0"]
-scale = Vector2(0.1, 0.1)
 texture = ExtResource("21_xgj7a")
 
 [node name="Objects" type="Node2D" parent="."]
@@ -424,7 +423,6 @@ collision_layer = 32
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Objects/Sand/SandSprite/Area2D"]
 position = Vector2(-279.573, 470.776)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_c78k2")
 
 [node name="Area2D" type="CollisionShape2D" parent="Objects/Sand"]

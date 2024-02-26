@@ -21,6 +21,7 @@ SceneTransition="*res://Scenes/Misc/SceneTransition.tscn"
 DialogueSystem="*res://Scenes/Misc/Dialogue.tscn"
 GlobalVariables="*res://Scripts/Global/GlobalVariables.gd"
 PrologueState="*res://Scripts/Global/PrologueState.gd"
+Section3State="*res://Scripts/Global/Section3State.gd"
 
 [display]
 
