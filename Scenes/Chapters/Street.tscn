@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://d4ff8s6mjwor2"]
+[gd_scene load_steps=46 format=3 uid="uid://d4ff8s6mjwor2"]
 
 [ext_resource type="Script" path="res://Scripts/Chapters/Street.gd" id="1_dxq2a"]
 [ext_resource type="Texture2D" uid="uid://cy4svuv2egtal" path="res://Assets/Backgrounds/Chapters/Rua.png" id="1_eknd3"]
@@ -26,7 +26,13 @@
 [ext_resource type="Resource" uid="uid://cv7g0dmqpynyj" path="res://Resources/Collectables/Shovel.collectable.tres" id="21_sngr1"]
 [ext_resource type="Texture2D" uid="uid://cvdy108felmvs" path="res://Assets/Images/Misc/Shovel.png" id="21_xgj7a"]
 [ext_resource type="Texture2D" uid="uid://deop0bkkom364" path="res://Assets/Images/Misc/Sand.png" id="23_4frid"]
+[ext_resource type="Texture2D" uid="uid://dnt5rugsv5e3y" path="res://Assets/Images/Misc/WorkSign.png" id="23_r33g3"]
 [ext_resource type="Script" path="res://Scripts/Chapters/Prologue/Sand.gd" id="24_2w6ic"]
+[ext_resource type="Texture2D" uid="uid://durnvca5ev5db" path="res://Assets/Images/Misc/BusStop.png" id="27_2dom6"]
+[ext_resource type="Resource" uid="uid://dsl5oqg4cptl5" path="res://Resources/Collectables/Gum.collectable.tres" id="28_62gdm"]
+[ext_resource type="Texture2D" uid="uid://b24po0ahi7vhj" path="res://Assets/Items/Gum.png" id="28_vpys3"]
+[ext_resource type="Resource" uid="uid://b6xmybqmcts6b" path="res://Resources/Collectables/String.collectable.tres" id="30_dsrav"]
+[ext_resource type="Texture2D" uid="uid://c4l2dhpslcruw" path="res://Assets/Items/String.png" id="30_sch2h"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_syjse"]
 size = Vector2(97, 140)
@@ -382,18 +388,13 @@ texture = ExtResource("18_cfrx7")
 position = Vector2(-10, 0)
 shape = SubResource("RectangleShape2D_g7x7h")
 
-[node name="Collectables" type="Node2D" parent="."]
-
-[node name="Shovel" parent="Collectables" instance=ExtResource("20_qd8k3")]
-position = Vector2(1745, 581)
-skew = -0.261799
-collectable = ExtResource("21_sngr1")
-
-[node name="CollectableSprite" parent="Collectables/Shovel" index="0"]
-texture = ExtResource("21_xgj7a")
-
 [node name="Objects" type="Node2D" parent="."]
 position = Vector2(388, 0)
+
+[node name="WorkSign" type="Sprite2D" parent="Objects"]
+position = Vector2(1535, 593)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("23_r33g3")
 
 [node name="Manhole" type="Node2D" parent="Objects"]
 position = Vector2(3973, 682)
@@ -430,8 +431,41 @@ position = Vector2(98.3472, 69.8469)
 shape = SubResource("RectangleShape2D_x35oo")
 debug_color = Color(0.65098, 0.509804, 0.254902, 0.419608)
 
+[node name="BusStop" type="Sprite2D" parent="Objects"]
+position = Vector2(2737, 538)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_2dom6")
+
+[node name="Collectables" type="Node2D" parent="."]
+
+[node name="Shovel" parent="Collectables" instance=ExtResource("20_qd8k3")]
+position = Vector2(1745, 581)
+skew = -0.261799
+collectable = ExtResource("21_sngr1")
+
+[node name="CollectableSprite" parent="Collectables/Shovel" index="0"]
+texture = ExtResource("21_xgj7a")
+
+[node name="Gum" parent="Collectables" instance=ExtResource("20_qd8k3")]
+position = Vector2(3106, 551)
+scale = Vector2(0.2, 0.2)
+collectable = ExtResource("28_62gdm")
+
+[node name="CollectableSprite" parent="Collectables/Gum" index="0"]
+texture = ExtResource("28_vpys3")
+
+[node name="String" parent="Collectables" instance=ExtResource("20_qd8k3")]
+position = Vector2(2567, 534)
+rotation = 3.14159
+scale = Vector2(0.35, 0.35)
+skew = 0.174533
+collectable = ExtResource("30_dsrav")
+
+[node name="CollectableSprite" parent="Collectables/String" index="0"]
+texture = ExtResource("30_sch2h")
+
 [node name="PlayerRoot" parent="." instance=ExtResource("2_8doae")]
-position = Vector2(987, 560)
+position = Vector2(2903, 586)
 scale = Vector2(0.35, 0.35)
 
 [node name="PlayerCamera" parent="PlayerRoot" index="2"]
@@ -461,4 +495,6 @@ libraries = {
 
 [editable path="Walls"]
 [editable path="Collectables/Shovel"]
+[editable path="Collectables/Gum"]
+[editable path="Collectables/String"]
 [editable path="PlayerRoot"]
