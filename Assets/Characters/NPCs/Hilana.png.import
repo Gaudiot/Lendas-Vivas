@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dlyxgwrwpjf2d"
-path="res://.godot/imported/WomanWallet.png-86f65293c544c075600821cbe771d4d0.ctex"
+path="res://.godot/imported/Hilana.png-c9ca9ae4fb6c0de3029ee606324b8ac0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Characters/NPCs/WomanWallet.png"
-dest_files=["res://.godot/imported/WomanWallet.png-86f65293c544c075600821cbe771d4d0.ctex"]
+source_file="res://Assets/Characters/NPCs/Hilana.png"
+dest_files=["res://.godot/imported/Hilana.png-c9ca9ae4fb6c0de3029ee606324b8ac0.ctex"]
 
 [params]
 

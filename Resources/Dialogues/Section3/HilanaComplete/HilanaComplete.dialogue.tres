@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="DialogueLine" load_steps=2 format=3 uid="uid://wg5pnrxbw7pa"]
+
+[ext_resource type="Script" path="res://Resources/Dialogues/Dialogue.gd" id="1_qnc4c"]
+
+[resource]
+script = ExtResource("1_qnc4c")
+is_char_left = false
+char_name = "Hilana"
+line = "Muito obrigada! Não sei o que seria de mim sem você.
+Por favor, aceite esse dinheiro como agradecimento."
