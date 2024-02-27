@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="DialogueLine" load_steps=3 format=3 uid="uid://dybucevq2avmf"]
+
+[ext_resource type="Texture2D" uid="uid://dlyxgwrwpjf2d" path="res://Assets/Characters/NPCs/Hilana.png" id="1_83w3r"]
+[ext_resource type="Script" path="res://Resources/Dialogues/Dialogue.gd" id="1_f2wwi"]
+
+[resource]
+script = ExtResource("1_f2wwi")
+is_char_left = false
+char_name = "Hilana"
+line = "Meu Deus! Me distrai e deixei minha carteira cair no bueiro!
+Por favor, me ajude, todos meus documentos estão nela!"
+char_image = ExtResource("1_83w3r")

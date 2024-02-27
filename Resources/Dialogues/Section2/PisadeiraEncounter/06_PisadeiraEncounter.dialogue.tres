@@ -1,9 +1,11 @@
-[gd_resource type="Resource" script_class="DialogueLine" load_steps=2 format=3 uid="uid://c3sm71fxxfmgc"]
+[gd_resource type="Resource" script_class="DialogueLine" load_steps=3 format=3 uid="uid://c3sm71fxxfmgc"]
 
 [ext_resource type="Script" path="res://Resources/Dialogues/Dialogue.gd" id="1_hgr2r"]
+[ext_resource type="Texture2D" uid="uid://du1x4yvm5ubfc" path="res://Assets/Characters/Pisadeira/PisadeiraUp.png" id="1_jh4bs"]
 
 [resource]
 script = ExtResource("1_hgr2r")
 is_char_left = false
 char_name = "???"
 line = "Mas você não está entendendo, nós precisamos de você para consertar essa confusão!"
+char_image = ExtResource("1_jh4bs")

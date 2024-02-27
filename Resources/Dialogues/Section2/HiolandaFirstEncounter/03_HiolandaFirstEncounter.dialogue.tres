@@ -1,6 +1,7 @@
-[gd_resource type="Resource" script_class="DialogueLine" load_steps=2 format=3 uid="uid://ct0d760pmcoed"]
+[gd_resource type="Resource" script_class="DialogueLine" load_steps=3 format=3 uid="uid://ct0d760pmcoed"]
 
 [ext_resource type="Script" path="res://Resources/Dialogues/Dialogue.gd" id="1_imtc8"]
+[ext_resource type="Texture2D" uid="uid://muvaisq8ekkr" path="res://Assets/Characters/NPCs/Hiolanda.png" id="1_l2y6q"]
 
 [resource]
 script = ExtResource("1_imtc8")
@@ -8,3 +9,4 @@ is_char_left = false
 char_name = "Hiolanda"
 line = "Só que ainda está muito cedo, preciso do meu cafézinho com açúcar para a mente funcionar direito. Infelizmente aqui em casa está sem nada, acabou todos os ingredientes.
 Mas se você puder fazer para mim agradeço bastante, só precisa de café, leite e açúcar."
+char_image = ExtResource("1_l2y6q")

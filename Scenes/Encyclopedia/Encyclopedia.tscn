@@ -23,6 +23,7 @@
 [ext_resource type="Texture2D" uid="uid://bkxx40pjsa8ey" path="res://Assets/Icons/Question.png" id="18_fxvyy"]
 
 [node name="Encyclopedia" type="CanvasLayer"]
+layer = 2
 script = ExtResource("1_cariu")
 
 [node name="Background" type="TextureRect" parent="."]
@@ -33,6 +34,15 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_iigwv")
 expand_mode = 1
+
+[node name="Back" type="TextureButton" parent="."]
+z_index = 1
+offset_right = 144.0
+offset_bottom = 144.0
+texture_normal = ExtResource("3_egd7k")
+ignore_texture_size = true
+stretch_mode = 0
+flip_h = true
 
 [node name="Book" type="TextureRect" parent="."]
 self_modulate = Color(0.866667, 0.25098, 0, 1)
@@ -150,20 +160,12 @@ grow_vertical = 2
 scale = Vector2(0.55, 0.55)
 texture_normal = ExtResource("16_88l3f")
 
-[node name="Back" type="TextureButton" parent="."]
-offset_right = 144.0
-offset_bottom = 144.0
-texture_normal = ExtResource("3_egd7k")
-ignore_texture_size = true
-stretch_mode = 0
-flip_h = true
-
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("15_unner")
 volume_db = -11.243
 autoplay = true
 
+[connection signal="button_down" from="Back" to="." method="_on_back_button_down"]
 [connection signal="page_turned" from="Book" to="Book/BookPages/FolkloreInfo" method="_on_book_page_turned"]
 [connection signal="button_down" from="Book/BookPages/PreviousPage" to="Book" method="_on_previous_page_button_down"]
 [connection signal="button_down" from="Book/BookPages/NextPage" to="Book" method="_on_next_page_button_down"]
-[connection signal="button_down" from="Back" to="." method="_on_back_button_down"]

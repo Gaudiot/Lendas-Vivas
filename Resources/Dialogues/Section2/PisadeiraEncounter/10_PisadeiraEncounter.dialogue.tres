@@ -1,5 +1,6 @@
-[gd_resource type="Resource" script_class="DialogueLine" load_steps=2 format=3 uid="uid://drnid2qvukbos"]
+[gd_resource type="Resource" script_class="DialogueLine" load_steps=3 format=3 uid="uid://drnid2qvukbos"]
 
+[ext_resource type="Texture2D" uid="uid://du1x4yvm5ubfc" path="res://Assets/Characters/Pisadeira/PisadeiraUp.png" id="1_bahcy"]
 [ext_resource type="Script" path="res://Resources/Dialogues/Dialogue.gd" id="1_e4rqh"]
 
 [resource]
@@ -7,3 +8,4 @@ script = ExtResource("1_e4rqh")
 is_char_left = false
 char_name = "???"
 line = "Tudo bem, sei que eventualmente vai notar que precisa de mim, vou esperar esse momento, só espero que não demore."
+char_image = ExtResource("1_bahcy")

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://qf2diniuas0g"
-path="res://.godot/imported/porta.png-59c7f34128de1271f0627823d9a540a9.ctex"
+uid="uid://dnt5rugsv5e3y"
+path="res://.godot/imported/WorkSign.png-9bcdec3f5e2804911bc9cf9cb91cff96.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Images/porta.png"
-dest_files=["res://.godot/imported/porta.png-59c7f34128de1271f0627823d9a540a9.ctex"]
+source_file="res://Assets/Images/Misc/WorkSign.png"
+dest_files=["res://.godot/imported/WorkSign.png-9bcdec3f5e2804911bc9cf9cb91cff96.ctex"]
 
 [params]
 

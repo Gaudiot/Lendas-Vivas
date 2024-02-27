@@ -1,9 +1,11 @@
-[gd_resource type="Resource" script_class="DialogueLine" load_steps=2 format=3 uid="uid://dimmhevubd5sc"]
+[gd_resource type="Resource" script_class="DialogueLine" load_steps=3 format=3 uid="uid://dimmhevubd5sc"]
 
 [ext_resource type="Script" path="res://Resources/Dialogues/Dialogue.gd" id="1_7eqod"]
+[ext_resource type="Texture2D" uid="uid://du1x4yvm5ubfc" path="res://Assets/Characters/Pisadeira/PisadeiraUp.png" id="1_w4j8j"]
 
 [resource]
 script = ExtResource("1_7eqod")
 is_char_left = false
 char_name = "???"
 line = "Calma! Não é bem assim! Deixa eu --"
+char_image = ExtResource("1_w4j8j")

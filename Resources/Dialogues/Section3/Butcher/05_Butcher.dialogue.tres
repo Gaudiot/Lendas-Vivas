@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="DialogueLine" load_steps=3 format=3 uid="uid://beqm67yo7yrug"]
+
+[ext_resource type="Texture2D" uid="uid://cqxrqu4efhog6" path="res://Assets/Characters/NPCs/Butcher.png" id="1_7ys57"]
+[ext_resource type="Script" path="res://Resources/Dialogues/Dialogue.gd" id="2_2ibbv"]
+
+[resource]
+script = ExtResource("2_2ibbv")
+is_char_left = false
+char_name = "André"
+line = "Fiado é igual cabelo, se não cortar cresce. Só volte se tiver dinheiro!"
+char_image = ExtResource("1_7ys57")

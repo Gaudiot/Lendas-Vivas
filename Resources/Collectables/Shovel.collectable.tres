@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Collectable" load_steps=3 format=3 uid="uid://cv7g0dmqpynyj"]
+
+[ext_resource type="Resource" uid="uid://c12kv5leijcjy" path="res://Resources/Items/Shovel.item.tres" id="1_lr4xl"]
+[ext_resource type="Script" path="res://Resources/Collectables/Collectable.gd" id="1_xjax7"]
+
+[resource]
+script = ExtResource("1_xjax7")
+item = ExtResource("1_lr4xl")

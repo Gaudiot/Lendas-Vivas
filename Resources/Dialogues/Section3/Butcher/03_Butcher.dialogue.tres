@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="DialogueLine" load_steps=3 format=3 uid="uid://1o2nt7ci6o1y"]
+
+[ext_resource type="Texture2D" uid="uid://cqxrqu4efhog6" path="res://Assets/Characters/NPCs/Butcher.png" id="1_iacoh"]
+[ext_resource type="Script" path="res://Resources/Dialogues/Dialogue.gd" id="2_grn71"]
+
+[resource]
+script = ExtResource("2_grn71")
+is_char_left = false
+char_name = "André"
+line = "Mas claro! Tenho esse pedaço daqui por 20 reais.
+Vai pagar em dinheiro ou cartão?"
+char_image = ExtResource("1_iacoh")

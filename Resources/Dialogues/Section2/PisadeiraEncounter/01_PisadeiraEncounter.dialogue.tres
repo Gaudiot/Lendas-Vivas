@@ -1,5 +1,6 @@
-[gd_resource type="Resource" script_class="DialogueLine" load_steps=2 format=3 uid="uid://6v1wwsuocsds"]
+[gd_resource type="Resource" script_class="DialogueLine" load_steps=3 format=3 uid="uid://6v1wwsuocsds"]
 
+[ext_resource type="Texture2D" uid="uid://du1x4yvm5ubfc" path="res://Assets/Characters/Pisadeira/PisadeiraUp.png" id="1_87xw7"]
 [ext_resource type="Script" path="res://Resources/Dialogues/Dialogue.gd" id="1_avir1"]
 
 [resource]
@@ -7,3 +8,4 @@ script = ExtResource("1_avir1")
 is_char_left = false
 char_name = "???"
 line = "Você! Sabia que você iria agir! Sempre destemida  e aventureira!"
+char_image = ExtResource("1_87xw7")

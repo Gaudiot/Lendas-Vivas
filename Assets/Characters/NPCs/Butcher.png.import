@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dpkmi04if521c"
-path="res://.godot/imported/Park.png-c4b3a83b97db82d4ee42ac33b3bc951e.ctex"
+uid="uid://cqxrqu4efhog6"
+path="res://.godot/imported/Butcher.png-96dda8e1a9a049d73db426ffabe308dc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Backgrounds/Chapters/Section5/Park.png"
-dest_files=["res://.godot/imported/Park.png-c4b3a83b97db82d4ee42ac33b3bc951e.ctex"]
+source_file="res://Assets/Characters/NPCs/Butcher.png"
+dest_files=["res://.godot/imported/Butcher.png-96dda8e1a9a049d73db426ffabe308dc.ctex"]
 
 [params]
 

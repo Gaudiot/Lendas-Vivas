@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://muvaisq8ekkr"
-path="res://.godot/imported/dona iolanda.png-4ad48a3201706d718416e91fd525e21f.ctex"
+uid="uid://cvdy108felmvs"
+path="res://.godot/imported/Shovel.png-096a6082acb27860d038d87f2c96529b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Characters/NPCs/dona iolanda.png"
-dest_files=["res://.godot/imported/dona iolanda.png-4ad48a3201706d718416e91fd525e21f.ctex"]
+source_file="res://Assets/Images/Misc/Shovel.png"
+dest_files=["res://.godot/imported/Shovel.png-096a6082acb27860d038d87f2c96529b.ctex"]
 
 [params]
 

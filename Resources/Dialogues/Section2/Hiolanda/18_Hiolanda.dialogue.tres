@@ -1,5 +1,6 @@
-[gd_resource type="Resource" script_class="DialogueLine" load_steps=2 format=3 uid="uid://jh4aa1h8lxlh"]
+[gd_resource type="Resource" script_class="DialogueLine" load_steps=3 format=3 uid="uid://jh4aa1h8lxlh"]
 
+[ext_resource type="Texture2D" uid="uid://muvaisq8ekkr" path="res://Assets/Characters/NPCs/Hiolanda.png" id="1_ced0s"]
 [ext_resource type="Script" path="res://Resources/Dialogues/Dialogue.gd" id="1_qspgb"]
 
 [resource]
@@ -8,3 +9,4 @@ is_char_left = false
 char_name = "Hiolanda"
 line = "Talvez você venha recebendo umas visitas. Existe uma lenda que uma mulher fica à espreita da noite, só observando as pessoas a partir do telhado das casas, e quem dorme com barriga cheia ela vem e fica pisando na boca da barriga. Dessa forma a pessoa acaba tendo vários pesadelos.
 O nome dessa lenda é Pisadeira"
+char_image = ExtResource("1_ced0s")
