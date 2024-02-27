@@ -1,6 +1,7 @@
-[gd_resource type="Resource" script_class="DialogueLine" load_steps=2 format=3 uid="uid://b0to0xhhqcd0m"]
+[gd_resource type="Resource" script_class="DialogueLine" load_steps=3 format=3 uid="uid://b0to0xhhqcd0m"]
 
 [ext_resource type="Script" path="res://Resources/Dialogues/Dialogue.gd" id="1_uyduk"]
+[ext_resource type="Texture2D" uid="uid://muvaisq8ekkr" path="res://Assets/Characters/NPCs/Hiolanda.png" id="1_xm11r"]
 
 [resource]
 script = ExtResource("1_uyduk")
@@ -8,3 +9,4 @@ is_char_left = false
 char_name = "Hiolanda"
 line = "E uma amiga minha, a Zuleide, falou que o sobrinho dela estava andando com os amigos na rua e de repente viram um vulto verde com roxo se movendo bem rápido e de forma suspeita.
 Eles não fizeram nada porque acharam que era alguma mendiga bêbada andando a esmo por aí."
+char_image = ExtResource("1_xm11r")

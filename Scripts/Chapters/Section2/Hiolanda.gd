@@ -6,10 +6,14 @@ func _ready():
 	pass # Replace with function body.
 	
 func interact(player_inventory: Inventory) -> void:
+	if PrologueState.npcs_talked["Hiolanda"]:
+		return
+		
 	var selected_item: Item = player_inventory.selected_item
+	var dialogue_lines: Array[DialogueLine] = []
 	
 	if selected_item && selected_item.name == "Coffee":
-		var dialogue_lines: Array[DialogueLine] = [
+		dialogue_lines = [
 			preload("res://Resources/Dialogues/Section2/Hiolanda/01_Hiolanda.dialogue.tres"),
 			preload("res://Resources/Dialogues/Section2/Hiolanda/02_Hiolanda.dialogue.tres"),
 			preload("res://Resources/Dialogues/Section2/Hiolanda/03_Hiolanda.dialogue.tres"),
@@ -34,5 +38,15 @@ func interact(player_inventory: Inventory) -> void:
 			preload("res://Resources/Dialogues/Section2/Hiolanda/22_Hiolanda.dialogue.tres"),
 			preload("res://Resources/Dialogues/Section2/Hiolanda/23_Hiolanda.dialogue.tres")
 		]
+		
+		PrologueState.npcs_talked["Hiolanda"] = true
 		DialogueSystem.startupDialogue(dialogue_lines)
-	pass
+		return
+	
+	dialogue_lines = [
+		preload("res://Resources/Dialogues/Section2/HiolandaFirstEncounter/01_HiolandaFirstEncounter.dialogue.tres"),
+		preload("res://Resources/Dialogues/Section2/HiolandaFirstEncounter/02_HiolandaFirstEncounter.dialogue.tres"),
+		preload("res://Resources/Dialogues/Section2/HiolandaFirstEncounter/03_HiolandaFirstEncounter.dialogue.tres"),
+	]
+	
+	DialogueSystem.startupDialogue(dialogue_lines)

@@ -1,5 +1,6 @@
-[gd_resource type="Resource" script_class="DialogueLine" load_steps=2 format=3 uid="uid://catux6ag3rypy"]
+[gd_resource type="Resource" script_class="DialogueLine" load_steps=3 format=3 uid="uid://catux6ag3rypy"]
 
+[ext_resource type="Texture2D" uid="uid://d2fl67tffv6xg" path="res://Assets/Characters/Player/Inarita.png" id="1_a1g7l"]
 [ext_resource type="Script" path="res://Resources/Dialogues/Dialogue.gd" id="1_bvrau"]
 
 [resource]
@@ -7,3 +8,4 @@ script = ExtResource("1_bvrau")
 is_char_left = true
 char_name = "Inara"
 line = "Não lembro muito detalhes dele, mas tem sido quase o mesmo sonho sempre. Eu no escuro correndo e ao longe vejo minha mãe e minha irmã gritando por ajuda e depois sumindo."
+char_image = ExtResource("1_a1g7l")

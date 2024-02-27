@@ -47,7 +47,6 @@ scale = Vector2(1, 40)
 position = Vector2(236, 420)
 
 [node name="PlayerCamera" parent="PlayerRoot" index="2"]
-position = Vector2(276, -3)
 limit_right = 3810
 
 [node name="Divider1" type="Sprite2D" parent="."]

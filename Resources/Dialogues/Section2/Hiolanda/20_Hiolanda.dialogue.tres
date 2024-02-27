@@ -1,5 +1,6 @@
-[gd_resource type="Resource" script_class="DialogueLine" load_steps=2 format=3 uid="uid://7gcfehy1ykj3"]
+[gd_resource type="Resource" script_class="DialogueLine" load_steps=3 format=3 uid="uid://7gcfehy1ykj3"]
 
+[ext_resource type="Texture2D" uid="uid://muvaisq8ekkr" path="res://Assets/Characters/NPCs/Hiolanda.png" id="1_aopov"]
 [ext_resource type="Script" path="res://Resources/Dialogues/Dialogue.gd" id="1_ts0rx"]
 
 [resource]
@@ -7,3 +8,4 @@ script = ExtResource("1_ts0rx")
 is_char_left = false
 char_name = "Hiolanda"
 line = "Minha querida, quando se vive tanto quanto eu, você aprende que essas lendas não surgem por acaso. E talvez essa pisadeira esteja querendo lhe avisar, já que ela te mostrou nos sonhos a sua irmã desaparecendo."
+char_image = ExtResource("1_aopov")
