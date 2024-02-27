@@ -1,10 +1,12 @@
-[gd_scene load_steps=8 format=3 uid="uid://pjklku0ctjmr"]
+[gd_scene load_steps=10 format=3 uid="uid://pjklku0ctjmr"]
 
 [ext_resource type="Texture2D" uid="uid://dobpcg5dan0fq" path="res://Assets/Backgrounds/Chapters/Section5/Restaurant.png" id="1_oa8ay"]
 [ext_resource type="Texture2D" uid="uid://qf2diniuas0g" path="res://Assets/Images/Misc/porta.png" id="2_7oi4l"]
 [ext_resource type="Texture2D" uid="uid://dblxcblj6rwuk" path="res://Assets/Characters/Cuca/CucaChef.png" id="3_jq4tb"]
 [ext_resource type="PackedScene" uid="uid://p8ndd1qu3ttx" path="res://Components/Obstacles/walls.tscn" id="4_edpc3"]
+[ext_resource type="PackedScene" uid="uid://liokbtu0disx" path="res://Components/Portals/Portal.tscn" id="4_o12w5"]
 [ext_resource type="PackedScene" uid="uid://brc301dhk383d" path="res://Components/Obstacles/RectangleObstacle.tscn" id="5_6dr8d"]
+[ext_resource type="Resource" uid="uid://css1ty0qkig4r" path="res://Resources/Portals/Street.portal.tres" id="5_lp4aa"]
 [ext_resource type="PackedScene" uid="uid://d2vghqcqvfq0e" path="res://Scenes/MainCharacter.tscn" id="5_u72up"]
 [ext_resource type="Texture2D" uid="uid://c0xmq6wh6mcw7" path="res://Assets/Images/Inventory/InventoryBackground.png" id="7_ph3oe"]
 
@@ -21,14 +23,22 @@ scale = Vector2(0.72, 0.72)
 texture = ExtResource("2_7oi4l")
 
 [node name="Cuca" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(1618, 408)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("3_jq4tb")
 
+[node name="Portals" type="Node2D" parent="."]
+
+[node name="Portal" parent="Portals" instance=ExtResource("4_o12w5")]
+position = Vector2(74, 664)
+rotation = 3.14159
+portal = ExtResource("5_lp4aa")
+
 [node name="Walls" parent="." instance=ExtResource("4_edpc3")]
 
 [node name="Top" parent="Walls" index="1"]
-position = Vector2(1905, 634)
+position = Vector2(1905, 625)
 scale = Vector2(200, 1)
 
 [node name="Right" parent="Walls" index="2"]
@@ -44,7 +54,7 @@ position = Vector2(2266, 360)
 scale = Vector2(1, 40)
 
 [node name="PlayerRoot" parent="." instance=ExtResource("5_u72up")]
-position = Vector2(236, 420)
+position = Vector2(617, 445)
 
 [node name="PlayerCamera" parent="PlayerRoot" index="2"]
 limit_right = 3810

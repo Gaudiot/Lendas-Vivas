@@ -1,8 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://3our0enw254n"]
+[gd_scene load_steps=8 format=3 uid="uid://3our0enw254n"]
 
 [ext_resource type="Texture2D" uid="uid://b24kjh5f41qdd" path="res://Assets/Backgrounds/Chapters/Section4/Library.png" id="1_v8wjk"]
 [ext_resource type="PackedScene" uid="uid://liokbtu0disx" path="res://Components/Portals/Portal.tscn" id="2_i12mp"]
+[ext_resource type="Resource" uid="uid://css1ty0qkig4r" path="res://Resources/Portals/Street.portal.tres" id="3_58kdt"]
 [ext_resource type="PackedScene" uid="uid://p8ndd1qu3ttx" path="res://Components/Obstacles/walls.tscn" id="3_hn5rv"]
+[ext_resource type="Script" path="res://Scripts/Chapters/Section4/Triggers.gd" id="5_0kpnt"]
+[ext_resource type="PackedScene" uid="uid://d2vghqcqvfq0e" path="res://Scenes/MainCharacter.tscn" id="6_r8rh7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3bm8q"]
+size = Vector2(20, 224)
 
 [node name="Library" type="Node2D"]
 
@@ -17,8 +23,11 @@ texture = ExtResource("1_v8wjk")
 position = Vector2(166, 590)
 rotation = 3.14159
 scale = Vector2(1.5, 1.5)
+is_portal_blocked = true
+portal = ExtResource("3_58kdt")
 
 [node name="Walls" parent="." instance=ExtResource("3_hn5rv")]
+visible = true
 
 [node name="Top" parent="Walls" index="1"]
 position = Vector2(1238, 489)
@@ -31,4 +40,23 @@ position = Vector2(2476, 360)
 position = Vector2(1238, 720)
 scale = Vector2(130, 1)
 
+[node name="Triggers" type="Node2D" parent="."]
+script = ExtResource("5_0kpnt")
+
+[node name="EndDemoArea" type="Area2D" parent="Triggers"]
+
+[node name="EndDemoCollision" type="CollisionShape2D" parent="Triggers/EndDemoArea"]
+position = Vector2(466, 603)
+shape = SubResource("RectangleShape2D_3bm8q")
+
+[node name="PlayerRoot" parent="." instance=ExtResource("6_r8rh7")]
+position = Vector2(151, 411)
+scale = Vector2(1.1, 1.1)
+
+[node name="PlayerCamera" parent="PlayerRoot" index="2"]
+limit_right = 2476
+
+[connection signal="area_entered" from="Triggers/EndDemoArea" to="Triggers" method="_endDemo"]
+
 [editable path="Walls"]
+[editable path="PlayerRoot"]
