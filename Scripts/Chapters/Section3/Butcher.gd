@@ -12,9 +12,10 @@ func interact(player_inventory: Inventory) -> void:
 		
 	var selected_item = player_inventory.selected_item
 	var talked_to_hiolanda = PrologueState.npcs_talked["Hiolanda"]
+	var dialogue_lines: Array[DialogueLine] = []
 	
 	if selected_item && selected_item.name == "Money":
-		var dialogue_lines: Array[DialogueLine] = [
+		dialogue_lines = [
 			preload("res://Resources/Dialogues/Section3/ButcherMoney/01_ButcherMoney.dialogue.tres")
 		]
 		
@@ -25,7 +26,7 @@ func interact(player_inventory: Inventory) -> void:
 		return
 	
 	if talked_to_hiolanda:
-		var dialogue_lines: Array[DialogueLine] = [
+		dialogue_lines = [
 			preload("res://Resources/Dialogues/Section3/Butcher/01_Butcher.dialogue.tres"),
 			preload("res://Resources/Dialogues/Section3/Butcher/02_Butcher.dialogue.tres"),
 			preload("res://Resources/Dialogues/Section3/Butcher/03_Butcher.dialogue.tres"),
@@ -36,7 +37,7 @@ func interact(player_inventory: Inventory) -> void:
 		DialogueSystem.startupDialogue(dialogue_lines)
 		return
 		
-	var dialogue_lines: Array[DialogueLine] = [
+	dialogue_lines = [
 		preload("res://Resources/Dialogues/Section3/ButcherInit/01_ButcherInit.dialogue.tres"),
 		preload("res://Resources/Dialogues/Section3/ButcherInit/02_ButcherInit.dialogue.tres"),
 		preload("res://Resources/Dialogues/Section3/ButcherInit/03_ButcherInit.dialogue.tres")

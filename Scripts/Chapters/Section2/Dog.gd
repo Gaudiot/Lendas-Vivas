@@ -4,13 +4,15 @@ extends Sprite2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	if not GlobalVariables.blocked_path["dog"]:
+		get_parent().queue_free()
 	
 func interact(player_inventory: Inventory) -> void:
 	var selected_item: Item = player_inventory.selected_item
 	
 	if selected_item and selected_item.name == "Meat":
 		player_inventory.removeSelectedItem()
+		GlobalVariables.blocked_path["dog"] = false
 		animation_player.play("DogLeave")
 		return
 		

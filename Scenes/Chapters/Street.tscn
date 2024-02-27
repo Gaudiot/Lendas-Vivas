@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=3 uid="uid://d4ff8s6mjwor2"]
+[gd_scene load_steps=48 format=3 uid="uid://d4ff8s6mjwor2"]
 
 [ext_resource type="Script" path="res://Scripts/Chapters/Street.gd" id="1_dxq2a"]
 [ext_resource type="Texture2D" uid="uid://cy4svuv2egtal" path="res://Assets/Backgrounds/Chapters/Rua.png" id="1_eknd3"]
@@ -58,6 +58,9 @@ size = Vector2(930.414, 731.283)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m3clr"]
 size = Vector2(20, 122)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0n73f"]
+size = Vector2(20, 130)
 
 [sub_resource type="Animation" id="Animation_p5uak"]
 resource_name = "DogLeave"
@@ -177,7 +180,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [true]
+"values": [false]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -240,10 +243,77 @@ tracks/5/keys = {
 "values": [true]
 }
 
+[sub_resource type="Animation" id="Animation_0jswj"]
+resource_name = "PisadeiraReencounter"
+length = 3.0
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(1.8),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"pisadeiraReencounterDialogue"
+}]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("NPCs/Pisadeira:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("NPCs/Pisadeira:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(5122, 596), Vector2(4410, 596)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("NPCs/Pisadeira:flip_h")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("PlayerRoot:play_can_move")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_u1fav"]
 _data = {
 "DogLeave": SubResource("Animation_p5uak"),
 "PisadeiraFirstEncounter": SubResource("Animation_bo6d8"),
+"PisadeiraReencounter": SubResource("Animation_0jswj"),
 "RESET": SubResource("Animation_ioij4")
 }
 
@@ -372,6 +442,7 @@ position = Vector2(-9, 0.5)
 shape = SubResource("RectangleShape2D_lakfe")
 
 [node name="Pisadeira" type="Sprite2D" parent="NPCs"]
+visible = false
 position = Vector2(3505, 587)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("16_wcoub")
@@ -465,7 +536,7 @@ collectable = ExtResource("30_dsrav")
 texture = ExtResource("30_sch2h")
 
 [node name="PlayerRoot" parent="." instance=ExtResource("2_8doae")]
-position = Vector2(1559, 576)
+position = Vector2(4138, 600)
 scale = Vector2(0.35, 0.35)
 
 [node name="PlayerCamera" parent="PlayerRoot" index="2"]
@@ -484,6 +555,13 @@ collision_layer = 64
 [node name="Pisadeira1Collision" type="CollisionShape2D" parent="Triggers/Pisadeira1Area"]
 shape = SubResource("RectangleShape2D_m3clr")
 
+[node name="Pisadeira2Area" type="Area2D" parent="Triggers"]
+unique_name_in_owner = true
+
+[node name="Pisadeira2Collision" type="CollisionShape2D" parent="Triggers/Pisadeira2Area"]
+position = Vector2(4358, 657)
+shape = SubResource("RectangleShape2D_0n73f")
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 unique_name_in_owner = true
 libraries = {
@@ -491,6 +569,7 @@ libraries = {
 }
 
 [connection signal="area_entered" from="Triggers/Pisadeira1Area" to="Triggers" method="pisadeiraEncounter"]
+[connection signal="area_entered" from="Triggers/Pisadeira2Area" to="Triggers" method="pisadeiraReencounter"]
 [connection signal="animation_finished" from="AnimationPlayer" to="NPCs/Dog/DogSprite" method="deleteDog"]
 
 [editable path="Walls"]

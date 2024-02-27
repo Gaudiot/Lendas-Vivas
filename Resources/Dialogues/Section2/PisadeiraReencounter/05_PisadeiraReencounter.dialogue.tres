@@ -1,5 +1,6 @@
-[gd_resource type="Resource" script_class="DialogueLine" load_steps=2 format=3 uid="uid://b4mvkr266wrln"]
+[gd_resource type="Resource" script_class="DialogueLine" load_steps=3 format=3 uid="uid://b4mvkr266wrln"]
 
+[ext_resource type="Texture2D" uid="uid://du1x4yvm5ubfc" path="res://Assets/Characters/Pisadeira/PisadeiraUp.png" id="1_i4nri"]
 [ext_resource type="Script" path="res://Resources/Dialogues/Dialogue.gd" id="1_orho1"]
 
 [resource]
@@ -7,3 +8,4 @@ script = ExtResource("1_orho1")
 is_char_left = false
 char_name = "Pisadeira"
 line = "Eu só sou capaz de gerar pesadelos, infelizmente. Olha, eu sei quem raptou a sua irmã, a Moema. Foi a cuca!"
+char_image = ExtResource("1_i4nri")

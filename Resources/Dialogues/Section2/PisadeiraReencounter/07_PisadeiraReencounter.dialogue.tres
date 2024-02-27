@@ -1,5 +1,6 @@
-[gd_resource type="Resource" script_class="DialogueLine" load_steps=2 format=3 uid="uid://d2iv8fq7b385m"]
+[gd_resource type="Resource" script_class="DialogueLine" load_steps=3 format=3 uid="uid://d2iv8fq7b385m"]
 
+[ext_resource type="Texture2D" uid="uid://du1x4yvm5ubfc" path="res://Assets/Characters/Pisadeira/PisadeiraUp.png" id="1_d5qyb"]
 [ext_resource type="Script" path="res://Resources/Dialogues/Dialogue.gd" id="1_gk6da"]
 
 [resource]
@@ -7,3 +8,4 @@ script = ExtResource("1_gk6da")
 is_char_left = false
 char_name = "Pisadeira"
 line = "Também não sei o motivo, mas suspeitou que ela não esteja agindo sozinha, não é do hábito dela sair dos seus costumes. Deve ter uma mente maior por trás disso."
+char_image = ExtResource("1_d5qyb")
