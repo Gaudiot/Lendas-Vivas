@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://brc301dhk383d" path="res://Components/Obstacles/RectangleObstacle.tscn" id="1_oyy1f"]
 
 [node name="Walls" type="Node2D"]
+visible = false
 
 [node name="Left" parent="." instance=ExtResource("1_oyy1f")]
 position = Vector2(0, 360)

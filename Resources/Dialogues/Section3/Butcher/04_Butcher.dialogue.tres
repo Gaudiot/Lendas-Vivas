@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="DialogueLine" load_steps=3 format=3 uid="uid://cmrv6lgw35p0y"]
+
+[ext_resource type="Texture2D" uid="uid://d2fl67tffv6xg" path="res://Assets/Characters/Player/Inarita.png" id="1_j3npb"]
+[ext_resource type="Script" path="res://Resources/Dialogues/Dialogue.gd" id="2_gtyn8"]
+
+[resource]
+script = ExtResource("2_gtyn8")
+is_char_left = true
+char_name = "Inara"
+line = "Eehhh... Estou sem dinheiro agora moço.
+Por acaso faz fiado?"
+char_image = ExtResource("1_j3npb")

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Portal" load_steps=2 format=3 uid="uid://c4yn6lsfsxhb6"]
+
+[ext_resource type="Script" path="res://Resources/Portals/Portal.gd" id="1_8nswq"]
+
+[resource]
+script = ExtResource("1_8nswq")
+go_to_scene = "res://Scenes/Chapters/Section3/Butcher.tscn"
+is_portal_blocked = false
+blocked_message = "Ainda não é possível explorar essa nova área"

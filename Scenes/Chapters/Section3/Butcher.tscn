@@ -1,8 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://dbpkij5ogvwii"]
+[gd_scene load_steps=8 format=3 uid="uid://dbpkij5ogvwii"]
 
 [ext_resource type="Texture2D" uid="uid://clqjh534horkt" path="res://Assets/Backgrounds/Chapters/Section3/Butcher.png" id="1_xempv"]
 [ext_resource type="PackedScene" uid="uid://liokbtu0disx" path="res://Components/Portals/Portal.tscn" id="2_u0bi7"]
+[ext_resource type="Resource" uid="uid://css1ty0qkig4r" path="res://Resources/Portals/Street.portal.tres" id="3_gbiod"]
 [ext_resource type="PackedScene" uid="uid://p8ndd1qu3ttx" path="res://Components/Obstacles/walls.tscn" id="3_mme51"]
+[ext_resource type="PackedScene" uid="uid://d2vghqcqvfq0e" path="res://Scenes/MainCharacter.tscn" id="4_8541o"]
+[ext_resource type="Script" path="res://Scripts/Chapters/Section3/Butcher.gd" id="5_ntgw6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0lrc8"]
+size = Vector2(432, 423)
 
 [node name="Butcher" type="Node2D"]
 
@@ -16,6 +22,7 @@ texture = ExtResource("1_xempv")
 [node name="Street" parent="Portals" instance=ExtResource("2_u0bi7")]
 position = Vector2(1737, 551)
 scale = Vector2(1.5, 1.5)
+portal = ExtResource("3_gbiod")
 
 [node name="Walls" parent="." instance=ExtResource("3_mme51")]
 
@@ -30,4 +37,24 @@ position = Vector2(1900, 360)
 position = Vector2(950, 720)
 scale = Vector2(100, 1.25)
 
+[node name="PlayerRoot" parent="." instance=ExtResource("4_8541o")]
+position = Vector2(1702, 414)
+scale = Vector2(1.1, 1.1)
+is_movement_only_horizontal = true
+
+[node name="PlayerCamera" parent="PlayerRoot" index="2"]
+limit_right = 1900
+
+[node name="Butcher" type="Node2D" parent="."]
+position = Vector2(644, 330)
+script = ExtResource("5_ntgw6")
+
+[node name="ButcherArea" type="Area2D" parent="Butcher"]
+collision_layer = 4
+
+[node name="ButcherCollision" type="CollisionShape2D" parent="Butcher/ButcherArea"]
+position = Vector2(-4, -75.5)
+shape = SubResource("RectangleShape2D_0lrc8")
+
 [editable path="Walls"]
+[editable path="PlayerRoot"]

@@ -1,5 +1,6 @@
-[gd_resource type="Resource" script_class="DialogueLine" load_steps=2 format=3 uid="uid://bmh1nf364jnb8"]
+[gd_resource type="Resource" script_class="DialogueLine" load_steps=3 format=3 uid="uid://bmh1nf364jnb8"]
 
+[ext_resource type="Texture2D" uid="uid://muvaisq8ekkr" path="res://Assets/Characters/NPCs/Hiolanda.png" id="1_o5k46"]
 [ext_resource type="Script" path="res://Resources/Dialogues/Dialogue.gd" id="1_olj8t"]
 
 [resource]
@@ -7,3 +8,4 @@ script = ExtResource("1_olj8t")
 is_char_left = false
 char_name = "Hiolanda"
 line = "O dia está bonito hoje, né? Como está sua mãe, tudo certo com ela?"
+char_image = ExtResource("1_o5k46")

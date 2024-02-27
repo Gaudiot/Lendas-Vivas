@@ -1,5 +1,6 @@
-[gd_resource type="Resource" script_class="DialogueLine" load_steps=2 format=3 uid="uid://54be586fdqk7"]
+[gd_resource type="Resource" script_class="DialogueLine" load_steps=3 format=3 uid="uid://54be586fdqk7"]
 
+[ext_resource type="Texture2D" uid="uid://muvaisq8ekkr" path="res://Assets/Characters/NPCs/Hiolanda.png" id="1_1nvyj"]
 [ext_resource type="Script" path="res://Resources/Dialogues/Dialogue.gd" id="1_2occ2"]
 
 [resource]
@@ -7,3 +8,4 @@ script = ExtResource("1_2occ2")
 is_char_left = false
 char_name = "Hiolanda"
 line = "Desculpa desculpa. Sobre as crianças, escutei algumas pessoas da rua falando que à noite escutaram uma risada bem assustadora."
+char_image = ExtResource("1_1nvyj")

@@ -1,5 +1,6 @@
-[gd_resource type="Resource" script_class="DialogueLine" load_steps=2 format=3 uid="uid://xagegxjd7yuw"]
+[gd_resource type="Resource" script_class="DialogueLine" load_steps=3 format=3 uid="uid://xagegxjd7yuw"]
 
+[ext_resource type="Texture2D" uid="uid://du1x4yvm5ubfc" path="res://Assets/Characters/Pisadeira/PisadeiraUp.png" id="1_abd0a"]
 [ext_resource type="Script" path="res://Resources/Dialogues/Dialogue.gd" id="1_i5jnp"]
 
 [resource]
@@ -7,3 +8,4 @@ script = ExtResource("1_i5jnp")
 is_char_left = false
 char_name = "Pisadeira"
 line = "Vá para a biblioteca e pesquise um pouco mais sobre as lendas, lá deve ter alguma pista que possa nos ajudar."
+char_image = ExtResource("1_abd0a")

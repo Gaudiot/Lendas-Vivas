@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="DialogueLine" load_steps=3 format=3 uid="uid://bcqu02qpnmvpj"]
+
+[ext_resource type="Script" path="res://Resources/Dialogues/Dialogue.gd" id="1_hregk"]
+[ext_resource type="Texture2D" uid="uid://bleyvspljcdgn" path="res://Assets/Characters/NPCs/Caramelo.png" id="1_tksgs"]
+
+[resource]
+script = ExtResource("1_hregk")
+is_char_left = false
+char_name = "Caramelo"
+line = "AUAUAUAUAUAUAU
+AUAU GRRRGRRRGRR AU GRRR
+AUAUAUAUAU GRRR GRRGRRRGR"
+char_image = ExtResource("1_tksgs")

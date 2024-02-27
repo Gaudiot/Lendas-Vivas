@@ -41,6 +41,7 @@ texture = ExtResource("1_31cqe")
 position = Vector2(669, 408)
 rotation = 0.626432
 scale = Vector2(0.74417, 0.74417)
+skew = 0.785398
 collectable = ExtResource("3_4j7o5")
 
 [node name="CollectableSprite" parent="Collectables/Paper" index="0"]
@@ -76,8 +77,7 @@ rotation = 1.24291
 scale = Vector2(1, 40)
 
 [node name="PlayerRoot" parent="." instance=ExtResource("2_ieo8d")]
-position = Vector2(388, 568)
-scale = Vector2(2.56, 2.56)
-is_movement_only_horizontal = false
+position = Vector2(408, 325)
+scale = Vector2(0.75, 0.75)
 
 [editable path="Collectables/Paper"]

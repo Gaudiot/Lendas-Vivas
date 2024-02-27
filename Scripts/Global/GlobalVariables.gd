@@ -3,7 +3,10 @@ extends Node
 var items_on_ground: Dictionary = {
 	"paper": true,
 	"pen": true,
-	"stick": true
+	"stick": true,
+	"shovel": true,
+	"gum": true,
+	"string": true
 }
 
 func isItemOnGround(item_name: String) -> bool:
@@ -13,7 +16,7 @@ func pickItem(item_name: String) -> void:
 	items_on_ground[item_name.to_lower()] = false
 
 var blocked_path: Dictionary = {
-	"gridwall": true,
+	"sand": true,
 	"dog": true
 }
 

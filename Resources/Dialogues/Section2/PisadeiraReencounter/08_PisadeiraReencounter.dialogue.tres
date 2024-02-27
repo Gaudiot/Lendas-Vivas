@@ -1,5 +1,6 @@
-[gd_resource type="Resource" script_class="DialogueLine" load_steps=2 format=3 uid="uid://cspwi2nomuwlt"]
+[gd_resource type="Resource" script_class="DialogueLine" load_steps=3 format=3 uid="uid://cspwi2nomuwlt"]
 
+[ext_resource type="Texture2D" uid="uid://d2fl67tffv6xg" path="res://Assets/Characters/Player/Inarita.png" id="1_6wh02"]
 [ext_resource type="Script" path="res://Resources/Dialogues/Dialogue.gd" id="1_v8px3"]
 
 [resource]
@@ -9,3 +10,4 @@ char_name = "Inara"
 line = "E como vamos fazer para resolver isso?
 Como iremos recuperar a minha irmã?
 E porque EU sou tão importante para isso tudo?"
+char_image = ExtResource("1_6wh02")

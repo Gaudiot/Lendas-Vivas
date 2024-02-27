@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="DialogueLine" load_steps=3 format=3 uid="uid://rkp6ubfju5sa"]
+
+[ext_resource type="Script" path="res://Resources/Dialogues/Dialogue.gd" id="1_0t80r"]
+[ext_resource type="Texture2D" uid="uid://cqxrqu4efhog6" path="res://Assets/Characters/NPCs/Butcher.png" id="1_4lqcn"]
+
+[resource]
+script = ExtResource("1_0t80r")
+is_char_left = false
+char_name = "André"
+line = "Bom dia, moça. O que quer comprar hoje?"
+char_image = ExtResource("1_4lqcn")

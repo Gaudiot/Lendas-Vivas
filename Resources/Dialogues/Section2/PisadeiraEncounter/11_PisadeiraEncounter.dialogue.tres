@@ -1,9 +1,11 @@
-[gd_resource type="Resource" script_class="DialogueLine" load_steps=2 format=3 uid="uid://ds0t4x8n8xgcr"]
+[gd_resource type="Resource" script_class="DialogueLine" load_steps=3 format=3 uid="uid://ds0t4x8n8xgcr"]
 
 [ext_resource type="Script" path="res://Resources/Dialogues/Dialogue.gd" id="1_ep1ix"]
+[ext_resource type="Texture2D" uid="uid://du1x4yvm5ubfc" path="res://Assets/Characters/Pisadeira/PisadeiraUp.png" id="1_ny0qd"]
 
 [resource]
 script = ExtResource("1_ep1ix")
 is_char_left = false
 char_name = "Pisadeira"
 line = "O meu nome é Pisadeira… Ah, e por sinal, eu sei que não sabe karatê."
+char_image = ExtResource("1_ny0qd")

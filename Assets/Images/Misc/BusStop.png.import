@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cpm23nemh72ge"
-path="res://.godot/imported/Idle (32x32).png-dd1f85e0aba630357519da577905f152.ctex"
+uid="uid://durnvca5ev5db"
+path="res://.godot/imported/BusStop.png-c327b3f7830f69c9c1af843d35c09c13.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Characters/Player/Idle (32x32).png"
-dest_files=["res://.godot/imported/Idle (32x32).png-dd1f85e0aba630357519da577905f152.ctex"]
+source_file="res://Assets/Images/Misc/BusStop.png"
+dest_files=["res://.godot/imported/BusStop.png-c327b3f7830f69c9c1af843d35c09c13.ctex"]
 
 [params]
 

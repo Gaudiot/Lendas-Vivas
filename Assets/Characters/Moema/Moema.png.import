@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dlyxgwrwpjf2d"
-path="res://.godot/imported/MulherCarteira.png-b1b0bc20020dbe39a72364eef312bef5.ctex"
+uid="uid://b3r8gsuimp8mr"
+path="res://.godot/imported/Moema.png-d3bb99a6fe2dd93074b3b396003e3bc2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Characters/NPCs/MulherCarteira.png"
-dest_files=["res://.godot/imported/MulherCarteira.png-b1b0bc20020dbe39a72364eef312bef5.ctex"]
+source_file="res://Assets/Characters/Moema/Moema.png"
+dest_files=["res://.godot/imported/Moema.png-d3bb99a6fe2dd93074b3b396003e3bc2.ctex"]
 
 [params]
 

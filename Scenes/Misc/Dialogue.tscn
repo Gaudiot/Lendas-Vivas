@@ -328,7 +328,7 @@ libraries = {
 }
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 0.05
+wait_time = 0.001
 
 [node name="DialogueAudioPlayer" type="AudioStreamPlayer2D" parent="."]
 

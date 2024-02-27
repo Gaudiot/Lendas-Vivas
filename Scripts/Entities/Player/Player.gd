@@ -6,11 +6,14 @@ extends CharacterBody2D
 @onready var joystick = $"../PlayerUI/Joystick"
 
 @export var player_inventory: Inventory
+@export var player_can_move: bool = true
 @export var is_movement_only_horizontal: bool = true
 
-const SPEED = 200.0
+var MAX_SPEED = 200.0
 
 func _physics_process(delta):
+	var SPEED = MAX_SPEED if player_can_move else 0
+	
 	var directon = joystick.pos_vector
 	var direction_horizontal = directon.x
 	if direction_horizontal:
@@ -25,7 +28,7 @@ func _physics_process(delta):
 		else:
 			velocity.y = move_toward(velocity.y, 0, SPEED)
 		
-	if false and abs(velocity.x) + abs(velocity.y) == 0:
+	if abs(velocity.x) + abs(velocity.y) == 0:
 		player_sprite.animation = "Idle"
 	else:
 		player_sprite.animation = "Running"

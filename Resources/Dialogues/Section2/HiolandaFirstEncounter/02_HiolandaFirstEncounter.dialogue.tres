@@ -1,6 +1,7 @@
-[gd_resource type="Resource" script_class="DialogueLine" load_steps=2 format=3 uid="uid://bwmeju187veu6"]
+[gd_resource type="Resource" script_class="DialogueLine" load_steps=3 format=3 uid="uid://bwmeju187veu6"]
 
 [ext_resource type="Script" path="res://Resources/Dialogues/Dialogue.gd" id="1_7odne"]
+[ext_resource type="Texture2D" uid="uid://muvaisq8ekkr" path="res://Assets/Characters/NPCs/Hiolanda.png" id="1_h8xva"]
 
 [resource]
 script = ExtResource("1_7odne")
@@ -8,3 +9,4 @@ is_char_left = false
 char_name = "Hiolanda"
 line = "Claro, sempre bom alguém para conversar!
 Poucas pessoas tem me visitado recentemente, vou adorar poder falar com você mocinha."
+char_image = ExtResource("1_h8xva")
