@@ -6,7 +6,9 @@ var items_on_ground: Dictionary = {
 	"stick": true,
 	"shovel": true,
 	"gum": true,
-	"string": true
+	"string": true,
+	"water": true,
+	"vase": true
 }
 
 func isItemOnGround(item_name: String) -> bool:

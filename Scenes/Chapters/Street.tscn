@@ -544,6 +544,7 @@ position = Vector2(700, 553)
 scale = Vector2(0.35, 0.35)
 
 [node name="PlayerCamera" parent="PlayerRoot" index="2"]
+scale = Vector2(1, 1)
 limit_right = 7786
 
 [node name="Triggers" type="Node2D" parent="."]

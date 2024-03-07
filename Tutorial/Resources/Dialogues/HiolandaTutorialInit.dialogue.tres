@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="DialogueLine" load_steps=3 format=3 uid="uid://b6xclyuawhfnr"]
+
+[ext_resource type="Texture2D" uid="uid://muvaisq8ekkr" path="res://Assets/Characters/NPCs/Hiolanda.png" id="1_sd2wb"]
+[ext_resource type="Script" path="res://Resources/Dialogues/Dialogue.gd" id="1_vt3q2"]
+
+[resource]
+script = ExtResource("1_vt3q2")
+is_char_left = false
+char_name = "Hiolanda"
+line = "Me dê uma flor que eu lhe darei uma maçã."
+char_image = ExtResource("1_sd2wb")

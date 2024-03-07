@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Collectable" load_steps=3 format=3 uid="uid://c3gk6721gdqrj"]
+
+[ext_resource type="Resource" uid="uid://bk2n47c5fpoll" path="res://Tutorial/Resources/Items/water.item.tres" id="1_5jjcc"]
+[ext_resource type="Script" path="res://Resources/Collectables/Collectable.gd" id="2_14jej"]
+
+[resource]
+script = ExtResource("2_14jej")
+item = ExtResource("1_5jjcc")
