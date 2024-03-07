@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://nwa12vb6cpxg"]
+
+[ext_resource type="Script" path="res://Resources/Items/Item.gd" id="1_2isjo"]
+[ext_resource type="Resource" uid="uid://xtock7qh6y1g" path="res://Tutorial/Resources/Items/flower.item.tres" id="1_tg5bv"]
+[ext_resource type="Texture2D" uid="uid://bwidjopc2fmwd" path="res://Tutorial/Assets/Vase.png" id="3_edt2i"]
+
+[resource]
+script = ExtResource("1_2isjo")
+name = "Vase"
+texture = ExtResource("3_edt2i")
+combine_with_item_id = "Water"
+result_when_combine = ExtResource("1_tg5bv")

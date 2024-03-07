@@ -1,0 +1,196 @@
+[gd_scene load_steps=16 format=3 uid="uid://cqifcqlhsobcc"]
+
+[ext_resource type="PackedScene" uid="uid://d2vghqcqvfq0e" path="res://Scenes/MainCharacter.tscn" id="1_ao84i"]
+[ext_resource type="FontFile" uid="uid://dlp1q0ohm3gb3" path="res://Assets/Fonts/Puimek/puimek.ttf" id="2_xx8am"]
+[ext_resource type="PackedScene" uid="uid://che8dm2ehd180" path="res://Components/Collectables/Collectable.tscn" id="3_vs7cf"]
+[ext_resource type="Resource" uid="uid://dxtqola41v3mx" path="res://Tutorial/Resources/Collectables/vase.collectable.tres" id="4_mv4v8"]
+[ext_resource type="Resource" uid="uid://c3gk6721gdqrj" path="res://Tutorial/Resources/Collectables/water.collectable.tres" id="5_rppkc"]
+[ext_resource type="Texture2D" uid="uid://muvaisq8ekkr" path="res://Assets/Characters/NPCs/Hiolanda.png" id="6_47qqj"]
+[ext_resource type="Script" path="res://Tutorial/Scripts/HiolandaTutorial.gd" id="6_cv8xh"]
+[ext_resource type="Texture2D" uid="uid://crp7t7mrqxl46" path="res://Tutorial/Assets/Stand.png" id="7_5tvju"]
+[ext_resource type="Script" path="res://Tutorial/Scripts/Stand.gd" id="8_bsqyn"]
+[ext_resource type="PackedScene" uid="uid://liokbtu0disx" path="res://Components/Portals/Portal.tscn" id="8_iyd0a"]
+[ext_resource type="Texture2D" uid="uid://vh4st286ae7w" path="res://Tutorial/Assets/Apple.png" id="8_ya7ja"]
+[ext_resource type="Resource" uid="uid://3hsf4xtjqbg0" path="res://Resources/Portals/Prologue/Nightmare.portal.tres" id="9_1yt3m"]
+[ext_resource type="PackedScene" uid="uid://p8ndd1qu3ttx" path="res://Components/Obstacles/walls.tscn" id="13_b4vbs"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_us444"]
+size = Vector2(750, 1240)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mj8tv"]
+size = Vector2(499.989, 508.32)
+
+[node name="Tutorial" type="Node2D"]
+
+[node name="Texts" type="Node2D" parent="."]
+
+[node name="Movement" type="Label" parent="Texts"]
+offset_left = 135.0
+offset_top = 80.0
+offset_right = 896.0
+offset_bottom = 281.0
+theme_override_fonts/font = ExtResource("2_xx8am")
+theme_override_font_sizes/font_size = 60
+text = "Você pode usar o analógico esquerdo para se mover com o personagem"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="PickUp" type="Label" parent="Texts"]
+offset_left = 1091.0
+offset_top = 84.0
+offset_right = 1852.0
+offset_bottom = 285.0
+theme_override_fonts/font = ExtResource("2_xx8am")
+theme_override_font_sizes/font_size = 60
+text = "Pegue itens do cenário utilizando o ícone da mão no lado direito"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Combine" type="Label" parent="Texts"]
+offset_left = 2068.0
+offset_top = 84.0
+offset_right = 2829.0
+offset_bottom = 285.0
+theme_override_fonts/font = ExtResource("2_xx8am")
+theme_override_font_sizes/font_size = 60
+text = "Abra o inventário com o ícone da bolsa e tente juntar itens para gerar novos"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Npc" type="Label" parent="Texts"]
+offset_left = 2922.0
+offset_top = 84.0
+offset_right = 3683.0
+offset_bottom = 285.0
+theme_override_fonts/font = ExtResource("2_xx8am")
+theme_override_font_sizes/font_size = 60
+text = "Fale com personagens para saber mais da história e trocar itens com eles"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Npc2" type="Label" parent="Texts"]
+offset_left = 3027.0
+offset_top = 323.0
+offset_right = 3574.0
+offset_bottom = 399.0
+theme_override_fonts/font = ExtResource("2_xx8am")
+theme_override_font_sizes/font_size = 30
+text = "Selecione o item no inventário com um toque simples para usar com o personagem. Teste com a flor"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Environment" type="Label" parent="Texts"]
+offset_left = 4028.0
+offset_top = 84.0
+offset_right = 5128.0
+offset_bottom = 285.0
+theme_override_fonts/font = ExtResource("2_xx8am")
+theme_override_font_sizes/font_size = 60
+text = "É possível usar itens no cenário, selecione o item no inventário ao dar um toque simples e use a mão para interagir com o mundo"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Environment2" type="Label" parent="Texts"]
+offset_left = 4028.0
+offset_top = 496.0
+offset_right = 5128.0
+offset_bottom = 697.0
+theme_override_fonts/font = ExtResource("2_xx8am")
+theme_override_font_sizes/font_size = 40
+text = "Experimente usando a maçã no pilar"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Portals" type="Label" parent="Texts"]
+offset_left = 5496.0
+offset_top = 84.0
+offset_right = 6286.0
+offset_bottom = 285.0
+theme_override_fonts/font = ExtResource("2_xx8am")
+theme_override_font_sizes/font_size = 60
+text = "Para ir para novos cenários interaja com as setas brancas"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="collectables" type="Node2D" parent="."]
+
+[node name="Vase" parent="collectables" instance=ExtResource("3_vs7cf")]
+position = Vector2(1295, 583)
+collectable = ExtResource("4_mv4v8")
+
+[node name="Water" parent="collectables" instance=ExtResource("3_vs7cf")]
+position = Vector2(1672, 585)
+collectable = ExtResource("5_rppkc")
+
+[node name="NPCs" type="Node2D" parent="."]
+
+[node name="Hiolanda" type="Sprite2D" parent="NPCs"]
+position = Vector2(2863, 491)
+scale = Vector2(0.369999, 0.369999)
+texture = ExtResource("6_47qqj")
+flip_h = true
+script = ExtResource("6_cv8xh")
+
+[node name="HiolandaInteractArea" type="Area2D" parent="NPCs/Hiolanda"]
+collision_layer = 4
+
+[node name="HiolandaCollision" type="CollisionShape2D" parent="NPCs/Hiolanda/HiolandaInteractArea"]
+position = Vector2(15, 0)
+scale = Vector2(0.999999, 0.999999)
+shape = SubResource("RectangleShape2D_us444")
+
+[node name="Objects" type="Node2D" parent="."]
+
+[node name="Stand" type="Sprite2D" parent="Objects"]
+position = Vector2(4579, 632)
+scale = Vector2(0.36001, 0.36001)
+texture = ExtResource("7_5tvju")
+script = ExtResource("8_bsqyn")
+
+[node name="Area2D" type="Area2D" parent="Objects/Stand"]
+collision_layer = 32
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Objects/Stand/Area2D"]
+position = Vector2(0.00195313, 18.0551)
+shape = SubResource("RectangleShape2D_mj8tv")
+
+[node name="Apple" type="Sprite2D" parent="Objects"]
+unique_name_in_owner = true
+visible = false
+position = Vector2(4573, 516)
+scale = Vector2(0.23999, 0.23999)
+texture = ExtResource("8_ya7ja")
+
+[node name="Portals" type="Node2D" parent="."]
+
+[node name="Nightmare" parent="Portals" instance=ExtResource("8_iyd0a")]
+unique_name_in_owner = true
+position = Vector2(5921, 596)
+scale = Vector2(1.68, 1.68)
+is_portal_blocked = true
+portal = ExtResource("9_1yt3m")
+
+[node name="PlayerRoot" parent="." instance=ExtResource("1_ao84i")]
+position = Vector2(511, 520)
+scale = Vector2(0.683197, 0.683197)
+is_movement_only_horizontal = true
+
+[node name="PlayerCamera" parent="PlayerRoot" index="2"]
+scale = Vector2(1, 1)
+limit_right = 6500
+
+[node name="Walls" parent="." instance=ExtResource("13_b4vbs")]
+
+[node name="Top" parent="Walls" index="1"]
+position = Vector2(3250, 0)
+scale = Vector2(330, 1)
+
+[node name="Right" parent="Walls" index="2"]
+position = Vector2(6500, 360)
+
+[node name="Bottom" parent="Walls" index="3"]
+position = Vector2(3250, 720)
+scale = Vector2(330, 1)
+
+[editable path="PlayerRoot"]
+[editable path="Walls"]
