@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="DialogueLine" load_steps=3 format=3 uid="uid://cv6q423owsnn3"]
+
+[ext_resource type="Script" path="res://Resources/Dialogues/Dialogue.gd" id="1_6mq85"]
+[ext_resource type="Texture2D" uid="uid://muvaisq8ekkr" path="res://Assets/Characters/NPCs/Hiolanda.png" id="1_qvd2o"]
+
+[resource]
+script = ExtResource("1_6mq85")
+is_char_left = false
+char_name = "Hiolanda"
+line = "Já tenho minha flor, tenho nada mais a oferecer."
+char_image = ExtResource("1_qvd2o")
